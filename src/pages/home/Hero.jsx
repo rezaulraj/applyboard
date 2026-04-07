@@ -3,7 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <section className="mt-10">
-      <div className="max-w-6xl mx-auto bg-blue-50 rounded-[20px] px-16 py-14 flex items-center justify-between gap-10 overflow-hidden min-h-[400px]">
+      <div className="max-w-6xl mx-auto bg-blue-50 rounded-4xl px-16 py-8 flex items-center justify-between gap-10 overflow-hidden min-h-[400px]">
         {/* Left Content */}
         <div className="flex-1 max-w-[500px]">
           <h1 className="text-5xl font-bold font-montserrat text-[#1E2D4E] leading-normal">
@@ -15,7 +15,7 @@ const Hero = () => {
             possible application with a 95% success rate. Unlock your full
             potential with ApplyBoard!
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 font-sans leading-relaxed text-white font-bold text-[18px] px-7 py-3 rounded-lg transition-colors duration-200">
+          <button className="bg-blue-600 hover:bg-blue-700 font-sans leading-relaxed text-white font-semibold text-[18px] px-7 py-3 rounded-lg transition-colors duration-200">
             Register as a Student
           </button>
         </div>
@@ -36,31 +36,31 @@ const Hero = () => {
                 bg: "bg-amber-400",
                 col: 2,
                 row: 1,
-                src: "https://images.unsplash.com/photo-1529390079861-591de354faf5?w=400&h=400&fit=crop&crop=face",
+                src: "https://plus.unsplash.com/premium_photo-1682089930633-6a76458014d4?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
               {
                 bg: "bg-violet-500",
                 col: 1,
                 row: 2,
-                src: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=400&h=400&fit=crop&crop=face",
+                src: "https://plus.unsplash.com/premium_photo-1682089861447-7363590a8ec9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
               {
                 bg: "bg-emerald-500",
                 col: 2,
                 row: 2,
-                src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+                src: "https://plus.unsplash.com/premium_photo-1683133311955-8092b79380a4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
               {
                 bg: "bg-red-500",
                 col: 1,
                 row: 3,
-                src: "https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=400&h=400&fit=crop&crop=face",
+                src: "https://plus.unsplash.com/premium_photo-1683133979652-a8f78aeef249?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
               {
                 bg: "bg-blue-300",
                 col: 2,
                 row: 3,
-                src: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
+                src: "https://plus.unsplash.com/premium_photo-1681487041056-38ab90b17605?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
               },
             ].map((item, i) => (
               <div
