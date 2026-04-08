@@ -3,7 +3,7 @@ import React from "react";
 const Funding = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left - Mockup */}
         <div className="relative flex justify-center lg:justify-start">
           <div className="relative w-full max-w-md">
@@ -257,7 +257,7 @@ const Funding = () => {
           </span>
 
           {/* Main Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-montserrat font-bold text-gray-800 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-800 leading-tight">
             Get Financial Assistance
           </h2>
 

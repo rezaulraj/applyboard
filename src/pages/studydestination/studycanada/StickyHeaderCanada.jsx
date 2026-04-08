@@ -1,0 +1,195 @@
+import React, { useState, useEffect, useRef } from "react";
+import AcademicsCanada from "./AcademicsCanada";
+import OpportunityCanada from "./OpportunityCanada";
+import ExperienceCanada from "./ExperienceCanada";
+import LifeCanada from "./LifeCanada";
+import CommunityCanada from "./CommunityCanada";
+import StudentVisaCanada from "./StudentVisaCanada";
+
+const StickyHeaderCanada = () => {
+  const [activeSection, setActiveSection] = useState("academics");
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  const sections = [
+    {
+      id: "academics",
+      label: "ACADEMICS",
+      color: "bg-blue-500",
+      hasCustom: true,
+      component: AcademicsCanada,
+    },
+    {
+      id: "opportunity",
+      label: "OPPORTUNITY",
+      color: "bg-green-500",
+      hasCustom: true,
+      component: OpportunityCanada,
+    },
+    {
+      id: "experience",
+      label: "EXPERIENCE",
+      color: "bg-purple-500",
+      hasCustom: true,
+      component: ExperienceCanada,
+    },
+    {
+      id: "life",
+      label: "LIFE",
+      color: "bg-orange-500",
+      hasCustom: true,
+      component: LifeCanada,
+    },
+    {
+      id: "community",
+      label: "COMMUNITY",
+      color: "bg-pink-500",
+      hasCustom: true,
+      component: CommunityCanada,
+    },
+    {
+      id: "student-visa",
+      label: "STUDENT VISA",
+      color: "bg-pink-500",
+      hasCustom: true,
+      component: StudentVisaCanada,
+    },
+  ];
+
+  const sectionRefs = useRef({});
+
+  // Intersection Observer for section tracking
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: "-120px 0px -80% 0px",
+      threshold: 0,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    // Wait for refs to be populated
+    const timeoutId = setTimeout(() => {
+      Object.values(sectionRefs.current).forEach((ref) => {
+        if (ref) observer.observe(ref);
+      });
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    };
+  }, []); // Empty dependency array - only run once
+
+  const scrollToSection = (id) => {
+    const element = sectionRefs.current[id];
+    if (element) {
+      const offset = 160;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return (
+    <div className="relative">
+      {/* Header is ALWAYS visible - removed the conditional visibility */}
+      <div
+        id="sticky-header"
+        className="sticky top-0 z-40 transition-all duration-500 ease-in-out"
+      >
+        <div className="bg-white/80 backdrop-blur-md">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-montserrat font-bold text-center text-gray-800 mb-5">
+              5 Incredible Reasons to Study in Australia
+            </h2>
+
+            <nav className="flex flex-wrap justify-center gap-2 sm:gap-3">
+              {sections.map((section) => (
+                <button
+                  key={section.id}
+                  onClick={() => scrollToSection(section.id)}
+                  className={`
+                    relative px-4 sm:px-5 lg:px-6 py-2.5 rounded-full font-semibold font-sans text-xs sm:text-sm uppercase tracking-wide
+                    transition-all duration-300 ease-out
+                    ${
+                      activeSection === section.id
+                        ? `${section.color} text-white shadow-lg scale-105 ring-2 ring-offset-2 ring-current`
+                        : "bg-gray-100 text-gray-500 hover:bg-gray-200 hover:text-gray-700 hover:scale-105"
+                    }
+                  `}
+                >
+                  {activeSection === section.id && (
+                    <span
+                      className={`absolute inset-0 rounded-full animate-ping opacity-20 ${section.color}`}
+                    />
+                  )}
+                  <span className="relative z-10 flex items-center gap-1.5">
+                    <span
+                      className={`w-1.5 h-1.5 rounded-full ${activeSection === section.id ? "bg-white" : "bg-gray-400"}`}
+                    />
+                    {section.label}
+                  </span>
+                </button>
+              ))}
+            </nav>
+
+            <div className="mt-5 flex justify-center">
+              <div className="flex items-center gap-1">
+                {sections.map((section, index) => (
+                  <div key={section.id} className="flex items-center">
+                    <div
+                      className={`h-1.5 rounded-full transition-all duration-500 ease-out ${
+                        activeSection === section.id
+                          ? `${section.color} w-12 sm:w-16`
+                          : sections.findIndex((s) => s.id === activeSection) >
+                              index
+                            ? `${section.color} w-1.5 opacity-60`
+                            : "bg-gray-200 w-1.5"
+                      }`}
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ==================== SECTIONS CONTENT ==================== */}
+      <div className="pt-0">
+        {sections.map((section, index) => {
+          // ✅ Render custom component for each section
+          const CustomComponent = section.component;
+
+          return (
+            <section
+              key={section.id}
+              id={section.id}
+              ref={(el) => (sectionRefs.current[section.id] = el)}
+              className={`min-h-[80vh] py-16 ${
+                index % 2 === 0 ? "bg-white" : "bg-gray-50"
+              }`}
+            >
+              <CustomComponent />
+            </section>
+          );
+        })}
+      </div>
+
+      <div className="h-48 bg-gradient-to-t from-white via-white/80 to-transparent" />
+    </div>
+  );
+};
+
+export default StickyHeaderCanada;

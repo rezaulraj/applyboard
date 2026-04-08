@@ -10,7 +10,7 @@ const Apply = () => {
             APPLY
           </span>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
             Submit Your Best Application
           </h2>
 

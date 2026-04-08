@@ -111,7 +111,7 @@ const Search = () => {
               SEARCH
             </span>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-montserrat font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900 leading-tight">
               Select a Program
             </h2>
 
