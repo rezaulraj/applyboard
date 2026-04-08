@@ -99,8 +99,8 @@ const RecruitmentSection = () => {
 
         <div className="shrink-0 self-end">
           <img
-            src="https://plus.unsplash.com/premium_photo-1683134573138-6c717f961526?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            className="w-[180px] h-[180px] object-cover block"
+            src="/choose.webp"
+            className="w-[180px] h-[280px] object-cover"
             alt="Student"
           />
         </div>

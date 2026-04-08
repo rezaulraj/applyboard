@@ -7,6 +7,7 @@ import TrustedPartners from "./Trustedpartners";
 import ChannelPartners from "./ChannelPartners";
 import RecruitmentSection from "./RecruitmentSection";
 import FAQ from "./FAQ";
+import GetStarted from "./GetStarted";
 
 const HomePage = () => {
   return (
@@ -18,7 +19,8 @@ const HomePage = () => {
       <TrustedPartners />
       <ChannelPartners />
       <RecruitmentSection />
-      <FAQ/>
+      <FAQ />
+      <GetStarted />
     </div>
   );
 };
