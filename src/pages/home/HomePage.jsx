@@ -8,6 +8,7 @@ import ChannelPartners from "./ChannelPartners";
 import RecruitmentSection from "./RecruitmentSection";
 import FAQ from "./FAQ";
 import GetStarted from "./GetStarted";
+import FeedbackStudent from "./FeedbackStudent";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <Stats />
       <StudyAbroad />
       <Solution />
+      <FeedbackStudent />
       <TrustedPartners />
       <ChannelPartners />
       <RecruitmentSection />

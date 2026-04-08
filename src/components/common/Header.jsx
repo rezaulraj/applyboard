@@ -66,7 +66,7 @@ const Header = () => {
       className="w-full bg-white font-sans relative z-50"
     >
       {/* Desktop Nav */}
-      <div className="container mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 no-underline">
           <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
