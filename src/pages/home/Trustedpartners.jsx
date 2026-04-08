@@ -675,25 +675,25 @@ const TrustedPartners = () => {
           display: inline-flex; 
           align-items: center; 
           gap: 8px;
-          background: linear-gradient(90deg, #4F8EF7, #2563eb);
+          background: linear-gradient(90deg, #2563eb, #2563eb);
           color: #fff; 
           border: none; 
           border-radius: 50px;
           padding: 14px 36px;
           font-family: 'Open Sans', sans-serif; 
-          font-weight: 700; 
-          font-size: 15px;
+          font-weight: 600; 
+          font-size: 18px;
           cursor: pointer; 
           box-shadow: 0 4px 24px rgba(79,142,247,0.3);
           transition: transform 0.2s, box-shadow 0.2s;
         }
         .tp-explore-btn:hover { 
-          transform: translateY(-2px) scale(1.02); 
+          // transform: translateY(-2px) scale(1.02); 
           box-shadow: 0 8px 32px rgba(37,99,235,0.4); 
         }
         .tp-section {
           background: #fff;
-          min-height: 100vh;
+          // min-height: 100vh;
           padding: 72px 20px 60px;
           font-family: 'Open Sans', sans-serif;
         }

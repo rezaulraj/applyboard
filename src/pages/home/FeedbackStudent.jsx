@@ -19,7 +19,7 @@ const FeedbackStudent = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50 py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-left mb-16">
@@ -57,7 +57,7 @@ const FeedbackStudent = () => {
               </div>
 
               {/* Quote Text */}
-              <p className="text-gray-700 text-lg leading-relaxed mb-8 italic font-sans">
+              <p className="text-gray-700 text-lg leading-relaxed mb-8 font-sans">
                 "{testimonial.quote}"
               </p>
 
@@ -91,7 +91,6 @@ const FeedbackStudent = () => {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );
