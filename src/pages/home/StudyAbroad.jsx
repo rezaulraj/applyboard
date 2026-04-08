@@ -34,10 +34,10 @@ const StudyAbroad = () => {
         <ul className="flex flex-col gap-4 mb-9">
           {features.map(({ icon: Icon, text }) => (
             <li key={text} className="flex items-start gap-4">
-              <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <Icon className="text-blue-600 text-[18px]" />
+              <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center shrink-0 mt-0.5">
+                <Icon className="text-blue-600 text-base" />
               </div>
-              <span className="text-base text-gray-700 font-sans leading-relaxed">
+              <span className="text-base text-gray-500 font-sans leading-relaxed">
                 {text}
               </span>
             </li>

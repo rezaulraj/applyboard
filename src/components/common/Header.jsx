@@ -69,8 +69,8 @@ const Header = () => {
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 no-underline">
-          <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
-            <svg width="22" height="22" viewBox="0 0 40 40" fill="none">
+          <div className="w-12 h-12 flex items-center justify-center">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
               <path
                 d="M20 4C11.2 4 4 11.2 4 20s7.2 16 16 16 16-7.2 16-16S28.8 4 20 4zm0 5c6.1 0 11 4.9 11 11s-4.9 11-11 11S9 26.1 9 20 13.9 9 20 9z"
                 fill="#1a5fd8"
@@ -84,7 +84,7 @@ const Header = () => {
               <circle cx="20" cy="20" r="4" fill="#1a5fd8" />
             </svg>
           </div>
-          <span className="text-[28px] font-bold text-[#1a5fd8] tracking-tight">
+          <span className="text-[24px] md:text-[28px] font-bold font-montserrat uppercase text-[#1a5fd8] tracking-tight">
             ApplyBoard
           </span>
         </a>

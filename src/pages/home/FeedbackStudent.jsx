@@ -26,7 +26,7 @@ const FeedbackStudent = () => {
           <h1 className="text-4xl font-montserrat font-bold text-gray-900 mb-4 tracking-tight">
             What Our Students Have to Say
           </h1>
-          <p className="text-lg md:text-xl text-gray-800 text-left">
+          <p className="text-sm md:text-lg font-sans text-gray-800 text-left">
             Hear from real international students about their experience.
           </p>
         </div>

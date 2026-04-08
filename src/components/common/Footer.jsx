@@ -66,7 +66,7 @@ const Footer = () => {
           {/* Left Column - Address & Social */}
           <div className="md:col-span-4 space-y-4">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <h2 className="text-2xl font-bold font-montserrat uppercase bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
                 ApplyBoard
               </h2>
             </div>

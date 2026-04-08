@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import HeroStudent from "./HeroStudent";
+import StickyStudentHeader from "./StickyStudentHeader";
 
 const Students = () => {
   return (
-    <div>Students</div>
-  )
-}
+    <div>
+      <HeroStudent />
+      <StickyStudentHeader />
+    </div>
+  );
+};
 
-export default Students
+export default Students;
