@@ -31,7 +31,7 @@ const GetStarted = () => {
     {
       title: "Partner School",
       description:
-        "Join 1,500+ global institutions on the ApplyBoard platform! Complete our contact form, and our Partner Relations team will be in touch soon.",
+        "Join 1,500+ global institutions on the  AdmissionOnBoard platform! Complete our contact form, and our Partner Relations team will be in touch soon.",
       buttonText: "Become a Partner Institution",
       buttonLink: "#",
       imageUrl:
@@ -49,7 +49,7 @@ const GetStarted = () => {
         {/* Header / Title Section */}
         <div className="text-center mb-14 md:mb-20">
           <h1 className="text-[38px] font-bold tracking-tight font-montserrat text-gray-900 mb-4">
-            Get Started with ApplyBoard
+            Get Started with  AdmissionOnBoard
           </h1>
         </div>
 

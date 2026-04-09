@@ -4,15 +4,15 @@ import { FiChevronUp } from "react-icons/fi";
 const faqs = [
   {
     q: "How can I find my dream program?",
-    a: "It couldn't be easier! Register for a free ApplyBoard account, then take a few short minutes to tell us about your educational goals and set up your profile. Our platform will suggest study programs just for your needs, and you'll have full access to explore the 150,000+ programs available through our AI-guided search.",
+    a: "It couldn't be easier! Register for a free  AdmissionOnBoard account, then take a few short minutes to tell us about your educational goals and set up your profile. Our platform will suggest study programs just for your needs, and you'll have full access to explore the 150,000+ programs available through our AI-guided search.",
   },
   {
     q: "How do I apply once I've found the right program?",
     a: 'Once you\'ve found your ideal program, simply click "Apply" and follow the guided steps. Our platform walks you through each requirement, checks your documents for quality, and submits your application — all in one place.',
   },
   {
-    q: "Why should I use ApplyBoard?",
-    a: "ApplyBoard gives you access to 150,000+ programs across top study destinations, a 95% acceptance rate, AI-powered guidance, and dedicated support from application to enrollment — all completely free for students.",
+    q: "Why should I use  AdmissionOnBoard?",
+    a: " AdmissionOnBoard gives you access to 150,000+ programs across top study destinations, a 95% acceptance rate, AI-powered guidance, and dedicated support from application to enrollment — all completely free for students.",
   },
   {
     q: "Which countries can I apply to study in?",
@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "I've applied, so what's next?",
-    a: "After you apply, ApplyBoard's team will review your application and keep you updated every step of the way. You'll receive notifications on your application status, and we'll help you with visa guidance and pre-departure support once you receive an offer.",
+    a: "After you apply,  AdmissionOnBoard's team will review your application and keep you updated every step of the way. You'll receive notifications on your application status, and we'll help you with visa guidance and pre-departure support once you receive an offer.",
   },
 ];
 
@@ -38,7 +38,7 @@ const FAQ = () => {
           Got Questions? We Have Answers
         </h2>
         <p className="text-base text-gray-500 leading-relaxed">
-          Still wondering about studying abroad, and how ApplyBoard can get you
+          Still wondering about studying abroad, and how  AdmissionOnBoard can get you
           there? Read these answers to our most commonly asked questions.
         </p>
       </div>

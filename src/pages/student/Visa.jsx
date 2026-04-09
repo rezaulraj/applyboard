@@ -143,7 +143,7 @@ const Visa = () => {
           {/* Description */}
           <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-lg">
             Receive guided support for your visa application through
-            ApplyBoard's trusted partner,{" "}
+             AdmissionOnBoard's trusted partner,{" "}
             <a
               href="#"
               className="text-blue-600 font-medium hover:text-blue-800 hover:underline transition-all duration-200"

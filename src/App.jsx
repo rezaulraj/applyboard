@@ -10,6 +10,7 @@ import StudyIreland from "./pages/studydestination/studyireland/StudyIreland";
 import StudyGermany from "./pages/studydestination/studygermany/StudyGermany";
 import StudyUk from "./pages/studydestination/studyuk/StudyUk";
 import StudyUsa from "./pages/studydestination/studyusa/StudyUsa";
+import Institution from "./pages/institution/Institution";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/germany" element={<StudyGermany />} />
           <Route path="/uk" element={<StudyUk />} />
           <Route path="/usa" element={<StudyUsa />} />
+          <Route path="/institutions" element={<Institution />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

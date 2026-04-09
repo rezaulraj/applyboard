@@ -13,7 +13,7 @@ const Hero = () => {
           <p className="font-sans text-[18px] text-gray-500 leading-relaxed mt-4 mb-8 max-w-[420px]">
             Explore 1,500+ global universities and colleges. Submit your best
             possible application with a 95% success rate. Unlock your full
-            potential with ApplyBoard!
+            potential with  AdmissionOnBoard!
           </p>
           <button className="bg-blue-600 hover:bg-blue-700 font-sans leading-relaxed text-white font-semibold text-[18px] px-7 py-3 rounded-lg transition-colors duration-200">
             Register as a Student

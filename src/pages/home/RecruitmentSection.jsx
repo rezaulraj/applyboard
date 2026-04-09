@@ -8,7 +8,7 @@ const features = [
   },
   {
     icon: LuLayers,
-    text: "Use AI-powered tools to benefit from ApplyBoard's 95% application success rate",
+    text: "Use AI-powered tools to benefit from  AdmissionOnBoard's 95% application success rate",
   },
   {
     icon: LuClock,

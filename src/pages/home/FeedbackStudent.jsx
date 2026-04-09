@@ -5,16 +5,16 @@ const FeedbackStudent = () => {
     {
       id: 1,
       quote:
-        "I tried [applying to institutions] and it took months, and months, and months for me to get an answer from a school. But then I stumbled upon ApplyBoard, and it was like an answer from heaven.",
+        "I tried [applying to institutions] and it took months, and months, and months for me to get an answer from a school. But then I stumbled upon  AdmissionOnBoard, and it was like an answer from heaven.",
       name: "Arabeille A.",
       highlight: "Like an answer from heaven",
     },
     {
       id: 2,
       quote:
-        "I wanted to make my parents proud, and they are proud. And it was all thanks to ApplyBoard.",
+        "I wanted to make my parents proud, and they are proud. And it was all thanks to  AdmissionOnBoard.",
       name: "Krupal P.",
-      highlight: "All thanks to ApplyBoard",
+      highlight: "All thanks to  AdmissionOnBoard",
     },
   ];
 

@@ -93,8 +93,8 @@ const Header = () => {
               <circle cx="20" cy="20" r="4" fill="#1a5fd8" />
             </svg>
           </div>
-          <span className="text-[24px] md:text-[28px] font-bold font-montserrat uppercase text-[#1a5fd8] tracking-tight">
-            ApplyBoard
+          <span className="text-[24px] md:text-[28px] font-bold font-montserrat text-[#1a5fd8] tracking-tight">
+            AdmissionOnBoard
           </span>
         </a>
 

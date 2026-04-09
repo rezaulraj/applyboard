@@ -32,7 +32,7 @@ const SuccessStories = () => {
               <blockquote className="text-white text-lg sm:text-xl leading-relaxed mb-8">
                 "I tried applying to institutions] and it took months, and
                 months, and months for me to get an answer from a school. But
-                then I stumbled upon ApplyBoard, and it was like an answer from
+                then I stumbled upon  AdmissionOnBoard, and it was like an answer from
                 heaven."
               </blockquote>
 

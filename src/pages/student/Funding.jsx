@@ -269,7 +269,7 @@ const Funding = () => {
               href="#"
               className="text-blue-600 font-medium underline underline-offset-4 hover:text-blue-800 transition-colors duration-200"
             >
-              ApplyBoard Student Loan
+               AdmissionOnBoard Student Loan
             </a>
             .
           </p>
