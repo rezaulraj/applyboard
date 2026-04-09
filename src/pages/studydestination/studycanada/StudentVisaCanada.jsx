@@ -66,23 +66,23 @@ const StudentVisaCanada = () => {
       </div>
 
       {/* Bottom: CTA Banner */}
-      <div className="relative rounded-2xl overflow-hidden bg-gradient-to-br from-purple-900 via-purple-700 to-purple-500 px-12 py-14 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[220px]">
+      <div className="relative rounded-2xl bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 px-12 py-14 grid grid-cols-1 lg:grid-cols-2 items-center min-h-[220px]">
         {/* Decorative rings */}
         <div className="absolute right-[-60px] top-1/2 -translate-y-1/2 w-64 h-64 rounded-full border border-white/20 pointer-events-none" />
         <div className="absolute right-[-110px] top-1/2 -translate-y-1/2 w-96 h-96 rounded-full border border-white/15 pointer-events-none" />
         <div className="absolute right-[-160px] top-1/2 -translate-y-1/2 w-[460px] h-[460px] rounded-full border border-white/10 pointer-events-none" />
 
         {/* Text */}
-        <div className="relative z-10 flex flex-col gap-4">
+        <div className="relative z-30 flex flex-col gap-4">
           <h3 className="text-4xl font-bold font-montserrat text-white leading-tight">
-            Study in Australia and
+            Study in Canada and
             <br />
-            Achieve <span className="text-purple-300">Your Dreams</span>
+            Achieve <span className="text-blue-500">Your Dreams</span>
           </h3>
           <p className="text-base font-sans leading-relaxed text-white/80 ">
             Ready to launch your study abroad journey? It can be intimidating,
-            but we're here for you! Follow in the steps of 1.3M+ other students
-            and trust  AdmissionOnBoard's team of experts to guide your way.
+            but we’re here for you! Follow in the steps of 1.3M+ other students
+            and trust AdmissionOnBoard’s team of experts to guide your way.
           </p>
           <button className="mt-2 w-fit bg-white text-blue-700 font-sans font-semibold text-base px-7 py-3.5 rounded-xl hover:bg-purple-50 transition-colors">
             Find Your Perfect Program
@@ -92,9 +92,9 @@ const StudentVisaCanada = () => {
         {/* Student Image */}
         <div className="relative z-10 flex justify-end items-end h-full">
           <img
-            src="/studentvisa.png"
+            src="/irl.png"
             alt="Smiling student with laptop"
-            className="absolute bottom-0 right-0 h-64 w-auto object-cover object-top rounded-t-2xl"
+            className="absolute -bottom-14 right-0 h-96 z-20 w-auto object-cover object-top rounded-t-2xl"
             style={{ filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.25))" }}
           />
         </div>
