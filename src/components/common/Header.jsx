@@ -123,7 +123,7 @@ const Header = () => {
                 </button>
 
                 {openDropdown === link.label && (
-                  <div className="absolute top-[calc(100%+8px)] left-0 bg-white border border-blue-200 rounded-xl min-w-[200px] p-1.5 shadow-[0_8px_24px_rgba(26,95,216,0.10)] z-50">
+                  <div className="absolute top-[calc(100%+8px)] left-0 bg-white border border-blue-200 rounded-xl min-w-[230px] p-1.5 shadow-[0_8px_24px_rgba(26,95,216,0.10)] z-50">
                     {link.subnavLink.map((sub) => (
                       <a
                         key={sub.label}

@@ -11,6 +11,7 @@ import StudyGermany from "./pages/studydestination/studygermany/StudyGermany";
 import StudyUk from "./pages/studydestination/studyuk/StudyUk";
 import StudyUsa from "./pages/studydestination/studyusa/StudyUsa";
 import Institution from "./pages/institution/Institution";
+import RecruitmentPartner from "./pages/recruitment-partner/RecruitmentPartner";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/uk" element={<StudyUk />} />
           <Route path="/usa" element={<StudyUsa />} />
           <Route path="/institutions" element={<Institution />} />
+          <Route path="/recruitment-partner" element={<RecruitmentPartner />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
