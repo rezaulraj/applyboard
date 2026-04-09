@@ -7,7 +7,7 @@ const HeroRecruitment = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column: Text Content */}
           <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl font-extrabold font-montserrat leading-tight text-gray-900">
+            <h1 className="text-4xl sm:text-5xl font-bold font-montserrat leading-tight text-gray-900">
               Join the Smartest Platform for{" "}
               <span className="text-orange-500">
                 International Student Recruitment

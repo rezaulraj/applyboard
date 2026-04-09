@@ -23,10 +23,10 @@ const RecruitmentSection = () => {
       <div className="flex items-center gap-12 flex-wrap">
         {/* Left */}
         <div className="flex-1 min-w-[280px]">
-          <p className="text-sm font-semibold tracking-[1.8px] font-sans text-blue-600 uppercase mb-3">
+          <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             Recruitment Partners
           </p>
-          <h2 className="text-[36px] font-bold font-montserrat text-[#1E2D4E] leading-tight mb-7">
+          <h2 className="text-3xl lg:text-4xl font-bold font-montserrat text-gray-800 leading-tight mb-7">
             How We Help Recruitment Partners
           </h2>
 

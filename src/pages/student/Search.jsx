@@ -7,7 +7,7 @@ const Search = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           
           {/* Left Side - Floating UI Cards */}
-          <div className="relative">
+          <div className="relative order-2 md:order-1">
             <div className="relative w-full max-w-lg mx-auto">
               
               {/* Card 1 - Coventry University (Top Left) */}
@@ -106,12 +106,12 @@ const Search = () => {
           </div>
 
           {/* Right Side - Text Content */}
-          <div className="space-y-6">
-            <span className="text-base font-bold font-sans tracking-[1.5px] text-blue-600 uppercase">
+          <div className="space-y-6 order-1 md:order-2">
+            <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
               SEARCH
             </span>
 
-            <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-800 leading-tight">
               Select a Program
             </h2>
 

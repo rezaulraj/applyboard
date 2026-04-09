@@ -31,15 +31,16 @@ const FAQ = () => {
     <section className="max-w-6xl mx-auto px-12 py-16 flex gap-14 items-start flex-wrap">
       {/* Left */}
       <div className="shrink-0 w-[360px]">
-        <p className="text-[15px] font-semibold tracking-[1.8px] font-sans text-blue-600 uppercase mb-3">
+        <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
           FAQ's
         </p>
-        <h2 className="text-[36px] font-bold font-montserrat text-[#1E2D4E] leading-tight mb-4">
+        <h2 className="text-3xl lg:text-4xl font-bold font-montserrat text-gray-800 leading-tight mb-4">
           Got Questions? We Have Answers
         </h2>
-        <p className="text-base text-gray-500 leading-relaxed">
-          Still wondering about studying abroad, and how  AdmissionOnBoard can get you
-          there? Read these answers to our most commonly asked questions.
+        <p className="text-base lg:text-lg text-gray-500 font-sans leading-relaxed">
+          Still wondering about studying abroad, and how AdmissionOnBoard can
+          get you there? Read these answers to our most commonly asked
+          questions.
         </p>
       </div>
 
@@ -54,7 +55,7 @@ const FAQ = () => {
               onClick={() => setOpen(open === i ? -1 : i)}
               className="w-full flex items-center justify-between px-6 py-[18px] text-left gap-4 bg-transparent border-none cursor-pointer"
             >
-              <span className="text-[15px] font-semibold text-[#1E2D4E] leading-snug font-sans">
+              <span className="text-base font-semibold text-[#1E2D4E] leading-snug font-sans">
                 {faq.q}
               </span>
               <FiChevronUp

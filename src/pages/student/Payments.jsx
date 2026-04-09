@@ -5,14 +5,14 @@ const MakeEasyPayments = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-12 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left - Text Content */}
-        <div className="space-y-5 order-2 lg:order-1 lg:pr-8">
+        <div className="space-y-5 lg:pr-8">
           {/* Category Label */}
-          <p className="text-base font-sans font-bold tracking-[1.5px] text-blue-600 uppercase">
+          <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             PAYMENTS
           </p>
 
           {/* Main Heading */}
-          <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-800 leading-tight">
             Make Easy Payments
           </h2>
 
@@ -37,7 +37,7 @@ const MakeEasyPayments = () => {
         </div>
 
         {/* Right - Visual Flow Diagram */}
-        <div className="relative order-1 lg:order-2 flex justify-center">
+        <div className="relative flex justify-center">
           <div className="relative w-full max-w-md aspect-square">
             {/* Background Dashed Flow Lines */}
             <svg

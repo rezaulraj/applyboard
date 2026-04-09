@@ -48,7 +48,7 @@ const GetStarted = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header / Title Section */}
         <div className="text-center mb-14 md:mb-20">
-          <h1 className="text-[38px] font-bold tracking-tight font-montserrat text-gray-900 mb-4">
+          <h1 className="text-3xl lg:text-4xl font-bold tracking-tight font-montserrat text-gray-900 mb-4">
             Get Started with  AdmissionOnBoard
           </h1>
         </div>

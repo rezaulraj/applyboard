@@ -6,11 +6,11 @@ const Apply = () => {
       <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 md:gap-16 items-center">
         {/* Left Content */}
         <div className="space-y-6 col-span-7">
-          <span className="text-base font-bold font-sans tracking-[1.5px] text-blue-600 uppercase">
+          <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             APPLY
           </span>
 
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 leading-tight">
             Submit Your Best Application
           </h2>
 

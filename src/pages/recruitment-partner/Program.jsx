@@ -10,13 +10,13 @@ const Program = () => {
           <div className="space-y-6">
             {/* Badge */}
             <div>
-              <span className="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">
+              <span className="text-base font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
                 PROGRAMS
               </span>
             </div>
 
             {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-montserrat font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-800 leading-tight">
               Access 150,000+ Global Study Programs
             </h2>
 
@@ -152,7 +152,7 @@ const Program = () => {
             </div>
 
             {/* Floating Flags */}
-            <div className="absolute top-0 left-0 transform -translate-x-1/3 -translate-y-1/4 bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
+            <div className="absolute top-0 left-1/4 transform -translate-x-1/3 -translate-y-1/4 bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
               <CountryFlag
                 countryCode="GB"
                 svg
@@ -161,7 +161,7 @@ const Program = () => {
               />
             </div>
 
-            <div className="absolute -top-4 left-1/3 transform -translate-x-1/2 bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
+            <div className="absolute -top-10 left-2/4 transform -translate-x-1/2 bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
               <CountryFlag
                 countryCode="AU"
                 svg
@@ -170,7 +170,7 @@ const Program = () => {
               />
             </div>
 
-            <div className="absolute -top-2 right-1/4 transform translate-x-1/2 bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
+            <div className="absolute -top-8 right-1/4 transform translate-x-1/2 bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
               <CountryFlag
                 countryCode="DE"
                 svg
@@ -179,7 +179,7 @@ const Program = () => {
               />
             </div>
 
-            <div className="absolute top-4 right-0 transform translate-x-1/3 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
+            <div className="absolute top-14 right-0 transform translate-x-1/3 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
               <CountryFlag
                 countryCode="IE"
                 svg
@@ -188,7 +188,7 @@ const Program = () => {
               />
             </div>
 
-            <div className="absolute top-1/3 -left-6 transform -translate-x-full bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
+            <div className="absolute top-1/3 left-8 lg:left-36 transform -translate-x-full bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
               <CountryFlag
                 countryCode="US"
                 svg
@@ -197,7 +197,7 @@ const Program = () => {
               />
             </div>
 
-            <div className="absolute bottom-16 -left-2 transform -translate-x-full bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
+            <div className="absolute bottom-16 left-12 lg:left-44 transform -translate-x-full bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
               <CountryFlag
                 countryCode="CA"
                 svg

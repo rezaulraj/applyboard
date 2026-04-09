@@ -66,13 +66,8 @@ const features = [
 
 const ChannelPartners = () => {
   return (
-    <section
-      className="w-full bg-white py-16 px-6"
-    >
-      {/* Section title */}
-      <h2
-        className="text-center text-[36px] font-montserrat font-bold text-gray-900 mb-12 tracking-tight"
-      >
+    <section className="w-full bg-white py-16 px-6">
+      <h2 className="text-center text-3xl lg:text-4xl font-montserrat font-bold text-gray-800 mb-12 tracking-tight">
         Channel Partners
       </h2>
 
@@ -129,12 +124,10 @@ const ChannelPartners = () => {
 
         {/* Right: Content */}
         <div className="flex flex-col gap-5">
-          <span className="text-blue-600 text-[14px] font-sans font-semibold tracking-[1.5px] uppercase">
+          <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3 ">
             Partners Institutions
           </span>
-          <h3
-            className="text-[28px] font-bold font-montserrat text-gray-900 leading-snug tracking-tight"
-          >
+          <h3 className="text-3xl font-bold font-montserrat text-gray-900 leading-snug tracking-tight">
             How We Help Partner Institutions
           </h3>
 
@@ -144,7 +137,7 @@ const ChannelPartners = () => {
                 <div className="w-9 h-9 rounded-lg border-[1.5px] border-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5 text-blue-600">
                   {f.icon}
                 </div>
-                <p className="text-base text-gray-600 font-sans leading-relaxed">
+                <p className="text-base lg:text-lg text-gray-600 font-sans leading-relaxed">
                   {f.text}
                 </p>
               </div>

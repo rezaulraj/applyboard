@@ -46,7 +46,7 @@ const stats = [
 const Stats = () => {
   return (
     <section className="py-16 px-8 text-center">
-      <h2 className="text-[34px] font-montserrat font-bold text-[#1E2D4E] leading-tight mb-12">
+      <h2 className="text-3xl lg:text-4xl font-montserrat font-bold text-gray-800 leading-tight mb-3">
         The Fastest and Easiest Way
         <br />
         to Successfully Study Abroad

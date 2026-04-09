@@ -19,13 +19,13 @@ const StudyAbroad = () => {
     <section className="flex items-center gap-12 px-12 py-14 max-w-6xl mx-auto flex-wrap">
       {/* LEFT */}
       <div className="flex-1 min-w-[280px]">
-        <p className="text-sm font-bold font-sans tracking-[1.5px] text-blue-600 uppercase mb-3">
+        <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
           International Students
         </p>
-        <h2 className="text-[36px] font-bold font-montserrat text-[#1E2D4E] leading-tight mb-4">
+        <h2 className="text-3xl lg:text-4xl font-bold font-montserrat text-gray-800 leading-tight mb-4">
           Find Your Perfect Study Program
         </h2>
-        <p className="text-base text-gray-500 font-sans leading-relaxed mb-7 max-w-[300px]">
+        <p className="text-base lg:text-lg text-gray-600 font-sans leading-relaxed mb-7 max-w-lg">
           We've spent a decade perfecting a faster, easier, quality-first
           international study application process. Now, the world is yours to
           explore in just a few clicks.
@@ -37,14 +37,14 @@ const StudyAbroad = () => {
               <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center shrink-0 mt-0.5">
                 <Icon className="text-blue-600 text-base" />
               </div>
-              <span className="text-base text-gray-500 font-sans leading-relaxed">
+              <span className="text-base lg:text-lg text-gray-600 font-sans leading-relaxed">
                 {text}
               </span>
             </li>
           ))}
         </ul>
 
-        <button className="bg-blue-600 hover:bg-blue-700 font-sans text-white font-semibold text-[18px] px-8 py-[14px] rounded-xl transition-colors duration-200">
+        <button className="bg-blue-600 hover:bg-blue-700 font-sans text-white font-semibold text-[18px] px-8 py-[14px] rounded-xl transition-colors duration-200 cursor-pointer">
           Create a Student Account
         </button>
       </div>

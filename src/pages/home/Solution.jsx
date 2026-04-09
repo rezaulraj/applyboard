@@ -258,17 +258,17 @@ const Solution = () => {
 
         <div className="max-w-[1180px] w-full mx-auto flex flex-col items-center">
           {/* Badge */}
-          <div className="text-sm font-semibold text-blue-600 uppercase mb-[14px] font-sans opacity-0 animate-[fadeUp_0.7s_cubic-bezier(.22,1,.36,1)_0.1s_forwards]">
+          <div className="ttext-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             360 Solutions
           </div>
 
           {/* Title */}
-          <h2 className="font-['Montserrat'] text-[clamp(20px,3.5vw,36px)] font-bold text-[#0f1f45] text-center leading-[1.18] mb-[18px] max-w-[940px] opacity-0 animate-[fadeUp_0.7s_cubic-bezier(.22,1,.36,1)_0.22s_forwards]">
-            Find Every Solution, From Applications to Accommodations
+          <h2 className="text-3xl lg:text-4xl font-montserrat font-bold text-center text-gray-800 leading-tight mb-6">
+            Find Every Solution, From <br /> Applications to Accommodations
           </h2>
 
           {/* Description */}
-          <p className="text-[clamp(14px,1.6vw,16px)] text-gray-800 text-center max-w-[760px] leading-[1.7] mb-8 opacity-0 font-sans animate-[fadeUp_0.7s_cubic-bezier(.22,1,.36,1)_0.34s_forwards]">
+          <p className="text-base lg:text-lg text-center text-gray-600 font-sans leading-relaxed mb-10 max-w-2xl">
             Access our full 360 Solutions, covering everything from application
             to arrival. Get instant language test vouchers, explore financial
             services, and invest in your future with flexible student loans.
@@ -276,7 +276,7 @@ const Solution = () => {
           </p>
 
           {/* CTA Button */}
-          <button className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-[#2563eb] text-white font-['Open_Sans'] font-semibold text-lg py-3.5 px-8 rounded-full cursor-pointer shadow-[0_4px_24px_#4F8EF744] transition-transform duration-200 hover:-translate-y-0.5 hover:scale-104 hover:shadow-[0_8px_32px_#4F8EF766] mb-[54px] tracking-[-0.01em] opacity-0 animate-[fadeUp_0.7s_cubic-bezier(.22,1,.36,1)_0.46s_forwards]">
+          <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 group cursor-pointer">
             Register as a Student
           </button>
 

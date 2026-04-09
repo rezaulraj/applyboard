@@ -738,7 +738,7 @@ const TrustedPartners = () => {
             style={{
               textAlign: "center",
               marginBottom: 14,
-              fontFamily: "'Open Sans', sans-serif",
+              fontFamily: "'Montserrat', sans-serif",
               fontSize: 14,
               fontWeight: 700,
               letterSpacing: "0.16em",

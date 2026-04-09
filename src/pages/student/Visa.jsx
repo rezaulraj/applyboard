@@ -5,12 +5,12 @@ const Visa = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-12 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left - Browser Mockup */}
-        <div className="relative order-1 lg:order-1 flex justify-center">
+        <div className="relative order-2 lg:order-1 flex justify-center">
           <div className="relative w-full max-w-lg">
             {/* Browser Window */}
             <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all duration-500 hover:shadow-3xl hover:-translate-y-1">
               {/* Browser Header */}
-              <div className="bg-gradient-to-r from-blue-600 to-blue-500 h-12 flex items-center px-5 gap-2">
+              <div className="bg-gradient-to-r from-blue-300 to-blue-400 h-12 flex items-center px-5 gap-2">
                 <div className="w-3 h-3 rounded-full bg-white/80" />
                 <div className="w-3 h-3 rounded-full bg-white/80" />
                 <div className="w-3 h-3 rounded-full bg-white/80" />
@@ -26,23 +26,23 @@ const Visa = () => {
                 {/* First Score Row */}
                 <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 animate-fade-in-up">
                   <div className="w-16 h-16 bg-white rounded-xl shadow-md flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl font-bold text-blue-600">95%</span>
+                    <span className="text-xl font-bold text-blue-400">95%</span>
                   </div>
                   <div className="flex-1 space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-gray-600">
+                      <span className="text-sm font-medium text-gray-400">
                         Level of study
                       </span>
                       <div className="h-2 bg-gray-200 rounded-full w-24" />
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-gray-600">
+                      <span className="text-sm font-medium text-gray-400">
                         Province
                       </span>
                       <div className="h-2 bg-gray-200 rounded-full w-20" />
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-gray-600">
+                      <span className="text-sm font-medium text-gray-400">
                         Program
                       </span>
                       <div className="h-2 bg-gray-200 rounded-full w-16" />
@@ -53,23 +53,23 @@ const Visa = () => {
                 {/* Second Score Row */}
                 <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 animate-fade-in-up-delay">
                   <div className="w-16 h-16 bg-white rounded-xl shadow-md flex items-center justify-center flex-shrink-0">
-                    <span className="text-xl font-bold text-blue-600">85%</span>
+                    <span className="text-xl font-bold text-blue-400">85%</span>
                   </div>
                   <div className="flex-1 space-y-2">
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-gray-600">
+                      <span className="text-sm font-medium text-gray-400">
                         Level of study
                       </span>
                       <div className="h-2 bg-gray-200 rounded-full w-24" />
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-gray-600">
+                      <span className="text-sm font-medium text-gray-400">
                         Province
                       </span>
                       <div className="h-2 bg-gray-200 rounded-full w-20" />
                     </div>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-medium text-gray-600">
+                      <span className="text-sm font-medium text-gray-400">
                         Program
                       </span>
                       <div className="h-2 bg-gray-200 rounded-full w-16" />
@@ -78,7 +78,7 @@ const Visa = () => {
                 </div>
 
                 {/* Calculate Button */}
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5 animate-fade-in-up-delay-2">
+                <button className="w-full bg-blue-300 hover:bg-blue-400 text-white font-semibold py-3.5 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5 animate-fade-in-up-delay-2">
                   Calculate visa score
                 </button>
               </div>
@@ -129,9 +129,9 @@ const Visa = () => {
         </div>
 
         {/* Right - Text Content */}
-        <div className="space-y-6 order-2 lg:order-2 lg:pl-8">
+        <div className="space-y-6 order-1 lg:order-2 lg:pl-8">
           {/* Category Label */}
-          <p className="text-base font-sans font-bold tracking-[1.5px] text-blue-600 uppercase">
+          <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             VISA
           </p>
 

@@ -1,7 +1,6 @@
 import React from "react";
 
 const Footer = () => {
-  // Social media icons as inline SVG for easy customization and consistent styling
   const SocialIcon = ({ type, href }) => {
     const getIconPath = () => {
       switch (type) {
@@ -66,9 +65,9 @@ const Footer = () => {
           {/* Left Column - Address & Social */}
           <div className="md:col-span-4 space-y-4">
             <div className="mb-6">
-              <h2 className="text-2xl font-bold font-montserrat uppercase bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                ApplyBoard
-              </h2>
+              <a href="/" className="text-2xl font-bold font-montserrat uppercase bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                AdmissionOnBoard
+              </a>
             </div>
             <div className="space-y-1 text-gray-600 text-sm leading-relaxed">
               <p>101 Frederick St,</p>
@@ -87,10 +86,10 @@ const Footer = () => {
             <FooterHeading>Students</FooterHeading>
             <ul className="space-y-3">
               <li>
-                <FooterLink href="#">Recruitment Partners</FooterLink>
+                <FooterLink href="/recruitment-partner">Recruitment Partners</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">Institutions</FooterLink>
+                <FooterLink href="/institutions">Institutions</FooterLink>
               </li>
             </ul>
             <div className="mt-6">
@@ -111,22 +110,22 @@ const Footer = () => {
             <FooterHeading>Destinations</FooterHeading>
             <ul className="space-y-3">
               <li>
-                <FooterLink href="#">Australia</FooterLink>
+                <FooterLink href="/australia">Australia</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">Canada</FooterLink>
+                <FooterLink href="/canada">Canada</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">Germany</FooterLink>
+                <FooterLink href="/germany">Germany</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">Ireland</FooterLink>
+                <FooterLink href="/ireland">Ireland</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">United Kingdom</FooterLink>
+                <FooterLink href="/uk">United Kingdom</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">United States</FooterLink>
+                <FooterLink href="/usa">United States</FooterLink>
               </li>
             </ul>
           </div>
@@ -161,7 +160,7 @@ const Footer = () => {
                 <FooterLink href="#">Webinar</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">ApplyBoard Insights</FooterLink>
+                <FooterLink href="#">AdmissionOnBoard Insights</FooterLink>
               </li>
             </ul>
           </div>
@@ -169,7 +168,7 @@ const Footer = () => {
 
         {/* Bottom Bar - Copyright & Legal */}
         <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 space-y-3 sm:space-y-0">
-          <p>© 2026 ApplyBoard Inc</p>
+          <p>© 2026 AdmissionOnBoard Inc</p>
           <div className="flex space-x-6">
             <a href="#" className="hover:text-indigo-600 transition-colors">
               Privacy Policy

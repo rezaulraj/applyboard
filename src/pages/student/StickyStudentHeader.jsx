@@ -116,7 +116,7 @@ const StickyStudentHeader = () => {
     <div className="relative">
       <div
         id="sticky-header"
-        className={`sticky top-0 z-40 transition-all duration-500 ease-in-out ${
+        className={`sticky top-20 z-40 transition-all duration-500 ease-in-out ${
           isHeaderVisible
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0 pointer-events-none"

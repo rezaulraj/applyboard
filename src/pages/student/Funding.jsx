@@ -5,7 +5,7 @@ const Funding = () => {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left - Mockup */}
-        <div className="relative flex justify-center lg:justify-start">
+        <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
           <div className="relative w-full max-w-md">
             {/* Browser Window */}
             <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
@@ -250,9 +250,9 @@ const Funding = () => {
         </div>
 
         {/* Right - Text Content */}
-        <div className="space-y-6 lg:pl-8">
+        <div className="space-y-6 lg:pl-8 order-1 lg:order-2">
           {/* Category Label */}
-          <span className="text-base font-bold font-sans tracking-[1.5px] text-blue-600 uppercase">
+          <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             FUNDING
           </span>
 
