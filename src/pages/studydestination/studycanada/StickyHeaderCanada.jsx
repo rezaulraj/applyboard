@@ -106,7 +106,7 @@ const StickyHeaderCanada = () => {
       {/* Header is ALWAYS visible - removed the conditional visibility */}
       <div
         id="sticky-header"
-        className="sticky top-0 z-40 transition-all duration-500 ease-in-out"
+        className="sticky top-20 z-40 transition-all duration-500 ease-in-out"
       >
         <div className="bg-white/80 backdrop-blur-md">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">

@@ -16,10 +16,10 @@ const StudyDestinations = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-10 space-y-3">
-          <span className="text-sm font-bold font-sans tracking-[1.5px] text-blue-600 uppercase">
+          <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             STUDY DESTINATIONS
           </span>
-          <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900">
+          <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900 leading-tight">
             More Study Destinations to Explore
           </h2>
         </div>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
-import AcademicsSection from "./AcademicsSection";
-import Satisfaction from "./Satisfaction";
-import Experience from "./Experience";
-import Life from "./Life";
-import Community from "./Community";
+import AcademicsIreland from "./AcademicsIreland";
+import AffordabilityIreland from "./AffordabilityIreland";
+import ExperienceIreland from "./ExperienceIreland";
+import LifeIreland from "./LifeIreland";
+import InnovationIreland from "./InnovationIreland";
 
-const StickyHeaderSection = () => {
+const StickyHeaderIreland = () => {
   const [activeSection, setActiveSection] = useState("academics");
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
@@ -15,35 +15,35 @@ const StickyHeaderSection = () => {
       label: "ACADEMICS",
       color: "bg-blue-500",
       hasCustom: true,
-      component: AcademicsSection,
+      component: AcademicsIreland,
     },
     {
-      id: "satisfaction",
-      label: "SATISFACTION",
+      id: "affordability",
+      label: "AFFORDABILITY",
       color: "bg-green-500",
       hasCustom: true,
-      component: Satisfaction,
+      component: AffordabilityIreland,
     },
     {
       id: "experience",
       label: "EXPERIENCE",
       color: "bg-purple-500",
       hasCustom: true,
-      component: Experience,
+      component: ExperienceIreland,
     },
     {
       id: "life",
       label: "LIFE",
       color: "bg-orange-500",
       hasCustom: true,
-      component: Life,
+      component: LifeIreland,
     },
     {
-      id: "community",
-      label: "COMMUNITY",
+      id: "innovation",
+      label: "INNOVATION",
       color: "bg-pink-500",
       hasCustom: true,
-      component: Community,
+      component: InnovationIreland,
     },
   ];
 
@@ -118,7 +118,7 @@ const StickyHeaderSection = () => {
         <div className="bg-white/80 backdrop-blur-md">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-montserrat font-bold text-center text-gray-800 mb-5">
-              5 Incredible Reasons to Study in Australia
+              5 Incredible Reasons to Study in Ireland
             </h2>
 
             <nav className="flex flex-wrap justify-center gap-2 sm:gap-3">
@@ -199,4 +199,4 @@ const StickyHeaderSection = () => {
   );
 };
 
-export default StickyHeaderSection;
+export default StickyHeaderIreland;

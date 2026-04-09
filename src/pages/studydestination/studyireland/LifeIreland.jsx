@@ -1,0 +1,135 @@
+import React from "react";
+
+const LifeIreland = () => {
+  return (
+    <div className="max-w-6xl mx-auto px-6 py-16 flex flex-col gap-16">
+      {/* Top Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+        {/* Left: Text */}
+        <div className="flex flex-col gap-5 animate-fade-in col-span-7">
+          <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
+            Life
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900 leading-tight">
+            Enjoy a High Quality of Life
+          </h2>
+          <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
+            Ireland has much to offer—from historic, centuries-old cathedrals to
+            tall, rocky islands of green. Those studying in Ireland can expect
+            to see luxurious grassy meadows, rolling hills, and awe-inspiring
+            shoreside cliffs. Access to so much incredible natural beauty may be
+            one of the reasons Ireland boasts such a{" "}
+            <a
+              href="#"
+              className="text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors"
+            >
+              high quality of life
+            </a>
+            for its residents.
+          </p>
+          <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
+            Ireland’s residents are equally wonderful! Ireland is known for its
+            legendary culture and nightlife; students can expect to make more
+            than a few visits to the local pubs to socialize, unwind, and enjoy
+            a meal with new friends. Ireland’s safe, inclusive, and
+            multicultural communities are welcoming to international students
+            from every corner of the world.
+          </p>
+        </div>
+
+        {/* Right: Stacked Images */}
+        <div className="flex flex-col gap-4 col-span-5">
+          {/* Top image */}
+          <div className="rounded-2xl shadow-lg h-64 relative ">
+            <img
+              src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Australian coastal walkway"
+              className="w-full h-full object-cover rounded-2xl"
+            />
+            <div className="absolute bottom-3 -right-8">
+              <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-md w-fit">
+                <div className="w-6 h-6 rounded-full bg-yellow-100 flex items-center justify-center flex-shrink-0">
+                  <svg
+                    className="w-3 h-3 text-yellow-700"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium text-gray-800">
+                  High Quality Life
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom image — offset left */}
+          <div className="self-end w-4/5 rounded-2xl shadow-lg h-56 relative">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1663946448097-c2358e0c6b6c?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="People enjoying Australian nature"
+              className="w-full h-full object-cover rounded-2xl"
+            />
+            <div className="absolute bottom-3 -left-8">
+              <div className="flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-md w-fit">
+                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0">
+                  <svg
+                    className="w-3 h-3 text-green-700"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2.2}
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M17 8C8 10 5.9 16.17 3.82 19.82" />
+                    <path d="M12 22C12 22 17 16 20 10c-4 2-7 0-8-4" />
+                  </svg>
+                </div>
+                <span className="text-sm font-medium text-gray-800">
+                  Natural Scenery
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom: English Proficiency Banner */}
+      <div className="relative rounded-2xl bg-gradient-to-br from-blue-700 via-blue-600 to-blue-500 px-10 py-14 text-center text-white shadow-xl overflow-hidden">
+        {/* Decorative Circular Rings Background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Large outer rings */}
+          <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] rounded-full border border-white/50" />
+          <div className="absolute -top-1/2 -right-1/4 w-[600px] h-[600px] rounded-full border border-white/30" />
+          <div className="absolute -top-1/2 -right-1/4 w-[400px] h-[400px] rounded-full border border-white/60" />
+
+          <div className="absolute -bottom-1/2 -left-1/4 w-[700px] h-[700px] rounded-full border border-white/40" />
+          <div className="absolute -bottom-1/2 -left-1/4 w-[500px] h-[500px] rounded-full border border-white/30" />
+          <div className="absolute -bottom-1/2 -left-1/4 w-[300px] h-[300px] rounded-full border border-white/70" />
+
+          {/* Additional subtle rings */}
+          <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full border border-white/50" />
+          <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full border border-white/30" />
+
+          {/* Radial gradient overlay for depth */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/40 via-transparent to-blue-800/60" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10">
+          <h3 className="text-3xl lg:text-4xl font-bold font-montserrat mb-5 tracking-tight">
+            Proof of English Proficiency in Ireland
+          </h3>
+          <p className="text-base lg:text-lg font-sans text-blue-100 leading-relaxed max-w-2xl mx-auto mb-4">
+            Test score requirements vary, so check programme and institution
+            language requirements very closely. Widely-accepted English language
+            proficiency tests in Ireland include TOEFL, IELTS, and PTE, among
+            others.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LifeIreland;
