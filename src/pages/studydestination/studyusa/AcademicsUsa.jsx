@@ -10,14 +10,14 @@ const AcademicsUsa = () => {
         "https://images.unsplash.com/photo-1562774053-701939374585?w=600&q=80",
     },
     {
-      university: "University of Greenwich",
-      program: "Master of Science - Global Public Health",
+      university: "University at Buffalo, State",
+      program: "Master of Science - Computer Science and Engineering - AL/ML",
       image:
         "https://images.unsplash.com/photo-1564981797816-1043664bf78d?w=600&q=80",
     },
     {
-      university: "Bournemouth University",
-      program: "Bachelor of Science (Honours) - Forensic Science",
+      university: "University of Arizona",
+      program: "Master of Science - Agricultural and Resource Economics",
       image:
         "https://images.unsplash.com/photo-1627556592933-ffe99c1cd9eb?w=600&q=80",
     },
