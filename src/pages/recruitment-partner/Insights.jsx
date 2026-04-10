@@ -28,9 +28,12 @@ const Insights = () => {
 
             {/* Button */}
             <div className="pt-2">
-              <button className="inline-flex items-center font-sans text-lg px-8 py-3.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl">
+              <a
+                href="/blogs"
+                className="inline-flex items-center font-sans text-lg px-8 py-3.5 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg hover:shadow-xl"
+              >
                 Read Our Latest Trends Report
-              </button>
+              </a>
             </div>
           </div>
 

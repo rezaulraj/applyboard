@@ -20,11 +20,13 @@ const LifeIreland = () => {
             shoreside cliffs. Access to so much incredible natural beauty may be
             one of the reasons Ireland boasts such a{" "}
             <a
-              href="#"
+              href="https://www.numbeo.com/quality-of-life/rankings_by_country.jsp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors"
             >
               high quality of life
-            </a>
+            </a>{" "}
             for its residents.
           </p>
           <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">

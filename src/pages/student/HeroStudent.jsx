@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
 
 const HeroStudent = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <section className=" bg-white flex items-center px-6 sm:px-12 lg:px-20 py-16">
       <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
@@ -12,7 +14,10 @@ const HeroStudent = () => {
               <span className="text-blue-600 block mt-2">Perfect Program</span>
             </h1>
 
-            <button className="group inline-flex items-center gap-2 bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold font-sans text-lg px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5">
+            <button
+              className="group inline-flex items-center gap-2 bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-semibold font-sans text-lg px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5"
+              onClick={() => setPopupOpen(true)}
+            >
               Start Your Journey
               <svg
                 className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -79,6 +84,10 @@ const HeroStudent = () => {
           </div>
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </section>
   );
 };

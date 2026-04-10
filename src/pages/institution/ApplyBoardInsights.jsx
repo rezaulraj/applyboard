@@ -14,6 +14,7 @@ const ApplyBoardInsights = () => {
       image:
         "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
       graphicColor: "text-purple-300",
+      link: "/blogs",
     },
     {
       id: 2,
@@ -26,6 +27,7 @@ const ApplyBoardInsights = () => {
       image:
         "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
       graphicColor: "text-teal-300",
+      link: "/blogs",
     },
     {
       id: 3,
@@ -38,6 +40,7 @@ const ApplyBoardInsights = () => {
       image:
         "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg",
       graphicColor: "text-orange-300",
+      link: "/blogs",
     },
   ];
 
@@ -46,10 +49,10 @@ const ApplyBoardInsights = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
-             AdmissionOnBoard INSIGHTS
+            AdmissionOnBoard INSIGHTS
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold font-montserrat text-gray-900">
-            Explore the Latest  AdmissionOnBoard Insights
+            Explore the Latest AdmissionOnBoard Insights
           </h2>
         </div>
 
@@ -182,11 +185,13 @@ const ApplyBoardInsights = () => {
                 </h3>
 
                 {/* Date */}
-                <p className="text-sm text-gray-500 mb-4 font-sans">{article.date}</p>
+                <p className="text-sm text-gray-500 mb-4 font-sans">
+                  {article.date}
+                </p>
 
                 {/* Read More Link */}
                 <a
-                  href="#"
+                  href={article.link}
                   className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 font-sans"
                 >
                   Read More
@@ -211,9 +216,12 @@ const ApplyBoardInsights = () => {
 
         {/* View More Button */}
         <div className="text-center mt-12">
-          <button className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 font-sans transition-colors duration-200 shadow-lg hover:shadow-xl">
+          <a
+            href="/blogs"
+            className="inline-flex items-center px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 font-sans transition-colors duration-200 shadow-lg hover:shadow-xl"
+          >
             View More Articles
-          </button>
+          </a>
         </div>
       </div>
     </div>

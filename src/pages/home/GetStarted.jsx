@@ -15,6 +15,7 @@ const GetStarted = () => {
       bgAccent: "from-blue-50 to-indigo-50",
       buttonColor: "bg-blue-600 hover:bg-blue-700",
       textColor: "text-blue-900",
+      link: "/students",
     },
     {
       title: "Recruitment Partner",
@@ -27,6 +28,7 @@ const GetStarted = () => {
       bgAccent: "from-emerald-50 to-teal-50",
       buttonColor: "bg-blue-600 hover:bg-blue-700",
       textColor: "text-blue-900",
+      link: "/recruitment-partner",
     },
     {
       title: "Partner School",
@@ -39,6 +41,7 @@ const GetStarted = () => {
       bgAccent: "from-amber-50 to-orange-50",
       buttonColor: "bg-blue-600 hover:bg-blue-700",
       textColor: "text-blue-900",
+      link: "/institutions",
     },
   ];
 
@@ -49,7 +52,7 @@ const GetStarted = () => {
         {/* Header / Title Section */}
         <div className="text-center mb-14 md:mb-20">
           <h1 className="text-3xl lg:text-4xl font-bold tracking-tight font-montserrat text-gray-900 mb-4">
-            Get Started with  AdmissionOnBoard
+            Get Started with AdmissionOnBoard
           </h1>
         </div>
 
@@ -77,7 +80,7 @@ const GetStarted = () => {
                 </p>
                 <div className="mt-auto pt-2">
                   <a
-                    href={card.buttonLink}
+                    href={card.link}
                     className={`inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 border border-transparent text-[18px] font-sans font-medium rounded-xl shadow-sm text-white ${card.buttonColor} transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-${card.buttonColor.split(" ")[0].replace("bg-", "")} group-hover:shadow-md`}
                   >
                     {card.buttonText}

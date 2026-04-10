@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "../../../components/common/StudentRegistrationPopup";
 
 const HeroGermany = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <section className="bg-gradient-to-br from-gray-50 via-white to-purple-50/30 flex items-center px-6 sm:px-12 lg:px-20 py-16">
       <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center md:px-16">
@@ -28,7 +30,10 @@ const HeroGermany = () => {
             Deutschland.
           </p>
 
-          <button className="group relative inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-base font-sans rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5">
+          <button
+            onClick={() => setPopupOpen(true)}
+            className="group relative inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-base font-sans rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5"
+          >
             Start Your Journey
           </button>
         </div>
@@ -64,6 +69,10 @@ const HeroGermany = () => {
           </div>
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </section>
   );
 };

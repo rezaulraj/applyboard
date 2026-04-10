@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "../../../components/common/StudentRegistrationPopup";
 
 const AcademicsUk = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   // Featured programs data
   const featuredPrograms = [
     {
@@ -108,7 +110,10 @@ const AcademicsUk = () => {
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 font-montserrat">
               Explore Some of the UK’s Top Study Programs
             </h3>
-            <button className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-50 text-blue-600 font-semibold rounded-lg border-2 border-blue-200 hover:border-blue-300 transition-all duration-300 shadow-sm hover:shadow-md group">
+            <button
+              onClick={() => setPopupOpen(true)}
+              className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-50 text-blue-600 font-semibold rounded-lg border-2 border-blue-200 hover:border-blue-300 transition-all duration-300 shadow-sm hover:shadow-md group"
+            >
               Explore more programs
               <svg
                 className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -169,7 +174,10 @@ const AcademicsUk = () => {
                   </div>
 
                   {/* Apply Now Button */}
-                  <button className="w-full py-3 px-4 bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white font-semibold rounded-lg transition-all duration-300 group/btn">
+                  <button
+                    onClick={() => setPopupOpen(true)}
+                    className="w-full py-3 px-4 bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white font-semibold rounded-lg transition-all duration-300 group/btn"
+                  >
                     <span className="flex items-center justify-center gap-2">
                       Apply Now
                       <svg
@@ -193,6 +201,10 @@ const AcademicsUk = () => {
           </div>
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </div>
   );
 };

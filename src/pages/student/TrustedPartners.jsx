@@ -5,12 +5,12 @@ const TrustedPartners = () => {
   const [activeCountry, setActiveCountry] = useState("australia");
 
   const countries = [
-    { id: "australia", name: "Australia", code: "AU" },
-    { id: "canada", name: "Canada", code: "CA" },
-    { id: "germany", name: "Germany", code: "DE" },
-    { id: "ireland", name: "Ireland", code: "IE" },
-    { id: "united-states", name: "United States", code: "US" },
-    { id: "united-kingdom", name: "United Kingdom", code: "GB" },
+    { id: "australia", name: "Australia", code: "AU", link: "/australia" },
+    { id: "canada", name: "Canada", code: "CA", link: "/canada" },
+    { id: "germany", name: "Germany", code: "DE", link: "/germany" },
+    { id: "ireland", name: "Ireland", code: "IE", link: "/ireland" },
+    { id: "united-states", name: "United States", code: "US", link: "/usa" },
+    { id: "united-kingdom", name: "United Kingdom", code: "GB", link: "/uk" },
   ];
 
   const universities = {
@@ -282,7 +282,10 @@ const TrustedPartners = () => {
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold font-sans text-base px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 group">
+          <a
+            href={countries.find((c) => c.id === activeCountry)?.link}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold font-sans text-base px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 group"
+          >
             <span className="flex items-center gap-2">
               Explore More{" "}
               {activeCountry === "australia"
@@ -303,7 +306,7 @@ const TrustedPartners = () => {
                 />
               </svg>
             </span>
-          </button>
+          </a>
         </div>
       </div>
 

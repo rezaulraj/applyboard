@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "../../../components/common/StudentRegistrationPopup";
 
 const StudentVisaGermany = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 flex flex-col gap-14">
       {/* Top Section: Student Visa */}
@@ -28,7 +30,9 @@ const StudentVisaGermany = () => {
             intensive German language course).
           </p>
           <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
-           After being granted a visa, as soon as you arrive in Germany, you must also apply for a long-term residence permit in the city you’re studying in.
+            After being granted a visa, as soon as you arrive in Germany, you
+            must also apply for a long-term residence permit in the city you’re
+            studying in.
           </p>
 
           <h3 className="text-lg sm:text-xl font-montserrat font-semibold text-gray-800 leading-tight">
@@ -86,9 +90,12 @@ const StudentVisaGermany = () => {
           <p className="text-base font-sans leading-relaxed text-white/80 ">
             Ready to launch your study abroad journey? It can be intimidating,
             but we’re here for you! Follow in the steps of 1.3M+ other students
-            and trust  AdmissionOnBoard’s team of experts to guide your way.
+            and trust AdmissionOnBoard’s team of experts to guide your way.
           </p>
-          <button className="mt-2 w-fit bg-white text-blue-700 font-sans font-semibold text-base px-7 py-3.5 rounded-xl hover:bg-purple-50 transition-colors">
+          <button
+            onClick={() => setPopupOpen(true)}
+            className="mt-2 w-fit bg-white text-blue-700 font-sans font-semibold text-base px-7 py-3.5 rounded-xl hover:bg-purple-50 transition-colors"
+          >
             Find Your Perfect Program
           </button>
         </div>
@@ -103,6 +110,10 @@ const StudentVisaGermany = () => {
           />
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </div>
   );
 };

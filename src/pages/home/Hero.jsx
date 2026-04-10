@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
 
 const Hero = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <section className="mt-10">
       <div className="max-w-6xl mx-auto bg-blue-50 rounded-4xl px-16 py-8 flex items-center justify-between gap-10 overflow-hidden min-h-[400px]">
@@ -13,9 +15,12 @@ const Hero = () => {
           <p className="font-sans text-[18px] text-gray-500 leading-relaxed mt-4 mb-8 max-w-[420px]">
             Explore 1,500+ global universities and colleges. Submit your best
             possible application with a 95% success rate. Unlock your full
-            potential with  AdmissionOnBoard!
+            potential with AdmissionOnBoard!
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 font-sans leading-relaxed text-white font-semibold text-[18px] px-7 py-3 rounded-lg transition-colors duration-200">
+          <button
+            onClick={() => setPopupOpen(true)}
+            className="bg-blue-600 hover:bg-blue-700 font-sans leading-relaxed text-white font-semibold text-[18px] px-7 py-3 rounded-lg transition-colors duration-200"
+          >
             Register as a Student
           </button>
         </div>
@@ -82,6 +87,10 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </section>
   );
 };

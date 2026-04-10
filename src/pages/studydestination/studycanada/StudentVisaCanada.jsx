@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "../../../components/common/StudentRegistrationPopup";
 
 const StudentVisaCanada = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 flex flex-col gap-14">
       {/* Top Section: Student Visa */}
@@ -84,7 +86,10 @@ const StudentVisaCanada = () => {
             but we’re here for you! Follow in the steps of 1.3M+ other students
             and trust AdmissionOnBoard’s team of experts to guide your way.
           </p>
-          <button className="mt-2 w-fit bg-white text-blue-700 font-sans font-semibold text-base px-7 py-3.5 rounded-xl hover:bg-purple-50 transition-colors">
+          <button
+            onClick={() => setPopupOpen(true)}
+            className="mt-2 w-fit bg-white text-blue-700 font-sans font-semibold text-base px-7 py-3.5 rounded-xl hover:bg-purple-50 transition-colors"
+          >
             Find Your Perfect Program
           </button>
         </div>
@@ -99,6 +104,10 @@ const StudentVisaCanada = () => {
           />
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </div>
   );
 };

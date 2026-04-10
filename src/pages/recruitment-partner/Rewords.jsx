@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
+import PartnershipFormModal from "../../components/common/PartnershipFormModal";
 
 const Rewords = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -42,7 +47,9 @@ const Rewords = () => {
                     d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"
                   />
                 </svg>
-                <span className="font-semibold tracking-wide">AdmissionOnBoard</span>
+                <span className="font-semibold tracking-wide">
+                  AdmissionOnBoard
+                </span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold tracking-widest flex items-center gap-1">
                 ELEV
@@ -252,16 +259,23 @@ const Rewords = () => {
 
             {/* Buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
-              <button className="px-6 py-3 bg-blue-600 text-white font-sans text-base lg:text-lg font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-md">
+              <button
+                onClick={openModal}
+                className="px-6 py-3 bg-blue-600 text-white font-sans text-base lg:text-lg font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-md"
+              >
                 Register Now
               </button>
-              <button className="px-6 py-3 bg-white text-blue-600 font-sans text-base lg:text-lg font-semibold rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors duration-200">
+              <a
+                href="/blogs"
+                className="px-6 py-3 bg-white text-blue-600 font-sans text-base lg:text-lg font-semibold rounded-lg border-2 border-blue-600 hover:bg-blue-50 transition-colors duration-200"
+              >
                 Read More
-              </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
+      <PartnershipFormModal isOpen={isModalOpen} onClose={closeModal} />
     </section>
   );
 };

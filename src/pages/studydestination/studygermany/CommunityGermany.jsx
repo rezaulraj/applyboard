@@ -63,7 +63,9 @@ const CommunityGermany = () => {
           <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
             In addition to the positive student experience, many immigrants{" "}
             <a
-              href="#"
+              href="https://www.migrationpolicy.org/article/germanys-approach-integration-immigrants"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-400 hover:underline"
             >
               build happy new lives for themselves

@@ -18,17 +18,20 @@ const SuccessStoriesSection = () => {
 
           {/* Description */}
           <p className="text-base sm:text-lg font-sans text-gray-600 leading-relaxed mb-8">
-            " AdmissionOnBoard and Algoma worked together to build awareness around
-            Algoma's affordable, flexible undergraduate options to a global
-            student audience. This led to international undergraduate enrolment
-            growing from 7 percent to 25 percent of international student
-            enrolment over the last couple of years."
+            " AdmissionOnBoard and Algoma worked together to build awareness
+            around Algoma's affordable, flexible undergraduate options to a
+            global student audience. This led to international undergraduate
+            enrolment growing from 7 percent to 25 percent of international
+            student enrolment over the last couple of years."
           </p>
 
           {/* Read More Button */}
-          <button className="inline-flex items-center px-6 py-2.5 border-2 border-blue-600 text-blue-600 font-semibold rounded-md font-sans hover:bg-blue-600 hover:text-white transition-colors duration-200 text-base">
+          <a
+            href="/blogs"
+            className="inline-flex items-center px-6 py-2.5 border-2 border-blue-600 text-blue-600 font-semibold rounded-md font-sans hover:bg-blue-600 hover:text-white transition-colors duration-200 text-base"
+          >
             Read More
-          </button>
+          </a>
         </div>
 
         {/* Main Banner Card */}
@@ -51,7 +54,9 @@ const SuccessStoriesSection = () => {
               {/* Stat 1: Green */}
               <div className="bg-emerald-500 rounded-lg p-4 text-white shadow-lg">
                 <p className="text-2xl font-bold font-montserrat">1.3 M+</p>
-                <p className="text-sm font-medium mt-1 font-sans">students helped</p>
+                <p className="text-sm font-medium mt-1 font-sans">
+                  students helped
+                </p>
               </div>
 
               {/* Stat 2: Blue */}
@@ -71,19 +76,25 @@ const SuccessStoriesSection = () => {
               {/* Stat 4: Dark Gray */}
               <div className="bg-gray-800/80 backdrop-blur-sm rounded-lg p-4 text-white shadow-lg">
                 <p className="text-2xl font-bold font-montserrat">1,500+</p>
-                <p className="text-sm font-medium mt-1 font-sans">partner institutions</p>
+                <p className="text-sm font-medium mt-1 font-sans">
+                  partner institutions
+                </p>
               </div>
 
               {/* Stat 5: Purple */}
               <div className="bg-purple-600 rounded-lg p-4 text-white shadow-lg">
                 <p className="text-2xl font-bold font-montserrat">180+</p>
-                <p className="text-sm font-medium mt-1 font-sans">student countries</p>
+                <p className="text-sm font-medium mt-1 font-sans">
+                  student countries
+                </p>
               </div>
 
               {/* Stat 6: Orange */}
               <div className="bg-amber-500 rounded-lg p-4 text-white shadow-lg">
                 <p className="text-2xl font-bold font-montserrat">5,000+</p>
-                <p className="text-sm font-medium mt-1 font-sans">recruitment partners</p>
+                <p className="text-sm font-medium mt-1 font-sans">
+                  recruitment partners
+                </p>
               </div>
             </div>
           </div>

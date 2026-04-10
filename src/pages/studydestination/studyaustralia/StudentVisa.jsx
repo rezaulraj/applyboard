@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "../../../components/common/StudentRegistrationPopup";
 
 const StudentVisa = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 flex flex-col gap-14">
       {/* Top Section: Student Visa */}
@@ -21,7 +23,9 @@ const StudentVisa = () => {
             To apply, you'll submit your student visa application online through
             the Australian Government's{" "}
             <a
-              href="#"
+              href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-listing/student-500"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-base lg:text-lg font-sans text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors leading-relaxed"
             >
               ImmiAccount system
@@ -83,7 +87,10 @@ const StudentVisa = () => {
             but we’re here for you! Follow in the steps of 1.3M+ other students
             and trust AdmissionOnBoard’s team of experts to guide your way.
           </p>
-          <button className="mt-2 w-fit bg-white text-blue-700 font-sans font-semibold text-base px-7 py-3.5 rounded-xl hover:bg-purple-50 transition-colors">
+          <button
+            onClick={() => setPopupOpen(true)}
+            className="mt-2 w-fit bg-white text-blue-700 font-sans font-semibold text-base px-7 py-3.5 rounded-xl hover:bg-purple-50 transition-colors"
+          >
             Find Your Perfect Program
           </button>
         </div>
@@ -98,6 +105,10 @@ const StudentVisa = () => {
           />
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </div>
   );
 };

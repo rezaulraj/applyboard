@@ -1,11 +1,6 @@
-import React, { useState } from "react";
-import PartnershipFormModal from "../../components/common/PartnershipFormModal";
+import React from "react";
 
-const RecruitmentPartnerBanner = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+const StudentBanner = () => {
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -35,24 +30,20 @@ const RecruitmentPartnerBanner = () => {
               {/* Text & Button Content */}
               <div className="relative z-10 max-w-md">
                 <h2 className="text-2xl md:text-3xl font-bold font-montserrat text-white mb-3 leading-tight">
-                  Register as a Recruitment Partner
+                  Register for Free to Get Started
                 </h2>
                 <p className="text-white/90 text-sm md:text-base mb- font-sans leading-relaxed">
-                  Ready to take your recruitment to the next level of quality,
-                  efficiency, and control?
+                  Ready to kick off your study abroad journey? We’ll guide you
+                  from application to arrival!
                 </p>
-                <button
-                  onClick={openModal}
-                  className="inline-flex items-center bg-white text-lg text-blue-600 font-semibold px-6 py-2.5 rounded-lg hover:bg-gray-50 hover:shadow-md transition-all duration-200 mt-4"
-                >
-                  Register Now
+                <button className="inline-flex items-center bg-white text-lg text-blue-600 font-semibold px-6 py-2.5 rounded-lg hover:bg-gray-50 hover:shadow-md transition-all duration-200 mt-4">
+                  Register as a Student
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <PartnershipFormModal isOpen={isModalOpen} onClose={closeModal} />
     </section>
   );
 };

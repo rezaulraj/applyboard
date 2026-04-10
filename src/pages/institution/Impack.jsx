@@ -1,4 +1,8 @@
+import { useState } from "react";
+import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
+
 const Impack = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <div className="min-h-screen bg-white pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
@@ -183,13 +187,20 @@ const Impack = () => {
                 Ready to take your recruitment to the next level of quality,
                 efficiency, and control
               </h3>
-              <button className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-md">
+              <button
+                onClick={() => setPopupOpen(true)}
+                className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-md font-sans text-base md:text-lg"
+              >
                 Partner with us today
               </button>
             </div>
           </div>
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </div>
   );
 };

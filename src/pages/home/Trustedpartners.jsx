@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import ReactCountryFlag from "react-country-flag";
+import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
 
 const countries = [
-  { id: "australia", label: "Australia", code: "AU" },
-  { id: "canada", label: "Canada", code: "CA" },
-  { id: "germany", label: "Germany", code: "DE" },
-  { id: "ireland", label: "Ireland", code: "IE" },
-  { id: "usa", label: "United States", code: "US" },
-  { id: "uk", label: "United Kingdom", code: "GB" },
+  { id: "australia", label: "Australia", code: "AU", link: "/australia" },
+  { id: "canada", label: "Canada", code: "CA", link: "/canada" },
+  { id: "germany", label: "Germany", code: "DE", link: "/germany" },
+  { id: "ireland", label: "Ireland", code: "IE", link: "/ireland" },
+  { id: "usa", label: "United States", code: "US", link: "/usa" },
+  { id: "uk", label: "United Kingdom", code: "GB", link: "/uk" },
 ];
 
 const universities = {
@@ -26,6 +27,7 @@ const universities = {
       founded: "1971",
       students: "50,000+",
       ranking: "Top 3% Worldwide",
+      link: "/australia",
     },
     {
       id: 2,
@@ -41,6 +43,7 @@ const universities = {
       founded: "1870",
       students: "22,000+",
       ranking: "Top Regional University AU",
+      link: "/australia",
     },
     {
       id: 3,
@@ -56,6 +59,7 @@ const universities = {
       founded: "1974",
       students: "61,000+",
       ranking: "Top 1% Worldwide",
+      link: "/australia",
     },
   ],
   canada: [
@@ -73,6 +77,7 @@ const universities = {
       founded: "1827",
       students: "97,000+",
       ranking: "#1 in Canada",
+      link: "/canada",
     },
     {
       id: 5,
@@ -88,6 +93,7 @@ const universities = {
       founded: "1821",
       students: "40,000+",
       ranking: "Top 30 Worldwide",
+      link: "/canada",
     },
     {
       id: 6,
@@ -103,6 +109,7 @@ const universities = {
       founded: "1908",
       students: "65,000+",
       ranking: "Top 40 Worldwide",
+      link: "/canada",
     },
   ],
   germany: [
@@ -120,6 +127,7 @@ const universities = {
       founded: "1868",
       students: "50,000+",
       ranking: "#1 in Germany (Engineering)",
+      link: "/germany",
     },
     {
       id: 8,
@@ -135,6 +143,7 @@ const universities = {
       founded: "1386",
       students: "30,000+",
       ranking: "Top 100 Worldwide",
+      link: "/germany",
     },
     {
       id: 9,
@@ -150,6 +159,7 @@ const universities = {
       founded: "1870",
       students: "45,000+",
       ranking: "Top Technical University EU",
+      link: "/germany",
     },
   ],
   ireland: [
@@ -166,6 +176,7 @@ const universities = {
       founded: "1592",
       students: "17,000+",
       ranking: "Top 100 Worldwide",
+      link: "/ireland",
     },
     {
       id: 11,
@@ -181,6 +192,7 @@ const universities = {
       founded: "1854",
       students: "35,000+",
       ranking: "Top 200 Worldwide",
+      link: "/ireland",
     },
     {
       id: 12,
@@ -196,6 +208,7 @@ const universities = {
       founded: "1845",
       students: "18,000+",
       ranking: "Top Research University IE",
+      link: "/ireland",
     },
   ],
   usa: [
@@ -213,6 +226,7 @@ const universities = {
       founded: "1636",
       students: "23,000+",
       ranking: "#1 Worldwide (multiple rankings)",
+      link: "/usa",
     },
     {
       id: 14,
@@ -228,6 +242,7 @@ const universities = {
       founded: "1861",
       students: "11,000+",
       ranking: "#1 for Engineering & Technology",
+      link: "/usa",
     },
     {
       id: 15,
@@ -243,6 +258,7 @@ const universities = {
       founded: "1885",
       students: "17,000+",
       ranking: "Top 5 Worldwide",
+      link: "/usa",
     },
   ],
   uk: [
@@ -260,6 +276,7 @@ const universities = {
       founded: "1096",
       students: "24,000+",
       ranking: "#1 in the UK",
+      link: "/uk",
     },
     {
       id: 17,
@@ -275,6 +292,7 @@ const universities = {
       founded: "1209",
       students: "24,000+",
       ranking: "Top 5 Worldwide",
+      link: "/uk",
     },
     {
       id: 18,
@@ -290,6 +308,7 @@ const universities = {
       founded: "1907",
       students: "19,000+",
       ranking: "Top 10 Worldwide",
+      link: "/uk",
     },
   ],
 };
@@ -466,7 +485,7 @@ const Modal = ({ uni, onClose }) => {
             ))}
           </div>
           <button
-            onClick={onClose}
+            onClick={() => setPopupOpen(true)}
             style={{
               marginTop: 22,
               width: "100%",
@@ -493,6 +512,7 @@ const Modal = ({ uni, onClose }) => {
 
 const UniversityCard = ({ uni, onClick }) => {
   const [hovered, setHovered] = useState(false);
+
   return (
     <div
       onClick={() => onClick(uni)}
@@ -608,7 +628,7 @@ const TrustedPartners = () => {
   const [activeTab, setActiveTab] = useState("australia");
   const [selectedUni, setSelectedUni] = useState(null);
   const [animating, setAnimating] = useState(false);
-
+  const [popupOpen, setPopupOpen] = useState(false);
   const handleTabChange = (id) => {
     if (id === activeTab) return;
     setAnimating(true);
@@ -801,12 +821,16 @@ const TrustedPartners = () => {
 
           {/* CTA */}
           <div style={{ textAlign: "center" }}>
-            <button className="tp-explore-btn">
+            <a href={activeCountry?.link} className="tp-explore-btn">
               Explore More {activeCountry?.label} Institutions →
-            </button>
+            </a>
           </div>
         </div>
       </section>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </>
   );
 };

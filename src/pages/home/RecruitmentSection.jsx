@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { LuUsersRound, LuLayers, LuClock } from "react-icons/lu";
+import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
 
 const features = [
   {
@@ -17,6 +18,7 @@ const features = [
 ];
 
 const RecruitmentSection = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <div className="max-w-6xl mx-auto px-12 py-14">
       {/* TOP ROW */}
@@ -113,11 +115,18 @@ const RecruitmentSection = () => {
             Pick your programs. Apply all at once. Built-in quality checks give
             you a ~95% chance of application success.
           </p>
-          <button className="border-2 border-white/70 font-sans text-white font-bold text-base px-6 py-[10px] rounded-lg hover:bg-white hover:text-blue-600 transition-all">
+          <button
+            className="border-2 border-white/70 font-sans text-white font-bold text-base px-6 py-[10px] rounded-lg hover:bg-white hover:text-blue-600 transition-all"
+            onClick={() => setPopupOpen(true)}
+          >
             Start Your Student Journey
           </button>
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </div>
   );
 };

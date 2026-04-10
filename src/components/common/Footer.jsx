@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "./StudentRegistrationPopup";
 
 const Footer = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   const SocialIcon = ({ type, href }) => {
     const getIconPath = () => {
       switch (type) {
@@ -65,7 +67,10 @@ const Footer = () => {
           {/* Left Column - Address & Social */}
           <div className="md:col-span-4 space-y-4">
             <div className="mb-6">
-              <a href="/" className="text-2xl font-bold font-montserrat uppercase bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+              <a
+                href="/"
+                className="text-2xl font-bold font-montserrat uppercase bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
+              >
                 AdmissionOnBoard
               </a>
             </div>
@@ -86,7 +91,9 @@ const Footer = () => {
             <FooterHeading>Students</FooterHeading>
             <ul className="space-y-3">
               <li>
-                <FooterLink href="/recruitment-partner">Recruitment Partners</FooterLink>
+                <FooterLink href="/recruitment-partner">
+                  Recruitment Partners
+                </FooterLink>
               </li>
               <li>
                 <FooterLink href="/institutions">Institutions</FooterLink>
@@ -96,10 +103,15 @@ const Footer = () => {
               <FooterHeading>Explore</FooterHeading>
               <ul className="space-y-3">
                 <li>
-                  <FooterLink href="#">Find Programs & Institutions</FooterLink>
+                  <button
+                    className="text-sm text-gray-600 text-left cursor-pointer"
+                    onClick={() => setPopupOpen(true)}
+                  >
+                    Find Programs & Institutions
+                  </button>
                 </li>
                 <li>
-                  <FooterLink href="#">360 Solutions</FooterLink>
+                  <FooterLink href="/solutions">360 Solutions</FooterLink>
                 </li>
               </ul>
             </div>
@@ -138,13 +150,13 @@ const Footer = () => {
                 <FooterLink href="#">Our Story</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">Careers</FooterLink>
+                <FooterLink href="/careers">Careers</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">Press and Media</FooterLink>
+                <FooterLink href="/blogs">Press and Media</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">Contact</FooterLink>
+                <FooterLink href="/contact">Contact</FooterLink>
               </li>
             </ul>
           </div>
@@ -154,13 +166,13 @@ const Footer = () => {
             <FooterHeading>Resources</FooterHeading>
             <ul className="space-y-3">
               <li>
-                <FooterLink href="#">Blog</FooterLink>
+                <FooterLink href="/blogs">Blog</FooterLink>
               </li>
               <li>
                 <FooterLink href="#">Webinar</FooterLink>
               </li>
               <li>
-                <FooterLink href="#">AdmissionOnBoard Insights</FooterLink>
+                <FooterLink href="/blogs">AdmissionOnBoard Insights</FooterLink>
               </li>
             </ul>
           </div>
@@ -179,6 +191,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </footer>
   );
 };

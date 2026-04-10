@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "../../../components/common/StudentRegistrationPopup";
 
 const StudentVisaIreland = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 flex flex-col gap-14">
       {/* Top Section: Student Visa */}
@@ -17,7 +19,7 @@ const StudentVisaIreland = () => {
             Before you apply for an Irish visa, check to see if your nationality
             is one of the 70+ that are{" "}
             <a
-              href="#"
+              href="https://www.irishimmigration.ie/coming-to-study-in-ireland/visa-requirements-for-students/"
               className="text-base lg:text-lg font-sans text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors leading-relaxed"
             >
               exempt from student visa requirements!
@@ -87,9 +89,12 @@ const StudentVisaIreland = () => {
           <p className="text-base font-sans leading-relaxed text-white/80 ">
             Ready to launch your study abroad journey? It can be intimidating,
             but we’re here for you! Follow in the steps of 1.3M+ other students
-            and trust  AdmissionOnBoard’s team of experts to guide your way.
+            and trust AdmissionOnBoard’s team of experts to guide your way.
           </p>
-          <button className="mt-2 w-fit bg-white text-blue-700 font-sans font-semibold text-base px-7 py-3.5 rounded-xl hover:bg-purple-50 transition-colors">
+          <button
+            onClick={() => setPopupOpen(true)}
+            className="mt-2 w-fit bg-white text-blue-700 font-sans font-semibold text-base px-7 py-3.5 rounded-xl hover:bg-purple-50 transition-colors"
+          >
             Find Your Perfect Program
           </button>
         </div>
@@ -104,6 +109,10 @@ const StudentVisaIreland = () => {
           />
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </div>
   );
 };

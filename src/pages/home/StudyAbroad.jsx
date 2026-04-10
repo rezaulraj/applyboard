@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { LuBookOpen, LuUser } from "react-icons/lu";
 import { RiBarChart2Fill } from "react-icons/ri";
+import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
 
 const features = [
   { icon: LuBookOpen, text: "Easily apply to multiple programs" },
@@ -15,6 +16,7 @@ const features = [
 ];
 
 const StudyAbroad = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <section className="flex items-center gap-12 px-12 py-14 max-w-6xl mx-auto flex-wrap">
       {/* LEFT */}
@@ -44,7 +46,10 @@ const StudyAbroad = () => {
           ))}
         </ul>
 
-        <button className="bg-blue-600 hover:bg-blue-700 font-sans text-white font-semibold text-[18px] px-8 py-[14px] rounded-xl transition-colors duration-200 cursor-pointer">
+        <button
+          onClick={() => setPopupOpen(true)}
+          className="bg-blue-600 hover:bg-blue-700 font-sans text-white font-semibold text-[18px] px-8 py-[14px] rounded-xl transition-colors duration-200 cursor-pointer"
+        >
           Create a Student Account
         </button>
       </div>
@@ -78,6 +83,10 @@ const StudyAbroad = () => {
           />
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </section>
   );
 };

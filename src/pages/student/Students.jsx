@@ -3,6 +3,9 @@ import HeroStudent from "./HeroStudent";
 import StickyStudentHeader from "./StickyStudentHeader";
 import TrustedPartners from "./TrustedPartners";
 import SuccessStories from "./SuccessStories";
+import Solution from "../home/Solution";
+import StudyDestinationsSection from "./StudyDestinationsSection";
+import StudentCommunitySection from "./StudentCommunitySection";
 
 const Students = () => {
   return (
@@ -11,6 +14,9 @@ const Students = () => {
       <StickyStudentHeader />
       <TrustedPartners />
       <SuccessStories />
+      <Solution />
+      <StudyDestinationsSection />
+      <StudentCommunitySection />
     </div>
   );
 };

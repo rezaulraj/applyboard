@@ -10,7 +10,7 @@ const Funding = () => {
             {/* Browser Window */}
             <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
               {/* Browser Header */}
-              <div className="bg-gradient-to-r from-blue-600 to-blue-500 h-10 flex items-center px-4 gap-2">
+              <div className="bg-gradient-to-r from-blue-300 to-blue-400 h-10 flex items-center px-4 gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-white/80" />
                 <div className="w-2.5 h-2.5 rounded-full bg-white/80" />
                 <div className="w-2.5 h-2.5 rounded-full bg-white/80" />
@@ -19,7 +19,7 @@ const Funding = () => {
               <div className="flex">
                 {/* Sidebar */}
                 <div className="w-14 bg-gray-50 border-r border-gray-100 py-6 flex flex-col items-center gap-5">
-                  <div className="text-gray-400 hover:text-blue-600 transition-colors cursor-pointer">
+                  <div className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -34,7 +34,7 @@ const Funding = () => {
                       />
                     </svg>
                   </div>
-                  <div className="text-gray-400 hover:text-blue-600 transition-colors cursor-pointer">
+                  <div className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -49,7 +49,7 @@ const Funding = () => {
                       />
                     </svg>
                   </div>
-                  <div className="text-gray-400 hover:text-blue-600 transition-colors cursor-pointer">
+                  <div className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -79,7 +79,7 @@ const Funding = () => {
                       />
                     </svg>
                   </div>
-                  <div className="text-gray-400 hover:text-blue-600 transition-colors cursor-pointer">
+                  <div className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -100,7 +100,7 @@ const Funding = () => {
                       />
                     </svg>
                   </div>
-                  <div className="text-gray-400 hover:text-blue-600 transition-colors cursor-pointer">
+                  <div className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                     <svg
                       className="w-5 h-5"
                       fill="none"
@@ -137,7 +137,7 @@ const Funding = () => {
                   </div>
 
                   {/* Application Title */}
-                  <h3 className="text-2xl font-bold font-sans text-gray-900 mb-6">
+                  <h3 className="text-2xl font-bold font-sans text-gray-300 mb-6">
                     Application
                   </h3>
 
@@ -152,7 +152,7 @@ const Funding = () => {
 
                   {/* Apply for a Loan Button */}
                   <div className="relative">
-                    <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3.5 rounded-lg shadow-lg font-sans hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5">
+                    <button className="bg-blue-300 hover:bg-blue-300 text-white font-semibold px-8 py-3.5 rounded-lg shadow-lg font-sans hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5">
                       Apply for a Loan
                     </button>
                     {/* Cursor Pointer */}
@@ -171,7 +171,7 @@ const Funding = () => {
             {/* Floating Finance Icons */}
             <div className="absolute -right-4 top-12 flex flex-col gap-3">
               {/* Green Document Icon */}
-              <div className="w-14 h-14 bg-emerald-500 rounded-xl shadow-lg flex items-center justify-center animate-float-slow hover:scale-110 transition-transform duration-300 cursor-pointer">
+              <div className="w-14 h-14 bg-emerald-300 rounded-xl shadow-lg flex items-center justify-center animate-float-slow hover:scale-110 transition-transform duration-300 cursor-pointer">
                 <svg
                   className="w-7 h-7 text-white"
                   fill="none"
@@ -195,7 +195,7 @@ const Funding = () => {
               </div>
 
               {/* Yellow Bank Icon */}
-              <div className="w-14 h-14 bg-amber-400 rounded-xl shadow-lg flex items-center justify-center animate-float-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
+              <div className="w-14 h-14 bg-amber-300 rounded-xl shadow-lg flex items-center justify-center animate-float-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
                 <svg
                   className="w-7 h-7 text-white"
                   fill="none"
@@ -219,7 +219,7 @@ const Funding = () => {
               </div>
 
               {/* Purple Home/Money Icon */}
-              <div className="w-14 h-14 bg-purple-500 rounded-xl shadow-lg flex items-center justify-center animate-float-fast hover:scale-110 transition-transform duration-300 cursor-pointer">
+              <div className="w-14 h-14 bg-purple-300 rounded-xl shadow-lg flex items-center justify-center animate-float-fast hover:scale-110 transition-transform duration-300 cursor-pointer">
                 <svg
                   className="w-7 h-7 text-white"
                   fill="none"
@@ -264,18 +264,11 @@ const Funding = () => {
           {/* Description */}
           <p className="text-base sm:text-lg font-sans text-gray-600 leading-relaxed max-w-lg">
             Strengthen your study permit application with a GIC, or fund your
-            journey with an{" "}
-            <a
-              href="#"
-              className="text-blue-600 font-medium underline underline-offset-4 hover:text-blue-800 transition-colors duration-200"
-            >
-               AdmissionOnBoard Student Loan
-            </a>
-            .
+            journey with an AdmissionOnBoard Student Loan.
           </p>
 
           {/* CTA Button */}
-          <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 font-sans text-base lg:text-lg hover:-translate-y-0.5">
+          {/* <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 font-sans text-base lg:text-lg hover:-translate-y-0.5">
             Explore Funding Options
             <svg
               className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -290,7 +283,7 @@ const Funding = () => {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
 

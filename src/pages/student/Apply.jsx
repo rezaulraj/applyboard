@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
 
 const Apply = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 md:gap-16 items-center">
@@ -164,19 +166,19 @@ const Apply = () => {
 
                   {/* Application Completion Panel */}
                   <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative z-10 hover:shadow-md transition-shadow duration-300">
-                    <h4 className="text-sm font-semibold text-gray-700 mb-4 text-center">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-4 text-center">
                       Application Completion
                     </h4>
 
                     {/* Progress Bar */}
                     <div className="h-2.5 bg-gray-100 rounded-full mb-6 overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full w-[75%] animate-progress-fill" />
+                      <div className="h-full bg-gradient-to-r from-emerald-200 to-emerald-300 rounded-full w-[75%] animate-progress-fill" />
                     </div>
 
                     {/* Steps */}
                     <div className="flex justify-between relative pt-2">
                       <div className="absolute top-5 left-0 right-0 h-0.5 bg-gray-100 -z-10" />
-                      <div className="absolute top-5 left-0 w-[75%] h-0.5 bg-emerald-400 -z-10 transition-all duration-1000" />
+                      <div className="absolute top-5 left-0 w-[75%] h-0.5 bg-emerald-200 -z-10 transition-all duration-1000" />
 
                       {[
                         {
@@ -257,11 +259,11 @@ const Apply = () => {
                           className="flex flex-col items-center gap-2 z-10"
                         >
                           <div
-                            className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${i < 3 ? "bg-emerald-50 border-emerald-400 text-emerald-600" : "bg-gray-50 border-gray-200 text-gray-400"}`}
+                            className={`w-10 h-10 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${i < 3 ? "bg-emerald-50 border-emerald-200 text-emerald-400" : "bg-gray-50 border-gray-200 text-gray-400"}`}
                           >
                             {step.icon}
                           </div>
-                          <span className="text-xs text-gray-500 font-medium whitespace-nowrap">
+                          <span className="text-xs text-gray-500 font-sans font-medium whitespace-nowrap">
                             {step.name}
                           </span>
                         </div>
@@ -275,7 +277,10 @@ const Apply = () => {
             {/* Floating Submit Button */}
             <div className="absolute -bottom-10 -right-6 sm:-right-16 animate-float">
               <div className="relative group">
-                <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-lg shadow-lg hover:shadow-blue-500/30 transition-all duration-300 flex items-center gap-2 transform group-hover:-translate-y-1 hover:animate-pulse">
+                <button
+                  onClick={() => setPopupOpen(true)}
+                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-lg shadow-lg hover:shadow-blue-500/30 transition-all duration-300 flex items-center gap-2 transform group-hover:-translate-y-1 hover:animate-pulse"
+                >
                   Submit Application
                   <svg
                     className="w-4 h-4"
@@ -291,7 +296,6 @@ const Apply = () => {
                     />
                   </svg>
                 </button>
-                
               </div>
             </div>
 
@@ -301,7 +305,10 @@ const Apply = () => {
           </div>
         </div>
       </div>
-
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
       {/* Animations */}
       <style>{`
         @keyframes float {

@@ -17,7 +17,9 @@ const Life = () => {
             There's a reason Australia is associated with a laid-back,
             enjoyable, high quality of life.{" "}
             <a
-              href="#"
+              href="https://www.numbeo.com/quality-of-life/rankings_by_country.jsp"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors"
             >
               According to the OECD Better Life Index

@@ -4,7 +4,7 @@ const Quality = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Visual Composition */}
-          <div className="relative">
+          <div className="relative order-2 md:order-1">
             {/* Browser Window Mockup */}
             <div className="relative bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200">
               {/* Browser Header */}
@@ -118,7 +118,7 @@ const Quality = () => {
                 <img
                   src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEeTZ4eEGcaVUtVvok1da18hvvG-MG1Cv1cQ&s"
                   alt="Graduate student"
-                  className="relative w-64 h-64 object-cover rounded-2xl shadow-2xl blur-xs"
+                  className="relative w-44 h-44 object-cover rounded-2xl shadow-2xl blur-xs"
                 />
                 {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center shadow-lg">
@@ -138,7 +138,7 @@ const Quality = () => {
           </div>
 
           {/* Right Column - Text Content */}
-          <div className="space-y-6 lg:pl-8">
+          <div className="space-y-6 lg:pl-8 order-1 md:order-2">
             {/* Category Label */}
             <div>
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
@@ -157,26 +157,6 @@ const Quality = () => {
               right times, enabling you to achieve all of your institution's
               revenue, enrolment, and diversity goals.
             </p>
-
-            {/* Optional CTA Button */}
-            <div className="pt-4">
-              <button className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg font-sans text-white bg-blue-600 hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl">
-                Learn More
-                <svg
-                  className="ml-2 -mr-1 w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5l7 7-7 7"
-                  />
-                </svg>
-              </button>
-            </div>
           </div>
         </div>
       </div>

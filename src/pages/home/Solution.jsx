@@ -10,6 +10,7 @@ import {
   FaIdCard,
   FaHome,
 } from "react-icons/fa";
+import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
 
 const solutions = [
   {
@@ -134,7 +135,7 @@ const Solution = () => {
   const sectionRef = useRef(null);
   const containerRef = useRef(null);
   const [linePaths, setLinePaths] = useState([]);
-
+  const [popupOpen, setPopupOpen] = useState(false);
   // Calculate dynamic SVG paths from pill positions to center
   useEffect(() => {
     if (!visible || !containerRef.current) return;
@@ -276,7 +277,10 @@ const Solution = () => {
           </p>
 
           {/* CTA Button */}
-          <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 group cursor-pointer">
+          <button
+            onClick={() => setPopupOpen(true)}
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 group cursor-pointer"
+          >
             Register as a Student
           </button>
 
@@ -435,6 +439,10 @@ const Solution = () => {
           }
         `}</style>
       </section>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </section>
   );
 };

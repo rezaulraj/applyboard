@@ -21,7 +21,7 @@ const LifeUk = () => {
           <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
             If you love a big city,{" "}
             <a
-              href="#"
+              href="https://www.topuniversities.com/city-rankings/2024"
               className="text-blue-600 underline underline-offset-2 hover:text-blue-800 transition-colors"
             >
               London has been named the world’s best student city

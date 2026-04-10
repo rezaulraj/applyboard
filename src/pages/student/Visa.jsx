@@ -154,7 +154,7 @@ const Visa = () => {
           </p>
 
           {/* CTA Button */}
-          <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 group">
+          <a href="/contact" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 group">
             Get Visa Support
             <svg
               className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
@@ -169,7 +169,7 @@ const Visa = () => {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </button>
+          </a>
         </div>
       </div>
 

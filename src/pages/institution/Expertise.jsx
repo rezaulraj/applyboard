@@ -6,7 +6,7 @@ const Expertise = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Image & Floating Elements */}
-          <div className="relative">
+          <div className="relative order-2 md:order-1">
             {/* Main Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100">
               <img
@@ -71,7 +71,7 @@ const Expertise = () => {
           </div>
 
           {/* Right Column - Text Content */}
-          <div className="space-y-6">
+          <div className="space-y-6 order-1 md:order-2">
             {/* Category Label */}
             <div>
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
