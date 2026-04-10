@@ -1,8 +1,12 @@
 import { useState } from "react";
-import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
+
+import PartnershipFormModal from "../../components/common/PartnershipFormModal";
 
 const Impack = () => {
-  const [popupOpen, setPopupOpen] = useState(false);
+const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <div className="min-h-screen bg-white pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
@@ -188,7 +192,7 @@ const Impack = () => {
                 efficiency, and control
               </h3>
               <button
-                onClick={() => setPopupOpen(true)}
+                onClick={() => openModal()}
                 className="bg-white text-blue-700 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-colors duration-200 shadow-md font-sans text-base md:text-lg"
               >
                 Partner with us today
@@ -197,10 +201,7 @@ const Impack = () => {
           </div>
         </div>
       </div>
-      <StudentRegistrationPopup
-        isOpen={popupOpen}
-        onClose={() => setPopupOpen(false)}
-      />
+      <PartnershipFormModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };
