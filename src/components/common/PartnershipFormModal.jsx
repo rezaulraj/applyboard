@@ -16,6 +16,7 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [currentStep, setCurrentStep] = useState(1);
 
   // Prevent body scroll when modal is open
   useEffect(() => {
@@ -62,6 +63,7 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
     // Close modal after 2 seconds
     setTimeout(() => {
       setSubmitSuccess(false);
+      setCurrentStep(1);
       onClose();
       // Reset form
       setFormData({
@@ -78,6 +80,29 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
     }, 2000);
   };
 
+  const steps = [
+    {
+      number: "01",
+      title: "Fill the Form",
+      description: "Provide your institution details",
+    },
+    {
+      number: "02",
+      title: "Review",
+      description: "Our team reviews your application",
+    },
+    {
+      number: "03",
+      title: "Connect",
+      description: "We'll schedule a call with you",
+    },
+    {
+      number: "04",
+      title: "Partner",
+      description: "Start your partnership journey",
+    },
+  ];
+
   if (!isOpen) return null;
 
   return (
@@ -89,11 +114,11 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
       ></div>
 
       {/* Modal Content */}
-      <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto transform transition-all">
+      <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform transition-all">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors"
+          className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm hover:bg-white rounded-full flex items-center justify-center transition-all shadow-lg"
           aria-label="Close modal"
         >
           <svg
@@ -111,23 +136,91 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
           </svg>
         </button>
 
-        {/* Header */}
-        <div className="bg-gradient-to-r from-blue-600 to-blue-700 px-8 py-6 rounded-t-3xl">
-          <h2 className="text-2xl md:text-3xl font-bold text-white font-montserrat">
-            Partnership Request
-          </h2>
-          <p className="text-blue-100 mt-2 text-sm">
-            Complete the form below and our team will contact you shortly
-          </p>
+        {/* Hero Image */}
+        <div className="relative h-48 sm:h-64 overflow-hidden rounded-t-3xl">
+          <img
+            src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            alt="Partnership"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-700/80"></div>
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-white px-4">
+              <h2 className="text-3xl sm:text-4xl font-bold font-montserrat mb-2">
+                Partnership Request
+              </h2>
+              <p className="text-blue-100 text-sm sm:text-base">
+                Join our global network of educational institutions
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Steps Indicator */}
+        <div className="px-6 sm:px-8 pt-8 pb-4">
+          <div className="grid grid-cols-4 gap-2 sm:gap-4">
+            {steps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div
+                  className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center mx-auto mb-2 transition-all duration-300 ${
+                    currentStep > index
+                      ? "bg-green-500 text-white"
+                      : currentStep === index + 1
+                        ? "bg-blue-600 text-white ring-4 ring-blue-100"
+                        : "bg-gray-200 text-gray-500"
+                  }`}
+                >
+                  {currentStep > index ? (
+                    <svg
+                      className="w-5 h-5 sm:w-6 sm:h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  ) : (
+                    <span className="text-sm sm:text-base font-bold">
+                      {step.number}
+                    </span>
+                  )}
+                </div>
+                <h4
+                  className={`text-xs sm:text-sm font-semibold mb-1 ${
+                    currentStep >= index + 1 ? "text-gray-900" : "text-gray-400"
+                  }`}
+                >
+                  {step.title}
+                </h4>
+                <p className="text-xs text-gray-500 hidden sm:block">
+                  {step.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          {/* Progress Line */}
+          <div className="relative mt-4">
+            <div className="absolute top-0 left-0 right-0 h-1 bg-gray-200 rounded-full">
+              <div
+                className="h-full bg-blue-600 rounded-full transition-all duration-500"
+                style={{ width: `${((currentStep - 1) / 3) * 100}%` }}
+              ></div>
+            </div>
+          </div>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="p-8">
+        <form onSubmit={handleSubmit} className="p-6 sm:p-8">
           {submitSuccess ? (
             <div className="text-center py-12">
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
                 <svg
-                  className="w-8 h-8 text-green-600"
+                  className="w-10 h-10 text-green-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -140,139 +233,152 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Thank You!
               </h3>
-              <p className="text-gray-600">
-                We've received your request and will be in touch soon.
+              <p className="text-gray-600 mb-2">
+                We've received your partnership request.
+              </p>
+              <p className="text-gray-500 text-sm">
+                Our team will review your application and contact you within 2-3
+                business days.
               </p>
             </div>
           ) : (
             <div className="space-y-5">
-              {/* Destination Country */}
-              <div>
-                <label
-                  htmlFor="destinationCountry"
-                  className="block text-sm font-semibold text-gray-700 mb-2"
-                >
-                  Destination Country <span className="text-red-500">*</span>
-                </label>
-                <select
-                  id="destinationCountry"
-                  name="destinationCountry"
-                  value={formData.destinationCountry}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none bg-white"
-                >
-                  <option value="">Please Select</option>
-                  <option value="australia">Australia</option>
-                  <option value="canada">Canada</option>
-                  <option value="germany">Germany</option>
-                  <option value="ireland">Ireland</option>
-                  <option value="uk">United Kingdom</option>
-                  <option value="usa">United States</option>
-                </select>
+              {/* Row 1 */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* Destination Country */}
+                <div>
+                  <label
+                    htmlFor="destinationCountry"
+                    className="block text-sm font-semibold text-gray-700 mb-2"
+                  >
+                    Destination Country <span className="text-red-500">*</span>
+                  </label>
+                  <select
+                    id="destinationCountry"
+                    name="destinationCountry"
+                    value={formData.destinationCountry}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none bg-white hover:border-gray-400"
+                  >
+                    <option value="">Please Select</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="germany">Germany</option>
+                    <option value="ireland">Ireland</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="usa">United States</option>
+                  </select>
+                </div>
+
+                {/* School Name */}
+                <div>
+                  <label
+                    htmlFor="schoolName"
+                    className="block text-sm font-semibold text-gray-700 mb-2"
+                  >
+                    School Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="schoolName"
+                    name="schoolName"
+                    value={formData.schoolName}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter school name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none hover:border-gray-400"
+                  />
+                </div>
               </div>
 
-              {/* School Name */}
-              <div>
-                <label
-                  htmlFor="schoolName"
-                  className="block text-sm font-semibold text-gray-700 mb-2"
-                >
-                  School Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="schoolName"
-                  name="schoolName"
-                  value={formData.schoolName}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter school name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
-                />
+              {/* Row 2 */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* Contact First Name */}
+                <div>
+                  <label
+                    htmlFor="contactFirstName"
+                    className="block text-sm font-semibold text-gray-700 mb-2"
+                  >
+                    Contact First Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="contactFirstName"
+                    name="contactFirstName"
+                    value={formData.contactFirstName}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter first name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none hover:border-gray-400"
+                  />
+                </div>
+
+                {/* Contact Last Name */}
+                <div>
+                  <label
+                    htmlFor="contactLastName"
+                    className="block text-sm font-semibold text-gray-700 mb-2"
+                  >
+                    Contact Last Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="contactLastName"
+                    name="contactLastName"
+                    value={formData.contactLastName}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter last name"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none hover:border-gray-400"
+                  />
+                </div>
               </div>
 
-              {/* Contact First Name */}
-              <div>
-                <label
-                  htmlFor="contactFirstName"
-                  className="block text-sm font-semibold text-gray-700 mb-2"
-                >
-                  Contact First Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="contactFirstName"
-                  name="contactFirstName"
-                  value={formData.contactFirstName}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter first name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
-                />
-              </div>
+              {/* Row 3 */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {/* Contact Email */}
+                <div>
+                  <label
+                    htmlFor="contactEmail"
+                    className="block text-sm font-semibold text-gray-700 mb-2"
+                  >
+                    Contact Email <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="contactEmail"
+                    value={formData.contactEmail}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter email address"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none hover:border-gray-400"
+                  />
+                </div>
 
-              {/* Contact Last Name */}
-              <div>
-                <label
-                  htmlFor="contactLastName"
-                  className="block text-sm font-semibold text-gray-700 mb-2"
-                >
-                  Contact Last Name <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="contactLastName"
-                  name="contactLastName"
-                  value={formData.contactLastName}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter last name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
-                />
-              </div>
-
-              {/* Contact Email */}
-              <div>
-                <label
-                  htmlFor="contactEmail"
-                  className="block text-sm font-semibold text-gray-700 mb-2"
-                >
-                  Contact Email <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="contactEmail"
-                  name="contactEmail"
-                  value={formData.contactEmail}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter email address"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
-                />
-              </div>
-
-              {/* Contact Title */}
-              <div>
-                <label
-                  htmlFor="contactTitle"
-                  className="block text-sm font-semibold text-gray-700 mb-2"
-                >
-                  Contact Title <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="contactTitle"
-                  name="contactTitle"
-                  value={formData.contactTitle}
-                  onChange={handleChange}
-                  required
-                  placeholder="Enter job title"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
-                />
+                {/* Contact Title */}
+                <div>
+                  <label
+                    htmlFor="contactTitle"
+                    className="block text-sm font-semibold text-gray-700 mb-2"
+                  >
+                    Contact Title <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="contactTitle"
+                    name="contactTitle"
+                    value={formData.contactTitle}
+                    onChange={handleChange}
+                    required
+                    placeholder="Enter job title"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none hover:border-gray-400"
+                  />
+                </div>
               </div>
 
               {/* Phone Number */}
@@ -290,25 +396,28 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   placeholder="Enter phone number"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none hover:border-gray-400"
                 />
               </div>
 
               {/* Referred by someone */}
-              <div className="flex items-start">
+              <div className="flex items-start p-4 bg-blue-50 rounded-lg">
                 <input
                   type="checkbox"
                   id="referredBySomeone"
                   name="referredBySomeone"
                   checked={formData.referredBySomeone}
                   onChange={handleChange}
-                  className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                  className="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
                 />
                 <label
                   htmlFor="referredBySomeone"
-                  className="ml-3 text-sm text-gray-700"
+                  className="ml-3 text-sm text-gray-700 cursor-pointer"
                 >
-                  Referred by someone in AdmissionOnBoard?
+                  <span className="font-semibold">Referred by someone?</span>
+                  <span className="block text-gray-600 mt-1">
+                    Were you referred by someone in AdmissionOnBoard?
+                  </span>
                 </label>
               </div>
 
@@ -318,7 +427,7 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                   htmlFor="additionalComments"
                   className="block text-sm font-semibold text-gray-700 mb-2"
                 >
-                  Partnership Request Form Additional Comments
+                  Additional Comments
                 </label>
                 <textarea
                   id="additionalComments"
@@ -327,16 +436,16 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                   onChange={handleChange}
                   rows="4"
                   placeholder="Tell us more about your institution and partnership goals..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all outline-none resize-none hover:border-gray-400"
                 />
               </div>
 
               {/* Submit Button */}
-              <div className="pt-4">
+              <div className="pt-6">
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-blue-400 disabled:to-blue-500 text-white font-semibold py-4 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                 >
                   {isSubmitting ? (
                     <>
@@ -363,9 +472,28 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                       <span>Submitting...</span>
                     </>
                   ) : (
-                    <span>Submit Request</span>
+                    <>
+                      <span>Submit Partnership Request</span>
+                      <svg
+                        className="w-5 h-5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 7l5 5m0 0l-5 5m5-5H6"
+                        />
+                      </svg>
+                    </>
                   )}
                 </button>
+                <p className="text-center text-xs text-gray-500 mt-3">
+                  By submitting, you agree to our privacy policy and terms of
+                  service.
+                </p>
               </div>
             </div>
           )}

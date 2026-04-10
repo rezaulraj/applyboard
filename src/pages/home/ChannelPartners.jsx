@@ -1,5 +1,5 @@
-import React from "react";
-
+import React, { useState } from "react";
+import PartnershipFormModal from "../../components/common/PartnershipFormModal";
 const GlobeIcon = () => (
   <svg
     width="18"
@@ -65,6 +65,10 @@ const features = [
 ];
 
 const ChannelPartners = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <section className="w-full bg-white py-16 px-6">
       <h2 className="text-center text-3xl lg:text-4xl font-montserrat font-bold text-gray-800 mb-12 tracking-tight">
@@ -144,11 +148,15 @@ const ChannelPartners = () => {
             ))}
           </div>
 
-          <button className="mt-2 px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white text-[18px] font-medium rounded-lg transition-colors w-fit font-sans">
+          <button
+            onClick={openModal}
+            className="mt-2 px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white text-[18px] font-medium rounded-lg transition-colors w-fit font-sans"
+          >
             Partner with Us
           </button>
         </div>
       </div>
+      <PartnershipFormModal isOpen={isModalOpen} onClose={closeModal} />
     </section>
   );
 };
