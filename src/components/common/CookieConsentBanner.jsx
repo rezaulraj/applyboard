@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 const CookieConsentBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // 1. Check if cookie exists when component mounts
   useEffect(() => {
     const hasConsent = document.cookie
       .split("; ")
@@ -14,21 +13,17 @@ const CookieConsentBanner = () => {
     }
   }, []);
 
-  // 2. Function to save the cookie
   const acceptCookies = () => {
-    // Create a date 1 year from now
     const date = new Date();
     date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000);
     const expires = `expires=${date.toUTCString()}`;
 
-    // Set the cookie
     document.cookie = `admissionOnBoardConsent=true; ${expires}; path=/; SameSite=Lax`;
 
     setIsVisible(false);
   };
 
   const declineCookies = () => {
-    // You can also set a 'false' cookie if you want to remember they declined
     setIsVisible(false);
   };
 
@@ -37,7 +32,6 @@ const CookieConsentBanner = () => {
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 text-white shadow-2xl border-t border-gray-700 animate-slide-up">
       <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        {/* Text */}
         <div className="text-sm sm:text-base text-gray-300 leading-relaxed text-center sm:text-left">
           <p>
             We use cookies to enhance your experience. By continuing to visit
@@ -51,7 +45,6 @@ const CookieConsentBanner = () => {
           </p>
         </div>
 
-        {/* Buttons */}
         <div className="flex gap-3 shrink-0">
           <button
             onClick={declineCookies}

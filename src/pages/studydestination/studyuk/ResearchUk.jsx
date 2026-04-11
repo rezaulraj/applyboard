@@ -6,12 +6,10 @@ const ResearchUk = () => {
   return (
     <section className="py-16 px-6 max-w-6xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center md:items-start">
-        {/* Images Column */}
         <div
           className="flex flex-col gap-5 animate-fade-in col-span-5 order-2 md:order-1
         "
         >
-          {/* Top image */}
           <div className="rounded-2xl shadow-lg h-64 relative z-10">
             <img
               src="https://plus.unsplash.com/premium_photo-1661963563108-50f1f802d08c?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -30,7 +28,6 @@ const ResearchUk = () => {
             </div>
           </div>
 
-          {/* Bottom image — offset right */}
           <div className="rounded-2xl shadow-lg h-56 w-4/5 self-end relative z-0 -mr-8">
             <img
               src="https://plus.unsplash.com/premium_photo-1706517229833-f41d68aae8ff?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -50,7 +47,6 @@ const ResearchUk = () => {
           </div>
         </div>
 
-        {/* Text Column */}
         <div className="flex flex-col gap-6 col-span-7 order-1 md:order-2">
           <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             Research
@@ -80,11 +76,9 @@ const ResearchUk = () => {
           </p>
         </div>
       </div>
-      {/* Bottom: English Proficiency Banner */}
+
       <div className="relative rounded-2xl mt-20 bg-gradient-to-br from-blue-700 via-blue-600 to-blue-500 px-10 py-14 text-center text-white shadow-xl overflow-hidden">
-        {/* Decorative Circular Rings Background */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Large outer rings */}
           <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] rounded-full border border-white/50" />
           <div className="absolute -top-1/2 -right-1/4 w-[600px] h-[600px] rounded-full border border-white/30" />
           <div className="absolute -top-1/2 -right-1/4 w-[400px] h-[400px] rounded-full border border-white/60" />
@@ -93,15 +87,12 @@ const ResearchUk = () => {
           <div className="absolute -bottom-1/2 -left-1/4 w-[500px] h-[500px] rounded-full border border-white/30" />
           <div className="absolute -bottom-1/2 -left-1/4 w-[300px] h-[300px] rounded-full border border-white/70" />
 
-          {/* Additional subtle rings */}
           <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full border border-white/50" />
           <div className="absolute bottom-1/4 right-1/4 w-[350px] h-[350px] rounded-full border border-white/30" />
 
-          {/* Radial gradient overlay for depth */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-600/40 via-transparent to-blue-800/60" />
         </div>
 
-        {/* Content */}
         <div className="relative z-10">
           <h3 className="text-3xl lg:text-4xl font-bold font-montserrat mb-5 tracking-tight">
             Did You Know?

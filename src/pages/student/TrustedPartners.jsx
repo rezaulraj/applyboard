@@ -223,7 +223,6 @@ const TrustedPartners = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-10 space-y-3">
           <span className="text-sm font-bold font-sans tracking-[2px] text-blue-600 uppercase">
             TRUSTED PARTNERS
@@ -233,7 +232,6 @@ const TrustedPartners = () => {
           </h2>
         </div>
 
-        {/* Country Tabs */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {countries.map((country) => (
             <button
@@ -255,7 +253,6 @@ const TrustedPartners = () => {
           ))}
         </div>
 
-        {/* Universities Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8 mb-12">
           {universities[activeCountry]?.map((university, index) => (
             <div
@@ -280,7 +277,6 @@ const TrustedPartners = () => {
           ))}
         </div>
 
-        {/* CTA Button */}
         <div className="flex justify-center">
           <a
             href={countries.find((c) => c.id === activeCountry)?.link}
@@ -310,7 +306,6 @@ const TrustedPartners = () => {
         </div>
       </div>
 
-      {/* Animations */}
       <style>{`
         @keyframes fade-in-up {
           0% {

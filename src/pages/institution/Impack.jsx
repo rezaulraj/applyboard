@@ -10,9 +10,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className=" bg-white pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
-        {/* --- Top Section: Content + Illustration --- */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
-          {/* Left: Text Content */}
           <div className="space-y-6">
             <div>
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
@@ -30,9 +28,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
             </p>
           </div>
 
-          {/* Right: Graphic Illustration */}
           <div className="relative lg:h-[400px] flex items-center justify-center">
-            {/* Central Application Card */}
             <div className="relative z-10 bg-white p-6 rounded-xl shadow-xl border border-gray-100 w-64 sm:w-80">
               <div className="flex items-center space-x-2 mb-4 text-gray-500 font-semibold">
                 <div className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
@@ -52,7 +48,6 @@ const [isModalOpen, setIsModalOpen] = useState(false);
                 </div>
                 <span>Application</span>
               </div>
-              {/* Fake text lines */}
               <div className="space-y-2">
                 <div className="h-2 bg-gray-200 rounded w-full"></div>
                 <div className="h-2 bg-gray-200 rounded w-5/6"></div>
@@ -61,7 +56,6 @@ const [isModalOpen, setIsModalOpen] = useState(false);
               </div>
             </div>
 
-            {/* Floating: Quality Card (Top Left) */}
             <div className="absolute -top-4 -left-4 sm:left-10 sm:top-0 z-20 animate-bounce-slow">
               <div className="bg-white p-4 rounded-xl shadow-lg border border-gray-50 flex flex-col items-center">
                 <span className="text-xs font-bold text-gray-500 uppercase mb-1">
@@ -98,7 +92,6 @@ const [isModalOpen, setIsModalOpen] = useState(false);
               </div>
             </div>
 
-            {/* Floating: Blue Button (Top Right) */}
             <div className="absolute -top-6 -right-4 sm:-right-8 z-30">
               <div className="bg-blue-400 text-white px-4 py-2 rounded-lg shadow-lg flex items-center space-x-2 text-sm font-medium">
                 <svg
@@ -118,7 +111,6 @@ const [isModalOpen, setIsModalOpen] = useState(false);
               </div>
             </div>
 
-            {/* Floating: Student Stack (Right Edge) */}
             <div className="absolute top-12 -right-6 sm:right-0 z-20 space-y-2">
               {[
                 {
@@ -165,14 +157,11 @@ const [isModalOpen, setIsModalOpen] = useState(false);
           </div>
         </div>
 
-        {/* --- Bottom Section: Blue CTA Banner --- */}
         <div className="relative w-full bg-gradient-to-r from-blue-500 to-blue-700 rounded-2xl overflow-hidden shadow-2xl mt-10">
-          {/* Background Circle Decorations */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full transform translate-x-1/2 -translate-y-1/2"></div>
           <div className="absolute bottom-0 left-20 w-64 h-64 bg-white opacity-5 rounded-full transform translate-y-1/3"></div>
 
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-5 items-center">
-            {/* Left: Man Image */}
             <div className="md:col-span-2 p-8 flex justify-center md:justify-end">
               <img
                 src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
@@ -185,7 +174,6 @@ const [isModalOpen, setIsModalOpen] = useState(false);
               />
             </div>
 
-            {/* Right: Text and Button */}
             <div className="md:col-span-3 p-8 md:pl-12 text-white md:-ml-16">
               <h3 className="text-2xl sm:text-3xl font-bold leading-snug mb-6">
                 Ready to take your recruitment to the next level of quality,

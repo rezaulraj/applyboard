@@ -2,28 +2,23 @@ import React from "react";
 
 const FlexibilityUk = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-        {/* Left Column - Text Content */}
         <div className="space-y-6">
-          {/* Category Label */}
           <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             FLEXIBILITY
           </span>
 
-          {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900 leading-tight">
             The UK Has It All
           </h2>
 
-          {/* First Paragraph */}
           <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
             The United Kingdom truly has something for everyone, from the
             world’s oldest and most prestigious universities to modern-day
             institutions with sleek amenities and innovative new courses.
           </p>
 
-          {/* Second Paragraph */}
           <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
             There are many routes into higher education in the UK, including
             pathways, foundation years, and pre-sessional English courses.
@@ -45,9 +40,7 @@ const FlexibilityUk = () => {
           </p>
         </div>
 
-        {/* Right Column - Images */}
         <div className="grid grid-cols-2 gap-4">
-          {/* Top Left - Small Square Image */}
           <div className="space-y-4">
             <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[6/4]">
               <img
@@ -57,7 +50,6 @@ const FlexibilityUk = () => {
               />
             </div>
 
-            {/* Bottom Left - Kangaroo Image */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[3.9/4]">
               <img
                 src="https://images.unsplash.com/photo-1717239749112-1722940626d1?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -67,7 +59,6 @@ const FlexibilityUk = () => {
             </div>
           </div>
 
-          {/* Right Side - Large Vertical Image */}
           <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[1.7/3]">
             <img
               src="https://images.unsplash.com/photo-1486299267070-83823f5448dd?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -78,14 +69,9 @@ const FlexibilityUk = () => {
         </div>
       </div>
       <div className="relative w-full py-10 rounded-4xl mt-10 flex items-center justify-center overflow-hidden bg-blue-900">
-        {/* The Concentric Gradient Background */}
-        {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-400/30 via-blue-600/20 to-blue-900/80" /> */}
-
-        {/* Alternative: More distinct 'Ripple' rings effect */}
 
         <div className="absolute inset-0 bg-[radial-gradient(circle,theme(colors.blue.500)_0%,theme(colors.blue.500)_20%,theme(colors.blue.800)_40%,theme(colors.blue.500)_60%,theme(colors.blue.800)_100%)] opacity-80" />
 
-        {/* Content */}
         <div className="relative z-10 text-center text-gray-100 p-8 max-w-4xl">
           <h1 className="text-4xl font-bold mb-4 font-montserrat">
             Proof of English Proficiency in the UK

@@ -12,7 +12,6 @@ const HeroRecruitment = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column: Text Content */}
             <div className="space-y-6">
               <h1 className="text-4xl sm:text-5xl font-bold font-montserrat leading-tight text-gray-900">
                 Join the Smartest Platform for{" "}
@@ -35,12 +34,9 @@ const HeroRecruitment = () => {
               </button>
             </div>
 
-            {/* Right Column: Image Collage */}
             <div className="flex justify-center lg:justify-end items-center">
               <div className="relative w-full max-w-md flex gap-4">
-                {/* Left Column of Images */}
                 <div className="flex flex-col gap-4 w-1/2">
-                  {/* Top Image: People with laptop */}
                   <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[3/4] bg-gray-100">
                     <img
                       src="https://images.pexels.com/photos/8199610/pexels-photo-8199610.jpeg"
@@ -49,7 +45,6 @@ const HeroRecruitment = () => {
                     />
                   </div>
 
-                  {/* Bottom Image: Telescope */}
                   <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-square bg-orange-100 flex items-center justify-center">
                     <img
                       src="https://images.pexels.com/photos/3915455/pexels-photo-3915455.jpeg"
@@ -59,9 +54,7 @@ const HeroRecruitment = () => {
                   </div>
                 </div>
 
-                {/* Right Main Image: Man with Laptop */}
                 <div className="w-3/4 relative h-auto">
-                  {/* Orange Background Blob for aesthetic match */}
                   <div className="absolute inset-0 bg-orange-100 rounded-3xl transform scale-90"></div>
 
                   <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl aspect-[2/4]">
@@ -78,7 +71,6 @@ const HeroRecruitment = () => {
         </div>
       </section>
 
-      {/* Partnership Form Modal */}
       <PartnershipFormModal isOpen={isModalOpen} onClose={closeModal} />
     </>
   );

@@ -7,7 +7,6 @@ const Hero = () => {
   return (
     <section className="mt-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto bg-blue-50 rounded-3xl sm:rounded-4xl px-6 sm:px-10 lg:px-16 py-10 sm:py-12 lg:py-16 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 overflow-hidden">
-        {/* Text Content */}
         <div className="flex-1 w-full text-center lg:text-left z-10">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-montserrat text-[#1E2D4E] leading-tight">
             Your Future Goes
@@ -26,7 +25,6 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Image Grid - Desktop */}
         <div className="hidden lg:block shrink-0 relative w-[380px] h-[420px]">
           <div
             className="absolute inset-0 grid gap-10"
@@ -88,7 +86,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Image Grid - Tablet */}
         <div className="hidden md:block lg:hidden shrink-0 relative w-[320px] h-[360px]">
           <div
             className="absolute inset-0 grid gap-6"
@@ -150,7 +147,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Mobile Image Grid - Simplified */}
         <div className="md:hidden w-full flex justify-center">
           <div
             className="grid gap-6"

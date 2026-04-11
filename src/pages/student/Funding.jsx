@@ -4,12 +4,9 @@ const Funding = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* Left - Mockup */}
         <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
           <div className="relative w-full max-w-md">
-            {/* Browser Window */}
             <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-              {/* Browser Header */}
               <div className="bg-gradient-to-r from-blue-300 to-blue-400 h-10 flex items-center px-4 gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-white/80" />
                 <div className="w-2.5 h-2.5 rounded-full bg-white/80" />
@@ -17,7 +14,6 @@ const Funding = () => {
               </div>
 
               <div className="flex">
-                {/* Sidebar */}
                 <div className="w-14 bg-gray-50 border-r border-gray-100 py-6 flex flex-col items-center gap-5">
                   <div className="text-gray-400 hover:text-blue-400 transition-colors cursor-pointer">
                     <svg
@@ -123,9 +119,7 @@ const Funding = () => {
                   </div>
                 </div>
 
-                {/* Main Content */}
                 <div className="flex-1 p-8 flex flex-col items-center">
-                  {/* User Icon Placeholder */}
                   <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center mb-4">
                     <svg
                       className="w-10 h-10 text-gray-300"
@@ -136,12 +130,10 @@ const Funding = () => {
                     </svg>
                   </div>
 
-                  {/* Application Title */}
                   <h3 className="text-2xl font-bold font-sans text-gray-300 mb-6">
                     Application
                   </h3>
 
-                  {/* Placeholder Lines */}
                   <div className="w-full space-y-3 mb-8">
                     <div className="h-3 bg-gray-100 rounded-full w-full" />
                     <div className="h-3 bg-gray-100 rounded-full w-5/6" />
@@ -150,12 +142,10 @@ const Funding = () => {
                     <div className="h-3 bg-gray-100 rounded-full w-3/4" />
                   </div>
 
-                  {/* Apply for a Loan Button */}
                   <div className="relative">
                     <button className="bg-blue-300 hover:bg-blue-300 text-white font-semibold px-8 py-3.5 rounded-lg shadow-lg font-sans hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5">
                       Apply for a Loan
                     </button>
-                    {/* Cursor Pointer */}
                     <svg
                       className="absolute -bottom-2 -right-2 w-8 h-8 text-gray-700 animate-cursor-bounce drop-shadow-md transform rotate-12"
                       fill="currentColor"
@@ -168,9 +158,7 @@ const Funding = () => {
               </div>
             </div>
 
-            {/* Floating Finance Icons */}
             <div className="absolute -right-4 top-12 flex flex-col gap-3">
-              {/* Green Document Icon */}
               <div className="w-14 h-14 bg-emerald-300 rounded-xl shadow-lg flex items-center justify-center animate-float-slow hover:scale-110 transition-transform duration-300 cursor-pointer">
                 <svg
                   className="w-7 h-7 text-white"
@@ -194,7 +182,6 @@ const Funding = () => {
                 </svg>
               </div>
 
-              {/* Yellow Bank Icon */}
               <div className="w-14 h-14 bg-amber-300 rounded-xl shadow-lg flex items-center justify-center animate-float-medium hover:scale-110 transition-transform duration-300 cursor-pointer">
                 <svg
                   className="w-7 h-7 text-white"
@@ -218,7 +205,6 @@ const Funding = () => {
                 </svg>
               </div>
 
-              {/* Purple Home/Money Icon */}
               <div className="w-14 h-14 bg-purple-300 rounded-xl shadow-lg flex items-center justify-center animate-float-fast hover:scale-110 transition-transform duration-300 cursor-pointer">
                 <svg
                   className="w-7 h-7 text-white"
@@ -243,51 +229,27 @@ const Funding = () => {
               </div>
             </div>
 
-            {/* Decorative Background Glow */}
             <div className="absolute -z-10 top-1/2 -left-12 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-30" />
             <div className="absolute -z-10 bottom-0 right-10 w-56 h-56 bg-purple-200 rounded-full blur-3xl opacity-30" />
           </div>
         </div>
 
-        {/* Right - Text Content */}
         <div className="space-y-6 lg:pl-8 order-1 lg:order-2">
-          {/* Category Label */}
           <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             FUNDING
           </span>
 
-          {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-800 leading-tight">
             Get Financial Assistance
           </h2>
 
-          {/* Description */}
           <p className="text-base sm:text-lg font-sans text-gray-600 leading-relaxed max-w-lg">
             Strengthen your study permit application with a GIC, or fund your
             journey with an AdmissionOnBoard Student Loan.
           </p>
-
-          {/* CTA Button */}
-          {/* <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 font-sans text-base lg:text-lg hover:-translate-y-0.5">
-            Explore Funding Options
-            <svg
-              className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </button> */}
         </div>
       </div>
 
-      {/* Animations */}
       <style>{`
         @keyframes float-slow {
           0%, 100% { transform: translateY(0px); }

@@ -49,7 +49,6 @@ const StudyDestinationsSection = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
         <div className="text-center mb-12 max-w-4xl mx-auto">
           <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             STUDY DESTINATIONS
@@ -67,7 +66,6 @@ const StudyDestinationsSection = () => {
           </p>
         </div>
 
-        {/* Destinations Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {destinations.map((dest, index) => (
             <a
@@ -82,10 +80,8 @@ const StudyDestinationsSection = () => {
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
 
-              {/* Gradient Overlay for Text Readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300"></div>
 
-              {/* Text Overlay */}
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <h3 className="text-white text-lg sm:text-xl font-semibold font-montserrat tracking-wide drop-shadow-md">
                   {dest.name}

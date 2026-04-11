@@ -3,9 +3,8 @@ import React from "react";
 const CultureUsa = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 flex flex-col gap-16">
-      {/* Top Section */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
-        {/* Left: Text */}
+   <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
+
         <div className="flex flex-col gap-5 animate-fade-in col-span-7">
           <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             Culture
@@ -30,9 +29,7 @@ const CultureUsa = () => {
           </p>
         </div>
 
-        {/* Right: Stacked Images */}
         <div className="flex flex-col gap-4 col-span-5">
-          {/* Top image */}
           <div className="rounded-2xl shadow-lg h-64 relative ">
             <img
               src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -57,7 +54,6 @@ const CultureUsa = () => {
             </div>
           </div>
 
-          {/* Bottom image — offset left */}
           <div className="self-end w-4/5 rounded-2xl shadow-lg h-56 relative">
             <img
               src="https://images.unsplash.com/photo-1610312278520-bcc893a3ff1d?q=80&w=847&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -89,7 +85,6 @@ const CultureUsa = () => {
       <div className="relative w-full py-10 rounded-4xl mt-10 flex items-center justify-center overflow-hidden bg-blue-900">
         <div className="absolute inset-0 bg-[radial-gradient(circle,theme(colors.blue.500)_0%,theme(colors.blue.500)_20%,theme(colors.blue.800)_40%,theme(colors.blue.500)_60%,theme(colors.blue.800)_100%)] opacity-80" />
 
-        {/* Content */}
         <div className="relative z-10 text-center text-gray-100 p-8 max-w-4xl">
           <h1 className="text-4xl font-bold mb-4 font-montserrat">
             Proof of English Proficiency in the USA

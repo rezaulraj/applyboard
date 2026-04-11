@@ -10,9 +10,7 @@ const Rewords = () => {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column: ELEVATE Card */}
           <div className="relative bg-gradient-to-br from-[#1e3a8a] via-[#2563eb] to-[#0ea5e9] rounded-2xl overflow-hidden p-8 md:p-10 min-h-[480px] shadow-xl">
-            {/* Background Arrow Graphic */}
             <svg
               className="absolute top-10 right-12 w-48 h-96 text-white/10 pointer-events-none"
               viewBox="0 0 100 200"
@@ -25,7 +23,6 @@ const Rewords = () => {
               <path d="M50 180 L50 40 M20 70 L50 20 L80 70" />
             </svg>
 
-            {/* Header */}
             <div className="relative z-10 text-white mb-8">
               <div className="flex items-center gap-2 mb-3">
                 <svg
@@ -67,9 +64,7 @@ const Rewords = () => {
               </h2>
             </div>
 
-            {/* Tier Badges */}
             <div className="relative z-10 space-y-3 mt-4">
-              {/* Diamond */}
               <div className="flex items-center gap-3">
                 <div className="bg-gradient-to-r from-purple-700 to-pink-500 text-white px-4 py-2 rounded-l-full rounded-r-md font-semibold text-sm flex items-center gap-2 shadow-lg">
                   <svg
@@ -88,7 +83,6 @@ const Rewords = () => {
                   Diamond
                 </div>
               </div>
-              {/* Titanium */}
               <div className="flex items-center gap-3">
                 <div className="bg-gradient-to-r from-emerald-600 to-teal-400 text-white px-4 py-2 rounded-l-full rounded-r-md font-semibold text-sm flex items-center gap-2 shadow-lg ml-4">
                   <svg
@@ -107,7 +101,7 @@ const Rewords = () => {
                   Titanium
                 </div>
               </div>
-              {/* Platinum */}
+
               <div className="flex items-center gap-3">
                 <div className="bg-gradient-to-r from-blue-800 to-blue-500 text-white px-4 py-2 rounded-l-full rounded-r-md font-semibold text-sm flex items-center gap-2 shadow-lg ml-8">
                   <svg
@@ -126,7 +120,6 @@ const Rewords = () => {
                   Platinum
                 </div>
               </div>
-              {/* Gold */}
               <div className="flex items-center gap-3">
                 <div className="bg-gradient-to-r from-amber-600 to-yellow-400 text-white px-4 py-2 rounded-l-full rounded-r-md font-semibold text-sm flex items-center gap-2 shadow-lg ml-12">
                   <svg
@@ -147,7 +140,6 @@ const Rewords = () => {
               </div>
             </div>
 
-            {/* Professional Man Image */}
             <div className="absolute bottom-0 right-0 w-1/2 h-full pointer-events-none">
               <img
                 src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -157,21 +149,18 @@ const Rewords = () => {
             </div>
           </div>
 
-          {/* Right Column: Content */}
-          <div className="space-y-6">
-            {/* Label */}
+        <div className="space-y-6">
+
             <div>
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
                 REWARDS
               </span>
             </div>
 
-            {/* Heading */}
             <h2 className="text-3xl sm:text-4xl font-bold font-montserrat text-gray-800 leading-tight">
               Get Exclusive Rewards as an Elevate Partner
             </h2>
 
-            {/* Description Paragraphs */}
             <p className="text-base lg:text-lg font-sans text-gray-600 leading-relaxed">
               Our built-in rewards program grants you exclusive benefits like
               higher commission, priority service, access to high-profile
@@ -182,9 +171,7 @@ const Rewords = () => {
               opportunities to grow your business!
             </p>
 
-            {/* Feature Items */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 py-2">
-              {/* Priority Service */}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg
@@ -208,7 +195,6 @@ const Rewords = () => {
                 </div>
               </div>
 
-              {/* Higher Commission */}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg
@@ -232,7 +218,6 @@ const Rewords = () => {
                 </div>
               </div>
 
-              {/* Upskilling Opportunities */}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg
@@ -257,7 +242,6 @@ const Rewords = () => {
               </div>
             </div>
 
-            {/* Buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
               <button
                 onClick={openModal}

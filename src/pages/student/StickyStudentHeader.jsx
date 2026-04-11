@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-// import Register from "./Register";
 import Search from "./Search";
 import Apply from "./Apply";
 import Funding from "./Funding";
@@ -10,13 +9,6 @@ const StickyStudentHeader = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const sections = [
-    // {
-    //   id: "register",
-    //   label: "REGISTER",
-    //   color: "bg-blue-500",
-    //   hasCustom: true,
-    //   component: Register,
-    // },
     {
       id: "search",
       label: "SEARCH",
@@ -56,7 +48,6 @@ const StickyStudentHeader = () => {
 
   const sectionRefs = useRef({});
 
-  // Intersection Observer for section tracking
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -180,10 +171,10 @@ const StickyStudentHeader = () => {
         </div>
       </div>
 
-      {/* ==================== SECTIONS CONTENT ==================== */}
+      {/*SECTIONS CONTENT*/}
       <div className="pt-0">
         {sections.map((section, index) => {
-          // ✅ Render custom component for each section
+
           const CustomComponent = section.component;
 
           return (
@@ -191,7 +182,7 @@ const StickyStudentHeader = () => {
               key={section.id}
               id={section.id}
               ref={(el) => (sectionRefs.current[section.id] = el)}
-              className={`min-h-[80vh] py-16 ${
+              className={`min-h-[60vh] py-16 ${
                 index % 2 === 0 ? "bg-white" : "bg-gray-50"
               }`}
             >

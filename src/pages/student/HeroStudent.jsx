@@ -7,7 +7,6 @@ const HeroStudent = () => {
     <section className=" bg-white flex items-center px-6 sm:px-12 lg:px-20 py-16">
       <div className="max-w-6xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
           <div className="space-y-8">
             <h1 className="text-4xl sm:text-5xl font-montserrat font-bold leading-tight">
               <span className="text-gray-800 block">Find Your</span>
@@ -35,7 +34,6 @@ const HeroStudent = () => {
             </button>
           </div>
 
-          {/* Right Images */}
           <div className="relative">
             <div className="grid grid-cols-5 gap-4">
               <div className="col-span-3 relative">
@@ -57,7 +55,6 @@ const HeroStudent = () => {
                 </div>
               </div>
 
-              {/* Right Side Small Images */}
               <div className="col-span-2 flex flex-col gap-4">
                 <div className="relative overflow-hidden rounded-2xl shadow-xl aspect-square">
                   <img

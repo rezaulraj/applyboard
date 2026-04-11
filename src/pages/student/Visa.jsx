@@ -4,26 +4,20 @@ const Visa = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-12 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* Left - Browser Mockup */}
         <div className="relative order-2 lg:order-1 flex justify-center">
           <div className="relative w-full max-w-lg">
-            {/* Browser Window */}
             <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all duration-500 hover:shadow-3xl hover:-translate-y-1">
-              {/* Browser Header */}
               <div className="bg-gradient-to-r from-blue-300 to-blue-400 h-12 flex items-center px-5 gap-2">
                 <div className="w-3 h-3 rounded-full bg-white/80" />
                 <div className="w-3 h-3 rounded-full bg-white/80" />
                 <div className="w-3 h-3 rounded-full bg-white/80" />
               </div>
 
-              {/* Browser Content */}
               <div className="p-8 space-y-6">
-                {/* Heading */}
                 <h3 className="text-2xl font-bold text-gray-900">
                   Visa support
                 </h3>
 
-                {/* First Score Row */}
                 <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 animate-fade-in-up">
                   <div className="w-16 h-16 bg-white rounded-xl shadow-md flex items-center justify-center flex-shrink-0">
                     <span className="text-xl font-bold text-blue-400">95%</span>
@@ -50,7 +44,6 @@ const Visa = () => {
                   </div>
                 </div>
 
-                {/* Second Score Row */}
                 <div className="flex items-center gap-4 p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-300 animate-fade-in-up-delay">
                   <div className="w-16 h-16 bg-white rounded-xl shadow-md flex items-center justify-center flex-shrink-0">
                     <span className="text-xl font-bold text-blue-400">85%</span>
@@ -77,14 +70,12 @@ const Visa = () => {
                   </div>
                 </div>
 
-                {/* Calculate Button */}
                 <button className="w-full bg-blue-300 hover:bg-blue-400 text-white font-semibold py-3.5 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-0.5 animate-fade-in-up-delay-2">
                   Calculate visa score
                 </button>
               </div>
             </div>
 
-            {/* OneVasco Logo Card */}
             <div className="absolute -bottom-6 -right-4 sm:-right-8 animate-float">
               <div className="bg-white rounded-xl shadow-xl p-5 border border-gray-100 hover:shadow-2xl transition-shadow duration-300">
                 <div className="flex items-center gap-3">
@@ -123,24 +114,19 @@ const Visa = () => {
               </div>
             </div>
 
-            {/* Decorative Background Glow */}
             <div className="absolute -z-10 top-1/2 -left-12 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-30" />
           </div>
         </div>
 
-        {/* Right - Text Content */}
         <div className="space-y-6 order-1 lg:order-2 lg:pl-8">
-          {/* Category Label */}
           <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             VISA
           </p>
 
-          {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl  font-montserrat font-bold text-gray-900 leading-tight">
             Request Visa Support
           </h2>
 
-          {/* Description */}
           <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-lg">
             Receive guided support for your visa application through
              AdmissionOnBoard's trusted partner,{" "}
@@ -153,7 +139,6 @@ const Visa = () => {
             .
           </p>
 
-          {/* CTA Button */}
           <a href="/contact" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 group">
             Get Visa Support
             <svg
@@ -173,7 +158,6 @@ const Visa = () => {
         </div>
       </div>
 
-      {/* Animations */}
       <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px); }

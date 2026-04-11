@@ -6,7 +6,6 @@ const HeroCanada = () => {
   return (
     <section className="bg-gradient-to-br from-gray-50 via-white to-purple-50/30 flex items-center px-6 sm:px-12 lg:px-20 py-16">
       <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center md:px-16">
-        {/* Left Content */}
         <div className="space-y-8">
           <h1 className="text-4xl md:text-5xl font-montserrat font-bold leading-normal text-gray-900">
             Your Journey to{" "}
@@ -32,9 +31,7 @@ const HeroCanada = () => {
           </button>
         </div>
 
-        {/* Right Images Grid */}
         <div className="grid grid-cols-3 grid-rows-2 gap-3 sm:gap-4 h-auto lg:h-[380px] ">
-          {/* Main Large Image - Student with Sydney Opera House */}
           <div className="col-span-2 row-span-2 relative overflow-hidden rounded-2xl shadow-xl group">
             <img
               src="https://plus.unsplash.com/premium_photo-1694475481348-7cbe417be129?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -44,7 +41,6 @@ const HeroCanada = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
 
-          {/* Top Small Image - Male Student with Books */}
           <div className="col-span-1 row-span-1 relative overflow-hidden rounded-2xl shadow-lg group">
             <img
               src="https://plus.unsplash.com/premium_photo-1661594735500-da5058ebd10d?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -53,7 +49,6 @@ const HeroCanada = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
 
-          {/* Bottom Small Image - Australian Flags */}
           <div className="col-span-1 row-span-1 relative overflow-hidden rounded-2xl shadow-lg group">
             <img
               src="https://images.unsplash.com/photo-1530025809667-1f4bcff8e60f?q=80&w=1091&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

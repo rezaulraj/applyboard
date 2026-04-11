@@ -22,7 +22,6 @@ const PrivacyPolicy = () => {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 400);
 
-      // Update active section based on scroll position
       const scrollPosition = window.scrollY + 150;
       for (const section of sections) {
         const element = document.getElementById(section.id);
@@ -65,7 +64,6 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
-      {/* Header */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl font-bold font-montserrat mb-4">
@@ -82,7 +80,6 @@ const PrivacyPolicy = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Sidebar Navigation - Sticky */}
           <div className="lg:w-64 flex-shrink-0">
             <div className="sticky top-24 bg-white rounded-2xl shadow-lg p-6 border border-blue-100">
               <h3 className="font-bold text-gray-900 mb-4 font-montserrat text-lg">
@@ -106,10 +103,8 @@ const PrivacyPolicy = () => {
             </div>
           </div>
 
-          {/* Main Content */}
           <div className="flex-1 bg-white rounded-2xl shadow-lg p-8 sm:p-12 border border-blue-100">
-            
-            {/* Introduction */}
+
             <section id="introduction" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -134,7 +129,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Information We Collect */}
             <section id="information" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -195,7 +189,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* How We Use Your Information */}
             <section id="use" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -226,7 +219,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Information Sharing */}
             <section id="sharing" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -261,7 +253,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Cookies & Tracking */}
             <section id="cookies" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -299,7 +290,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Data Security */}
             <section id="security" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -339,7 +329,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Your Rights */}
             <section id="rights" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -371,7 +360,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* International Transfers */}
             <section id="international" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -398,7 +386,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Children's Privacy */}
             <section id="children" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -415,7 +402,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Policy Changes */}
             <section id="changes" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -440,7 +426,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Contact Us */}
             <section id="contact" className="mb-12 scroll-mt-24">
               <h2 className="text-3xl font-bold text-gray-900 mb-6 font-montserrat flex items-center gap-3">
                 <span className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600">
@@ -475,7 +460,6 @@ const PrivacyPolicy = () => {
               </div>
             </section>
 
-            {/* Footer Note */}
             <div className="border-t border-gray-200 pt-8 mt-12">
               <p className="text-center text-gray-500 text-sm">
                 This Privacy Policy was last updated on January 1, 2026.
@@ -485,7 +469,6 @@ const PrivacyPolicy = () => {
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
       {showScrollTop && (
         <button
           onClick={scrollToTop}

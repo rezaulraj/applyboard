@@ -8,7 +8,6 @@ import StudentVisaCanada from "./StudentVisaCanada";
 
 const StickyHeaderCanada = () => {
   const [activeSection, setActiveSection] = useState("academics");
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   const sections = [
     {
@@ -57,7 +56,6 @@ const StickyHeaderCanada = () => {
 
   const sectionRefs = useRef({});
 
-  // Intersection Observer for section tracking
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -73,7 +71,6 @@ const StickyHeaderCanada = () => {
       });
     }, observerOptions);
 
-    // Wait for refs to be populated
     const timeoutId = setTimeout(() => {
       Object.values(sectionRefs.current).forEach((ref) => {
         if (ref) observer.observe(ref);
@@ -84,7 +81,7 @@ const StickyHeaderCanada = () => {
       clearTimeout(timeoutId);
       observer.disconnect();
     };
-  }, []); // Empty dependency array - only run once
+  }, []);
 
   const scrollToSection = (id) => {
     const element = sectionRefs.current[id];
@@ -103,7 +100,6 @@ const StickyHeaderCanada = () => {
 
   return (
     <div className="relative">
-      {/* Header is ALWAYS visible - removed the conditional visibility */}
       <div
         id="sticky-header"
         className="sticky top-20 z-40 transition-all duration-500 ease-in-out"
@@ -166,10 +162,8 @@ const StickyHeaderCanada = () => {
         </div>
       </div>
 
-      {/* ==================== SECTIONS CONTENT ==================== */}
       <div className="pt-0">
         {sections.map((section, index) => {
-          // ✅ Render custom component for each section
           const CustomComponent = section.component;
 
           return (
@@ -177,7 +171,7 @@ const StickyHeaderCanada = () => {
               key={section.id}
               id={section.id}
               ref={(el) => (sectionRefs.current[section.id] = el)}
-              className={`min-h-[80vh] py-16 ${
+              className={`min-h-[60vh] py-16 ${
                 index % 2 === 0 ? "bg-white" : "bg-gray-50"
               }`}
             >

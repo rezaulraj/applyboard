@@ -4,19 +4,15 @@ const OpportunityUsa = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-        {/* Left Column - Text Content */}
         <div className="space-y-6">
-          {/* Category Label */}
           <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             Opportunity
           </span>
 
-          {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900 leading-tight">
             Find Big Opportunities in Small Cities
           </h2>
 
-          {/* First Paragraph */}
           <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
             As a huge and geographically diverse country with 50 unique states
             to choose from, the USA has plenty to offer any student whether you
@@ -26,7 +22,6 @@ const OpportunityUsa = () => {
             exist in smaller, growing (and more affordable) communities.
           </p>
 
-          {/* Second Paragraph */}
           <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
             The US has countless growing cities in smaller major population
             zones—and these up-and-coming regions need talented international
@@ -37,9 +32,7 @@ const OpportunityUsa = () => {
           </p>
         </div>
 
-        {/* Right Column - Images */}
         <div className="grid grid-cols-2 gap-4">
-          {/* Top Left - Small Square Image */}
           <div className="space-y-4">
             <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[6/4]">
               <img
@@ -49,7 +42,6 @@ const OpportunityUsa = () => {
               />
             </div>
 
-            {/* Bottom Left - Kangaroo Image */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[3.9/4]">
               <img
                 src="https://images.pexels.com/photos/6147444/pexels-photo-6147444.jpeg"
@@ -58,8 +50,7 @@ const OpportunityUsa = () => {
               />
             </div>
           </div>
-
-          {/* Right Side - Large Vertical Image */}
+          
           <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[1.7/3]">
             <img
               src="https://images.unsplash.com/photo-1761301006715-d4f6ee28b08c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

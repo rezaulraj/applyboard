@@ -4,12 +4,10 @@ const CommunityCanada = () => {
   return (
     <section className="py-16 px-6 max-w-6xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center md:items-start">
-        {/* Images Column */}
         <div
           className="flex flex-col gap-5 animate-fade-in col-span-5 order-2 md:order-1
         "
         >
-          {/* Top image */}
           <div className="rounded-2xl shadow-lg h-56 relative z-10">
             <img
               src="https://plus.unsplash.com/premium_photo-1661963563108-50f1f802d08c?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -37,7 +35,6 @@ const CommunityCanada = () => {
             </div>
           </div>
 
-          {/* Bottom image — offset right */}
           <div className="rounded-2xl shadow-lg h-48 w-4/5 self-end relative z-0 -mr-8">
             <img
               src="https://plus.unsplash.com/premium_photo-1706517229833-f41d68aae8ff?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -66,7 +63,6 @@ const CommunityCanada = () => {
           </div>
         </div>
 
-        {/* Text Column */}
         <div className="flex flex-col gap-6 col-span-7 order-1 md:order-2">
           <p className="text-sm font-bold font-sans tracking-[1.5px] text-blue-600 uppercase">
             Community

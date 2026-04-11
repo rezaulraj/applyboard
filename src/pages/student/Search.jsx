@@ -5,12 +5,10 @@ const Search = () => {
   const [popupOpen, setPopupOpen] = useState(false);
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Side - Floating UI Cards */}
           <div className="relative order-2 md:order-1">
             <div className="relative w-full max-w-lg mx-auto">
-              {/* Card 1 - Coventry University (Top Left) */}
               <div className="absolute top-0 -left-10 z-10 w-64 bg-white rounded-2xl shadow-lg border border-blue-100 p-4 animate-float-slow hover:shadow-xl transition-shadow duration-300">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -31,7 +29,6 @@ const Search = () => {
                 </button>
               </div>
 
-              {/* Green Icon - Top Right */}
               <div className="absolute -top-32 -left-10 z-20 w-16 h-16 bg-emerald-500 rounded-2xl shadow-lg flex items-center justify-center animate-float-medium hover:scale-110 transition-transform duration-300">
                 <svg
                   className="w-8 h-8 text-white"
@@ -55,7 +52,6 @@ const Search = () => {
                 </svg>
               </div>
 
-              {/* Card 2 - University of Waterloo (Center) */}
               <div className="absolute top-10 left-36 z-30 w-72 bg-white rounded-2xl shadow-xl border-2 border-blue-200 p-5 animate-float-fast hover:shadow-2xl transition-shadow duration-300">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -75,10 +71,12 @@ const Search = () => {
                   <div className="h-2.5 bg-gray-100 rounded-full w-2/3" />
                 </div>
                 <div className="relative">
-                  <button className="w-full py-2.5 text-sm font-sans font-semibold text-blue-600 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-200">
+                  <button
+                    onClick={() => setPopupOpen(true)}
+                    className="w-full py-2.5 text-sm font-sans font-semibold text-blue-600 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors duration-200"
+                  >
                     Create application
                   </button>
-                  {/* Cursor pointer */}
                   <div className="absolute -right-2 -bottom-2">
                     <svg
                       className="w-8 h-8 text-gray-800 transform rotate-12"
@@ -91,7 +89,6 @@ const Search = () => {
                 </div>
               </div>
 
-              {/* Yellow Icon - Middle Left */}
               <div className="absolute top-44 left-0 z-20 w-16 h-16 bg-amber-400 rounded-2xl shadow-lg flex items-center justify-center animate-float-medium hover:scale-110 transition-transform duration-300">
                 <svg
                   className="w-8 h-8 text-white"
@@ -130,7 +127,10 @@ const Search = () => {
                   <div className="h-2 bg-gray-100 rounded-full w-full" />
                   <div className="h-2 bg-gray-100 rounded-full w-2/3" />
                 </div>
-                <button className="w-full py-2 text-xs font-semibold font-sans text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-200">
+                <button
+                  onClick={() => setPopupOpen(true)}
+                  className="w-full py-2 text-xs font-semibold font-sans text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors duration-200"
+                >
                   Create application
                 </button>
               </div>

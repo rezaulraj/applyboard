@@ -19,7 +19,6 @@ const Saveing = () => {
               </div>
             </div>
 
-            {/* Main Chat Window */}
             <div className="relative w-full max-w-sm bg-white rounded-2xl border-2 border-blue-100 shadow-2xl overflow-hidden z-10">
               <div className="bg-gradient-to-r from-blue-300 to-blue-400 px-4 py-3 flex justify-center items-center">
                 <h3 className="text-gray-200 font-bold text-lg tracking-wide font-sans">
@@ -27,7 +26,6 @@ const Saveing = () => {
                 </h3>
               </div>
 
-              {/* Chat Body */}
               <div className="p-5 bg-gray-50/50 space-y-6 min-h-[340px]">
                 <div className="flex justify-end items-start space-x-3">
                   <div className="flex flex-col items-end space-y-2 max-w-[80%]">
@@ -35,7 +33,6 @@ const Saveing = () => {
                       My student wants to study in Alberta. What are the most
                       popular cities?
                     </div>
-                    {/* Avatar */}
                     <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white shadow-sm">
                       <img
                         src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=150"
@@ -63,7 +60,6 @@ const Saveing = () => {
                     <div className="bg-blue-100 font-sans text-blue-400 px-4 py-3 rounded-2xl rounded-tr-none text-sm shadow-sm leading-snug">
                       Great! What about top programs?
                     </div>
-                    {/* Avatar */}
                     <div className="w-8 h-8 rounded-full overflow-hidden border-2 border-white shadow-sm">
                       <img
                         src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=150"
@@ -78,19 +74,16 @@ const Saveing = () => {
           </div>
 
           <div className="space-y-6">
-            {/* Label */}
             <div>
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
                 SAVINGS
               </span>
             </div>
 
-            {/* Heading */}
             <h2 className="text-3xl sm:text-4xl font-bold font-montserrat text-gray-800 leading-tight">
               Save Yourself Time and Money
             </h2>
 
-            {/* Description */}
             <p className="text-base lg:text-lg text-gray-600 font-sans leading-relaxed max-w-md">
               Use proven automation technology to speed up applications and
               eliminate back-and-forth. Revolutionize your workflow and put

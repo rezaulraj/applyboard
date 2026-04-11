@@ -314,199 +314,206 @@ const universities = {
 };
 
 const Modal = ({ uni, onClose }) => {
+  const [popupOpen, setPopupOpen] = useState(false);
   if (!uni) return null;
   return (
-    <div
-      onClick={onClose}
-      style={{
-        position: "fixed",
-        inset: 0,
-        zIndex: 1000,
-        background: "rgba(15,31,69,0.55)",
-        backdropFilter: "blur(6px)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "20px",
-        animation: "fadeInOverlay 0.22s ease",
-      }}
-    >
+    <>
       <div
-        onClick={(e) => e.stopPropagation()}
+        onClick={onClose}
         style={{
-          background: "#fff",
-          borderRadius: "20px",
-          maxWidth: "560px",
-          width: "100%",
-          overflow: "hidden",
-          boxShadow: "0 24px 80px rgba(15,31,69,0.22)",
-          animation: "popIn 0.28s cubic-bezier(.22,1,.36,1)",
+          position: "fixed",
+          inset: 0,
+          zIndex: 1000,
+          background: "rgba(15,31,69,0.55)",
+          backdropFilter: "blur(6px)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "20px",
+          animation: "fadeInOverlay 0.22s ease",
         }}
       >
-        <div style={{ position: "relative", height: "220px" }}>
-          <img
-            src={uni.image}
-            alt={uni.name}
-            style={{ width: "100%", height: "100%", objectFit: "cover" }}
-          />
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              background:
-                "linear-gradient(to top, rgba(15,31,69,0.7) 0%, transparent 60%)",
-            }}
-          />
-          <button
-            onClick={onClose}
-            style={{
-              position: "absolute",
-              top: 14,
-              right: 14,
-              background: "rgba(255,255,255,0.9)",
-              border: "none",
-              borderRadius: "50%",
-              width: 34,
-              height: 34,
-              cursor: "pointer",
-              fontSize: 18,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#0f1f45",
-              fontWeight: 700,
-              boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-            }}
-          >
-            ×
-          </button>
-          <span
-            style={{
-              position: "absolute",
-              bottom: 14,
-              left: 16,
-              background: "#4F8EF7",
-              color: "#fff",
-              fontSize: 11,
-              fontWeight: 700,
-              letterSpacing: "0.1em",
-              padding: "4px 10px",
-              borderRadius: "20px",
-              fontFamily: "'Open Sans', sans-serif",
-            }}
-          >
-            ● Featured
-          </span>
-        </div>
-        <div style={{ padding: "24px 28px 28px" }}>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: 14,
-              marginBottom: 14,
-            }}
-          >
+        <div
+          onClick={(e) => e.stopPropagation()}
+          style={{
+            background: "#fff",
+            borderRadius: "20px",
+            maxWidth: "560px",
+            width: "100%",
+            overflow: "hidden",
+            boxShadow: "0 24px 80px rgba(15,31,69,0.22)",
+            animation: "popIn 0.28s cubic-bezier(.22,1,.36,1)",
+          }}
+        >
+          <div style={{ position: "relative", height: "220px" }}>
             <img
-              src={uni.logo}
-              alt=""
+              src={uni.image}
+              alt={uni.name}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+            <div
               style={{
-                width: 52,
-                height: 52,
-                borderRadius: "50%",
-                border: "2px solid #e8f0fe",
+                position: "absolute",
+                inset: 0,
+                background:
+                  "linear-gradient(to top, rgba(15,31,69,0.7) 0%, transparent 60%)",
               }}
             />
-            <div>
-              <div
+            <button
+              onClick={onClose}
+              style={{
+                position: "absolute",
+                top: 14,
+                right: 14,
+                background: "rgba(255,255,255,0.9)",
+                border: "none",
+                borderRadius: "50%",
+                width: 34,
+                height: 34,
+                cursor: "pointer",
+                fontSize: 18,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "#0f1f45",
+                fontWeight: 700,
+                boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+              }}
+            >
+              ×
+            </button>
+            <span
+              style={{
+                position: "absolute",
+                bottom: 14,
+                left: 16,
+                background: "#4F8EF7",
+                color: "#fff",
+                fontSize: 11,
+                fontWeight: 700,
+                letterSpacing: "0.1em",
+                padding: "4px 10px",
+                borderRadius: "20px",
+                fontFamily: "'Open Sans', sans-serif",
+              }}
+            >
+              ● Featured
+            </span>
+          </div>
+          <div style={{ padding: "24px 28px 28px" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 14,
+                marginBottom: 14,
+              }}
+            >
+              <img
+                src={uni.logo}
+                alt=""
                 style={{
-                  fontFamily: "'Open Sans', sans-serif",
-                  fontWeight: 900,
-                  fontSize: 20,
-                  color: "#0f1f45",
+                  width: 52,
+                  height: 52,
+                  borderRadius: "50%",
+                  border: "2px solid #e8f0fe",
                 }}
-              >
-                {uni.name}
-              </div>
-              <div style={{ fontSize: 13, color: "#6b7fa3", marginTop: 2 }}>
-                {uni.location}
+              />
+              <div>
+                <div
+                  style={{
+                    fontFamily: "'Open Sans', sans-serif",
+                    fontWeight: 900,
+                    fontSize: 20,
+                    color: "#0f1f45",
+                  }}
+                >
+                  {uni.name}
+                </div>
+                <div style={{ fontSize: 13, color: "#6b7fa3", marginTop: 2 }}>
+                  {uni.location}
+                </div>
               </div>
             </div>
-          </div>
-          <p
-            style={{
-              fontSize: 14,
-              color: "#3a4a6b",
-              lineHeight: 1.75,
-              marginBottom: 20,
-            }}
-          >
-            {uni.detail}
-          </p>
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            {[
-              { label: "Founded", value: uni.founded },
-              { label: "Students", value: uni.students },
-              { label: "Ranking", value: uni.ranking },
-            ].map((s) => (
-              <div
-                key={s.label}
-                style={{
-                  flex: 1,
-                  minWidth: 110,
-                  background: "#f0f6ff",
-                  borderRadius: 12,
-                  padding: "12px 14px",
-                }}
-              >
+            <p
+              style={{
+                fontSize: 14,
+                color: "#3a4a6b",
+                lineHeight: 1.75,
+                marginBottom: 20,
+              }}
+            >
+              {uni.detail}
+            </p>
+            <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
+              {[
+                { label: "Founded", value: uni.founded },
+                { label: "Students", value: uni.students },
+                { label: "Ranking", value: uni.ranking },
+              ].map((s) => (
                 <div
+                  key={s.label}
                   style={{
-                    fontSize: 11,
-                    color: "#4F8EF7",
-                    fontWeight: 700,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.08em",
-                    marginBottom: 4,
+                    flex: 1,
+                    minWidth: 110,
+                    background: "#f0f6ff",
+                    borderRadius: 12,
+                    padding: "12px 14px",
                   }}
                 >
-                  {s.label}
+                  <div
+                    style={{
+                      fontSize: 11,
+                      color: "#4F8EF7",
+                      fontWeight: 700,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.08em",
+                      marginBottom: 4,
+                    }}
+                  >
+                    {s.label}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 14,
+                      color: "#0f1f45",
+                      fontWeight: 800,
+                      fontFamily: "'Open Sans', sans-serif",
+                    }}
+                  >
+                    {s.value}
+                  </div>
                 </div>
-                <div
-                  style={{
-                    fontSize: 14,
-                    color: "#0f1f45",
-                    fontWeight: 800,
-                    fontFamily: "'Open Sans', sans-serif",
-                  }}
-                >
-                  {s.value}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <button
+              onClick={() => setPopupOpen(true)}
+              style={{
+                marginTop: 22,
+                width: "100%",
+                background: "linear-gradient(90deg, #4F8EF7, #2563eb)",
+                color: "#fff",
+                border: "none",
+                borderRadius: "50px",
+                padding: "13px",
+                fontFamily: "'Open Sans', sans-serif",
+                fontWeight: 800,
+                fontSize: 15,
+                cursor: "pointer",
+                boxShadow: "0 4px 16px #4F8EF744",
+                transition: "opacity 0.2s",
+              }}
+            >
+              Apply Now
+            </button>
           </div>
-          <button
-            onClick={() => setPopupOpen(true)}
-            style={{
-              marginTop: 22,
-              width: "100%",
-              background: "linear-gradient(90deg, #4F8EF7, #2563eb)",
-              color: "#fff",
-              border: "none",
-              borderRadius: "50px",
-              padding: "13px",
-              fontFamily: "'Open Sans', sans-serif",
-              fontWeight: 800,
-              fontSize: 15,
-              cursor: "pointer",
-              boxShadow: "0 4px 16px #4F8EF744",
-              transition: "opacity 0.2s",
-            }}
-          >
-            Apply Now
-          </button>
         </div>
       </div>
-    </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
+    </>
   );
 };
 

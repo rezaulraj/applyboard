@@ -4,7 +4,6 @@ const HeroContact = () => {
   return (
     <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
         <div className="bg-gradient-to-b from-blue-50 to-white rounded-3xl p-8 md:p-12 mb-12 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-montserrat">
             Contact
@@ -17,9 +16,7 @@ const HeroContact = () => {
           </p>
         </div>
 
-        {/* Contact Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {/* Email Card */}
           <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow duration-300">
             <div className="mb-4 flex justify-center">
               <svg
@@ -50,7 +47,6 @@ const HeroContact = () => {
             </p>
           </div>
 
-          {/* Live Chat Card */}
           <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow duration-300">
             <div className="mb-4 flex justify-center">
               <svg
@@ -74,7 +70,6 @@ const HeroContact = () => {
             <p className="text-gray-600 text-sm font-sans">Available 24/7</p>
           </div>
 
-          {/* Canada Card */}
           <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow duration-300">
             <div className="mb-4 flex justify-center">
               <svg
@@ -107,7 +102,6 @@ const HeroContact = () => {
             </p>
           </div>
 
-          {/* India Card */}
           <div className="bg-white rounded-2xl border border-gray-200 p-8 text-center hover:shadow-lg transition-shadow duration-300">
             <div className="mb-4 flex justify-center">
               <svg

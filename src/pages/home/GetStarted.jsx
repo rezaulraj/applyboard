@@ -1,7 +1,7 @@
 import React from "react";
 
 const GetStarted = () => {
-  // Card data for clean mapping
+
   const cards = [
     {
       title: "Student",
@@ -9,7 +9,6 @@ const GetStarted = () => {
         "Are you a student looking to study in Canada, the US, the UK, Ireland, Australia, or Germany? Register to launch your journey now!",
       buttonText: "Apply Now",
       buttonLink: "#",
-      // Unsplash image: Student studying abroad / education concept
       imageUrl:
         "https://plus.unsplash.com/premium_photo-1682089877310-b2308b0dc719?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       bgAccent: "from-blue-50 to-indigo-50",

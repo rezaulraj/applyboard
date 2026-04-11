@@ -18,7 +18,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
 
-  // Prevent body scroll when modal is open
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -30,7 +29,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
     };
   }, [isOpen]);
 
-  // Handle escape key
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === "Escape" && isOpen) {
@@ -53,19 +51,16 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     console.log("Form submitted:", formData);
     setIsSubmitting(false);
     setSubmitSuccess(true);
 
-    // Close modal after 2 seconds
     setTimeout(() => {
       setSubmitSuccess(false);
       setCurrentStep(1);
       onClose();
-      // Reset form
       setFormData({
         destinationCountry: "",
         schoolName: "",
@@ -107,15 +102,13 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
         onClick={onClose}
       ></div>
 
-      {/* Modal Content */}
+
       <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform transition-all">
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm hover:bg-white rounded-full flex items-center justify-center transition-all shadow-lg"
@@ -136,7 +129,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
           </svg>
         </button>
 
-        {/* Hero Image */}
         <div className="relative h-48 sm:h-64 overflow-hidden rounded-t-3xl">
           <img
             src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1200"
@@ -156,7 +148,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
           </div>
         </div>
 
-        {/* Steps Indicator */}
         <div className="px-6 sm:px-8 pt-8 pb-4">
           <div className="grid grid-cols-4 gap-2 sm:gap-4">
             {steps.map((step, index) => (
@@ -203,7 +194,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
               </div>
             ))}
           </div>
-          {/* Progress Line */}
           <div className="relative mt-4">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gray-200 rounded-full">
               <div
@@ -214,7 +204,7 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
           </div>
         </div>
 
-        {/* Form */}
+
         <form onSubmit={handleSubmit} className="p-6 sm:p-8">
           {submitSuccess ? (
             <div className="text-center py-12">
@@ -246,9 +236,8 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
             </div>
           ) : (
             <div className="space-y-5">
-              {/* Row 1 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                {/* Destination Country */}
+
                 <div>
                   <label
                     htmlFor="destinationCountry"
@@ -274,7 +263,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                   </select>
                 </div>
 
-                {/* School Name */}
                 <div>
                   <label
                     htmlFor="schoolName"
@@ -295,9 +283,8 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              {/* Row 2 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                {/* Contact First Name */}
+
                 <div>
                   <label
                     htmlFor="contactFirstName"
@@ -317,7 +304,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                   />
                 </div>
 
-                {/* Contact Last Name */}
                 <div>
                   <label
                     htmlFor="contactLastName"
@@ -338,9 +324,7 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              {/* Row 3 */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                {/* Contact Email */}
                 <div>
                   <label
                     htmlFor="contactEmail"
@@ -360,7 +344,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                   />
                 </div>
 
-                {/* Contact Title */}
                 <div>
                   <label
                     htmlFor="contactTitle"
@@ -381,7 +364,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                 </div>
               </div>
 
-              {/* Phone Number */}
               <div>
                 <label
                   htmlFor="phoneNumber"
@@ -400,7 +382,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                 />
               </div>
 
-              {/* Referred by someone */}
               <div className="flex items-start p-4 bg-blue-50 rounded-lg">
                 <input
                   type="checkbox"
@@ -421,7 +402,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                 </label>
               </div>
 
-              {/* Additional Comments */}
               <div>
                 <label
                   htmlFor="additionalComments"
@@ -440,7 +420,6 @@ const PartnershipFormModal = ({ isOpen, onClose }) => {
                 />
               </div>
 
-              {/* Submit Button */}
               <div className="pt-6">
                 <button
                   type="submit"

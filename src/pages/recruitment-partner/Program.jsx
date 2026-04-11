@@ -6,21 +6,17 @@ const Program = () => {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Text Content */}
           <div className="space-y-6">
-            {/* Badge */}
             <div>
               <span className="text-base font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
                 PROGRAMS
               </span>
             </div>
 
-            {/* Heading */}
             <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-800 leading-tight">
               Access 150,000+ Global Study Programs
             </h2>
 
-            {/* Description */}
             <p className="text-base sm:text-lg font-sans text-gray-600 leading-relaxed max-w-xl">
               Explore the world from one platform. No need to manage
               partnerships or contracts. Find programs to suit any student's
@@ -29,11 +25,8 @@ const Program = () => {
             </p>
           </div>
 
-          {/* Right Column: Graphic Illustration */}
           <div className="relative flex justify-center lg:justify-end py-8">
-            {/* Browser Mockup */}
             <div className="relative bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-blue-100 w-full max-w-md z-10 overflow-hidden">
-              {/* Browser Header */}
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-5 py-3 flex items-center gap-2">
                 <div className="flex gap-1.5">
                   <div className="w-2.5 h-2.5 rounded-full bg-white/40"></div>
@@ -42,9 +35,7 @@ const Program = () => {
                 </div>
               </div>
 
-              {/* Browser Content */}
               <div className="p-6 space-y-5 bg-white/95 backdrop-blur-sm">
-                {/* Search Bar */}
                 <div className="relative group">
                   <input
                     type="text"
@@ -67,7 +58,6 @@ const Program = () => {
                   </svg>
                 </div>
 
-                {/* Filter Tags */}
                 <div className="flex flex-wrap gap-2">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-50 text-purple-600 rounded-full text-xs font-semibold border border-purple-100">
                     <svg
@@ -123,7 +113,6 @@ const Program = () => {
                   </span>
                 </div>
 
-                {/* Program Card */}
                 <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
@@ -151,7 +140,6 @@ const Program = () => {
               </div>
             </div>
 
-            {/* Floating Flags */}
             <div className="absolute top-0 left-1/4 transform -translate-x-1/3 -translate-y-1/4 bg-white rounded-full p-2 shadow-lg border border-gray-100 z-20">
               <CountryFlag
                 countryCode="GB"

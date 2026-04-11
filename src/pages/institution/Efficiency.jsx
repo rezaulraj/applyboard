@@ -5,21 +5,17 @@ const Efficiency = () => {
     <div className=" bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
           <div className="space-y-6">
-            {/* Category Label */}
             <div>
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
                 EFFICIENCY
               </span>
             </div>
 
-            {/* Main Heading */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 font-montserrat leading-tight">
               Save Time by Streamlining Your Process
             </h2>
 
-            {/* Description */}
             <p className="text-lg text-gray-600 font-sans leading-relaxed max-w-xl">
               Built-in quality checks and proven automation technology ensure
               you only receive complete, high-quality applications, letting you
@@ -27,11 +23,9 @@ const Efficiency = () => {
             </p>
           </div>
 
-          {/* Right Column - Browser Mockup */}
           <div className="relative">
-            {/* Browser Window */}
+
             <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
-              {/* Browser Header */}
               <div className="bg-gradient-to-r from-blue-300 to-blue-400 px-4 py-3">
                 <div className="flex items-center space-x-2">
                   <div className="flex space-x-1.5">
@@ -42,12 +36,9 @@ const Efficiency = () => {
                 </div>
               </div>
 
-              {/* Browser Content */}
               <div className="flex">
-                {/* Sidebar */}
                 <div className="w-16 bg-gray-50 border-r border-gray-200 py-6">
                   <div className="flex flex-col items-center space-y-4">
-                    {/* Sidebar Icon 1 - Home */}
                     <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-blue-400"
@@ -64,7 +55,6 @@ const Efficiency = () => {
                       </svg>
                     </div>
 
-                    {/* Sidebar Icon 2 - Flag/Document */}
                     <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-blue-400"
@@ -81,7 +71,6 @@ const Efficiency = () => {
                       </svg>
                     </div>
 
-                    {/* Sidebar Icon 3 - Graduation Cap */}
                     <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-gray-400"
@@ -104,7 +93,6 @@ const Efficiency = () => {
                       </svg>
                     </div>
 
-                    {/* Sidebar Icon 4 - User */}
                     <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-gray-400"
@@ -121,7 +109,6 @@ const Efficiency = () => {
                       </svg>
                     </div>
 
-                    {/* Sidebar Icon 5 - Document */}
                     <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-gray-400"
@@ -138,7 +125,6 @@ const Efficiency = () => {
                       </svg>
                     </div>
 
-                    {/* Sidebar Icon 6 - Dollar */}
                     <div className="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-gray-400"
@@ -157,9 +143,7 @@ const Efficiency = () => {
                   </div>
                 </div>
 
-                {/* Main Content Area */}
                 <div className="flex-1 p-6">
-                  {/* Application Header */}
                   <div className="flex items-center space-x-3 mb-6">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-300 to-purple-400 flex items-center justify-center">
                       <svg
@@ -181,15 +165,12 @@ const Efficiency = () => {
                     </h3>
                   </div>
 
-                  {/* Placeholder Lines */}
                   <div className="space-y-2 mb-6">
                     <div className="h-3 bg-gray-200 rounded w-1/3"></div>
                     <div className="h-3 bg-gray-200 rounded w-1/2"></div>
                   </div>
 
-                  {/* Checklist */}
                   <div className="space-y-3">
-                    {/* Item 1 */}
                     <div className="flex items-center space-x-3">
                       <div className="flex-shrink-0">
                         <div className="w-10 h-10 bg-emerald-300 rounded-lg flex items-center justify-center shadow-lg">
@@ -215,12 +196,10 @@ const Efficiency = () => {
                       </div>
                     </div>
 
-                    {/* Connector Line */}
                     <div className="flex items-center pl-5">
                       <div className="w-0.5 h-6 bg-gray-300"></div>
                     </div>
 
-                    {/* Item 2 */}
                     <div className="flex items-center space-x-3">
                       <div className="flex-shrink-0">
                         <div className="w-10 h-10 bg-emerald-300 rounded-lg flex items-center justify-center shadow-lg">
@@ -246,12 +225,10 @@ const Efficiency = () => {
                       </div>
                     </div>
 
-                    {/* Connector Line */}
                     <div className="flex items-center pl-5">
                       <div className="w-0.5 h-6 bg-gray-300"></div>
                     </div>
 
-                    {/* Item 3 */}
                     <div className="flex items-center space-x-3">
                       <div className="flex-shrink-0">
                         <div className="w-10 h-10 bg-emerald-300 rounded-lg flex items-center justify-center shadow-lg">
@@ -281,7 +258,6 @@ const Efficiency = () => {
               </div>
             </div>
 
-            {/* Decorative Elements */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-100 rounded-full opacity-50 blur-2xl"></div>
             <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-100 rounded-full opacity-50 blur-2xl"></div>
           </div>

@@ -3,9 +3,7 @@ import React from "react";
 const LifeCanada = () => {
   return (
     <div className="max-w-6xl mx-auto px-6 py-16 flex flex-col gap-16">
-      {/* Top Section */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-14 items-center">
-        {/* Left: Text */}
         <div className="flex flex-col gap-5 animate-fade-in col-span-7">
           <p className="text-sm font-bold font-sans tracking-[1.5px] text-blue-600 uppercase">
             Life
@@ -36,9 +34,7 @@ const LifeCanada = () => {
           </p>
         </div>
 
-        {/* Right: Stacked Images */}
         <div className="flex flex-col gap-4 col-span-5">
-          {/* Top image */}
           <div className="rounded-2xl shadow-lg h-52 relative ">
             <img
               src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -63,7 +59,6 @@ const LifeCanada = () => {
             </div>
           </div>
 
-          {/* Bottom image — offset left */}
           <div className="self-end w-4/5 rounded-2xl shadow-lg h-44 relative">
             <img
               src="https://plus.unsplash.com/premium_photo-1663946448097-c2358e0c6b6c?q=80&w=464&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

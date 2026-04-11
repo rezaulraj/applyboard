@@ -9,7 +9,6 @@ const HeroInstitution = () => {
   return (
     <section className="bg-gradient-to-br from-gray-50 via-white to-purple-50/30 flex items-center px-6 sm:px-12 lg:px-20 py-16">
       <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center md:px-16">
-        {/* Left Content */}
         <div className="space-y-8">
           <h1 className="text-4xl md:text-5xl font-montserrat font-bold leading-normal text-gray-900">
             Attract Quality Students from{" "}
@@ -32,7 +31,6 @@ const HeroInstitution = () => {
           </button>
         </div>
 
-        {/* Right Images Grid */}
         <div className="grid grid-cols-3 grid-rows-2 gap-3 sm:gap-4 h-auto lg:h-[380px] ">
           <div className="col-span-2 row-span-3 relative overflow-hidden rounded-2xl shadow-xl group">
             <img
@@ -43,13 +41,11 @@ const HeroInstitution = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
 
-          {/* Top Small Image - Male Student with Books */}
           <div className="col-span-1 row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">
             <img src="https://images.unsplash.com/photo-1717239749112-1722940626d1?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
 
-          {/* Bottom Small Image - Australian Flags */}
           <div className="col-span-1 row-span-1 relative overflow-hidden rounded-2xl shadow-lg group">
             <img
               src="https://plus.unsplash.com/premium_photo-1726862569563-37d29397ac3b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

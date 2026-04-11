@@ -14,7 +14,6 @@ const StudyDestinations = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
         <div className="text-center mb-10 space-y-3">
           <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             STUDY DESTINATIONS
@@ -24,7 +23,6 @@ const StudyDestinations = () => {
           </h2>
         </div>
 
-        {/* Destinations Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {destinations.map((destination) => (
             <a
@@ -32,7 +30,6 @@ const StudyDestinations = () => {
               href={destination.path}
               className="group flex items-center gap-3 bg-white border border-gray-100 hover:border-gray-200 rounded-2xl px-6 py-4 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Country Flag */}
               <div className="flex-shrink-0">
                 <CountryFlag
                   countryCode={destination.code}
@@ -42,12 +39,10 @@ const StudyDestinations = () => {
                 />
               </div>
 
-              {/* Country Name */}
               <span className="text-base font-semibold font-sans text-gray-800 group-hover:text-gray-900 transition-colors duration-300">
                 Study in {destination.country}
               </span>
 
-              {/* Arrow Icon */}
               <svg
                 className="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all duration-300 ml-auto"
                 fill="none"

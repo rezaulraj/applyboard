@@ -4,19 +4,15 @@ const MakeEasyPayments = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-12 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        {/* Left - Text Content */}
         <div className="space-y-5 lg:pr-8">
-          {/* Category Label */}
           <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             PAYMENTS
           </p>
 
-          {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-800 leading-tight">
             Make Easy Payments
           </h2>
 
-          {/* Description */}
           <p className="text-base md:text-lg text-gray-600 leading-relaxed max-w-md">
             Make secure tuition payments through{" "}
             <a
@@ -36,17 +32,14 @@ const MakeEasyPayments = () => {
           </p>
         </div>
 
-        {/* Right - Visual Flow Diagram */}
         <div className="relative flex justify-center">
           <div className="relative w-full max-w-md aspect-square">
-            {/* Background Dashed Flow Lines */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none"
               viewBox="0 0 500 500"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              {/* Top-left to top-right path */}
               <path
                 d="M130 100 L130 80 Q130 60 150 60 L330 60 Q350 60 350 80 L350 100"
                 stroke="#d1d5db"
@@ -54,10 +47,8 @@ const MakeEasyPayments = () => {
                 strokeDasharray="6 6"
                 className="animate-dash-flow-1"
               />
-              {/* Arrow head top-right */}
               <path d="M345 90 L350 105 L355 90" fill="#d1d5db" />
 
-              {/* Top-right to right path */}
               <path
                 d="M430 130 L430 130 Q430 130 430 180 L430 180"
                 stroke="#d1d5db"
@@ -66,7 +57,6 @@ const MakeEasyPayments = () => {
                 className="animate-dash-flow-2"
               />
 
-              {/* Right to bottom-right path */}
               <path
                 d="M430 260 L430 370 Q430 390 410 390 L390 390"
                 stroke="#d1d5db"
@@ -74,10 +64,8 @@ const MakeEasyPayments = () => {
                 strokeDasharray="6 6"
                 className="animate-dash-flow-3"
               />
-              {/* Arrow head bottom-right */}
               <path d="M395 385 L380 390 L395 395" fill="#d1d5db" />
 
-              {/* Bottom-right to bottom-left path */}
               <path
                 d="M310 410 L130 410 Q110 410 110 390 L110 370"
                 stroke="#d1d5db"
@@ -85,10 +73,8 @@ const MakeEasyPayments = () => {
                 strokeDasharray="6 6"
                 className="animate-dash-flow-4"
               />
-              {/* Arrow head bottom-left */}
               <path d="M105 375 L110 360 L115 375" fill="#d1d5db" />
 
-              {/* Bottom-left to top-left path */}
               <path
                 d="M110 290 L110 130 Q110 110 130 110 L130 110"
                 stroke="#d1d5db"
@@ -96,11 +82,9 @@ const MakeEasyPayments = () => {
                 strokeDasharray="6 6"
                 className="animate-dash-flow-5"
               />
-              {/* Arrow head top-left */}
               <path d="M125 115 L130 100 L135 115" fill="#d1d5db" />
             </svg>
 
-            {/* Center - Student Image */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 sm:w-52 sm:h-52 rounded-2xl overflow-hidden shadow-xl animate-float-slow">
               <img
                 src="https://plus.unsplash.com/premium_photo-1682430974123-dfe0a2dbb637?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -109,7 +93,6 @@ const MakeEasyPayments = () => {
               />
             </div>
 
-            {/* Top-Left - Purple Search Icon */}
             <div className="absolute top-22 left-16 animate-float-slow">
               <div className="w-16 h-16 bg-purple-500 rounded-2xl shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300">
                 <svg
@@ -135,7 +118,6 @@ const MakeEasyPayments = () => {
               </div>
             </div>
 
-            {/* Top-Right - Flywire Logo */}
             <div className="absolute top-6 right-8 animate-float-medium">
               <div className="bg-white rounded-xl shadow-md px-6 py-4 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                 <svg
@@ -160,13 +142,11 @@ const MakeEasyPayments = () => {
               </div>
             </div>
 
-            {/* Right - Make Payment Button */}
             <div className="absolute right-0 top-1/3 -translate-y-1/2 animate-float-fast">
               <div className="relative group">
                 <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5 whitespace-nowrap">
                   Make Payment
                 </button>
-                {/* Cursor Pointer */}
                 <svg
                   className="absolute -bottom-2 -right-1 w-8 h-8 text-gray-800 animate-cursor-bounce drop-shadow-md transform rotate-12"
                   fill="currentColor"
@@ -177,7 +157,6 @@ const MakeEasyPayments = () => {
               </div>
             </div>
 
-            {/* Bottom-Left - Reeedo Logo */}
             <div className="absolute bottom-6 left-4 animate-float-medium">
               <div className="bg-white rounded-xl shadow-md px-6 py-4 hover:shadow-xl transition-shadow duration-300 border border-gray-100">
                 <svg
@@ -197,13 +176,11 @@ const MakeEasyPayments = () => {
                   >
                     Ree<tspan fontWeight="700">udo</tspan>
                   </text>
-                  {/* Teal triangle */}
                   <polygon points="115,12 125,18 115,24" fill="#14b8a6" />
                 </svg>
               </div>
             </div>
 
-            {/* Bottom-Right - Green Currency Icon */}
             <div className="absolute bottom-16 right-28 animate-float-slow">
               <div className="w-16 h-16 bg-emerald-500 rounded-2xl shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300">
                 <div className="grid grid-cols-2 gap-x-2 gap-y-0">
@@ -215,14 +192,12 @@ const MakeEasyPayments = () => {
               </div>
             </div>
 
-            {/* Decorative Background Glows */}
             <div className="absolute -z-10 top-1/3 right-0 w-56 h-56 bg-blue-100 rounded-full blur-3xl opacity-40" />
             <div className="absolute -z-10 bottom-1/3 left-0 w-44 h-44 bg-purple-100 rounded-full blur-3xl opacity-30" />
           </div>
         </div>
       </div>
 
-      {/* CSS Animations */}
       <style>{`
         @keyframes float-slow {
           0%, 100% { transform: translateY(0px); }

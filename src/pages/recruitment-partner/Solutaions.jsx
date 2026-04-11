@@ -5,21 +5,17 @@ const Solutaions = () => {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-visible">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Text Content */}
           <div className="space-y-6">
-            {/* Label */}
             <div>
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
                 SOLUTIONS
               </span>
             </div>
 
-            {/* Heading */}
             <h2 className="text-3xl sm:text-4xl font-bold font-montserrat text-gray-800 leading-tight">
               Find Everything from Loans to Language Tests
             </h2>
 
-            {/* Description */}
             <p className="text-lg lg:text-lg text-gray-600 leading-relaxed base max-w-lg">
               Our 360 Solutions help you attract and support students well
               beyond their study application. Grow your business with loans,
@@ -27,9 +23,7 @@ const Solutaions = () => {
             </p>
           </div>
 
-          {/* Right Column: Visual Composition */}
           <div className="relative flex justify-center lg:justify-end py-8 lg:py-0">
-            {/* Main Image Container */}
             <div className="relative w-full max-w-md rounded-2xl overflow-hidden shadow-2xl border-4 border-blue-50 z-10">
               <img
                 src="https://images.pexels.com/photos/31367494/pexels-photo-31367494.jpeg"
@@ -38,7 +32,6 @@ const Solutaions = () => {
               />
             </div>
 
-            {/* Floating Card: Loan Services */}
             <div className="absolute -top-4 left-4 lg:left-20 z-20 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3 border border-gray-100">
               <div className="w-9 h-9 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg
@@ -60,7 +53,6 @@ const Solutaions = () => {
               </span>
             </div>
 
-            {/* Floating Card: GIC */}
             <div className="absolute top-12 right-4 lg:-right-6 z-20 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3 border border-gray-100">
               <div className="w-9 h-9 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg
@@ -82,7 +74,6 @@ const Solutaions = () => {
               </span>
             </div>
 
-            {/* Floating Card: Language Test Services */}
             <div className="absolute top-1/2 -left-8 lg:left-16 transform -translate-y-1/2 z-20 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3 border border-gray-100">
               <div className="w-9 h-9 bg-teal-100 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg
@@ -104,7 +95,6 @@ const Solutaions = () => {
               </span>
             </div>
 
-            {/* Floating Card: Banking */}
             <div className="absolute bottom-24 right-0 lg:-right-10 z-20 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3 border border-gray-100">
               <div className="w-9 h-9 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg
@@ -126,7 +116,6 @@ const Solutaions = () => {
               </span>
             </div>
 
-            {/* Floating Card: Foreign Exchange */}
             <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 z-20 bg-white rounded-xl shadow-lg px-4 py-3 flex items-center gap-3 border border-gray-100">
               <div className="w-9 h-9 bg-amber-100 rounded-lg flex items-center justify-center flex-shrink-0">
                 <svg

@@ -4,13 +4,11 @@ const OurStorySection = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 font-montserrat">
           Our Story
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Column - Text Content */}
           <div className="space-y-6">
             <p className="text-gray-700 leading-relaxed font-sans text-lg lg:text-xl">
               Since 2015, AdmissionOnBoard has been on a mission to make education
@@ -28,9 +26,7 @@ const OurStorySection = () => {
               by Deloitte.
             </p>
 
-            {/* Mission and Vision Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-              {/* Mission Card */}
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
@@ -59,7 +55,6 @@ const OurStorySection = () => {
                 </p>
               </div>
 
-              {/* Vision Card */}
               <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
@@ -94,9 +89,7 @@ const OurStorySection = () => {
             </div>
           </div>
 
-          {/* Right Column - Images */}
           <div className="space-y-4">
-            {/* Top Row - Two Images */}
             <div className="grid grid-cols-2 gap-4">
               <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/3]">
                 <img
@@ -114,7 +107,6 @@ const OurStorySection = () => {
               </div>
             </div>
 
-            {/* Bottom Row - One Large Image */}
             <div className="rounded-2xl overflow-hidden shadow-lg aspect-video">
               <img
                 src="https://images.pexels.com/photos/3182833/pexels-photo-3182833.jpeg?auto=compress&cs=tinysrgb&w=800"

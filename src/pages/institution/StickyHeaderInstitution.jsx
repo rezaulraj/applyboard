@@ -173,7 +173,7 @@ const StickyHeaderInstitution = () => {
         </div>
       </div>
 
-      {/* ==================== SECTIONS CONTENT ==================== */}
+      {/*SECTIONS CONTENT*/}
       <div className="pt-0">
         {sections.map((section, index) => {
 

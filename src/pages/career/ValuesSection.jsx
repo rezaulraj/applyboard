@@ -127,26 +127,22 @@ const ValuesSection = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Section Title */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 text-center mb-12 font-montserrat leading-tight">
           At AdmissionOnBoard We're Committed to Our Values
         </h2>
 
-        {/* Values Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {values.map((value, index) => (
             <div
               key={index}
               className="flex flex-col items-center text-center group"
             >
-              {/* Icon Container */}
               <div
                 className={`w-16 h-16 rounded-2xl border-2 flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110 ${value.color}`}
               >
                 {value.icon}
               </div>
 
-              {/* Title */}
               <h3 className="text-base md:text-lg font-semibold text-gray-900 leading-snug max-w-[200px] font-montserrat">
                 {value.title}
               </h3>

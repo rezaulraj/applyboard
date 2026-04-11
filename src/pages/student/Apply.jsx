@@ -6,7 +6,6 @@ const Apply = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 md:gap-16 items-center">
-        {/* Left Content */}
         <div className="space-y-6 col-span-7">
           <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             APPLY
@@ -22,12 +21,9 @@ const Apply = () => {
           </p>
         </div>
 
-        {/* Right Mockup */}
         <div className="relative flex justify-center lg:justify-end col-span-5">
           <div className="relative w-full max-w-md">
-            {/* Browser Window */}
             <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform transition-all duration-500 hover:shadow-3xl">
-              {/* Window Header */}
               <div className="bg-gradient-to-r from-blue-600 to-blue-500 h-10 flex items-center px-4 gap-2">
                 <div className="w-2.5 h-2.5 rounded-full bg-white/80" />
                 <div className="w-2.5 h-2.5 rounded-full bg-white/80" />
@@ -35,9 +31,7 @@ const Apply = () => {
               </div>
 
               <div className="flex">
-                {/* Sidebar */}
                 <div className="w-14 bg-gray-50 border-r border-gray-100 py-6 flex flex-col items-center gap-5">
-                  {/* Home */}
                   <div className="text-blue-600">
                     <svg
                       className="w-5 h-5"
@@ -53,7 +47,6 @@ const Apply = () => {
                       />
                     </svg>
                   </div>
-                  {/* Search */}
                   <div className="text-gray-400 hover:text-gray-600 transition-colors">
                     <svg
                       className="w-5 h-5"
@@ -69,7 +62,6 @@ const Apply = () => {
                       />
                     </svg>
                   </div>
-                  {/* User */}
                   <div className="text-gray-400 hover:text-gray-600 transition-colors">
                     <svg
                       className="w-5 h-5"
@@ -85,7 +77,6 @@ const Apply = () => {
                       />
                     </svg>
                   </div>
-                  {/* File */}
                   <div className="text-gray-400 hover:text-gray-600 transition-colors">
                     <svg
                       className="w-5 h-5"
@@ -101,7 +92,6 @@ const Apply = () => {
                       />
                     </svg>
                   </div>
-                  {/* Graduation */}
                   <div className="text-gray-400 hover:text-gray-600 transition-colors">
                     <svg
                       className="w-5 h-5"
@@ -123,7 +113,6 @@ const Apply = () => {
                       />
                     </svg>
                   </div>
-                  {/* Settings */}
                   <div className="text-gray-400 hover:text-gray-600 transition-colors">
                     <svg
                       className="w-5 h-5"
@@ -147,9 +136,7 @@ const Apply = () => {
                   </div>
                 </div>
 
-                {/* Main Content Area */}
                 <div className="flex-1 p-6 space-y-6">
-                  {/* Profile Section */}
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-gray-200 overflow-hidden border-2 border-white shadow-sm">
                       <img
@@ -164,18 +151,15 @@ const Apply = () => {
                     </div>
                   </div>
 
-                  {/* Application Completion Panel */}
                   <div className="bg-white border border-gray-200 rounded-xl p-5 shadow-sm relative z-10 hover:shadow-md transition-shadow duration-300">
                     <h4 className="text-sm font-semibold text-gray-400 mb-4 text-center">
                       Application Completion
                     </h4>
 
-                    {/* Progress Bar */}
                     <div className="h-2.5 bg-gray-100 rounded-full mb-6 overflow-hidden">
                       <div className="h-full bg-gradient-to-r from-emerald-200 to-emerald-300 rounded-full w-[75%] animate-progress-fill" />
                     </div>
 
-                    {/* Steps */}
                     <div className="flex justify-between relative pt-2">
                       <div className="absolute top-5 left-0 right-0 h-0.5 bg-gray-100 -z-10" />
                       <div className="absolute top-5 left-0 w-[75%] h-0.5 bg-emerald-200 -z-10 transition-all duration-1000" />
@@ -274,7 +258,6 @@ const Apply = () => {
               </div>
             </div>
 
-            {/* Floating Submit Button */}
             <div className="absolute -bottom-10 -right-6 sm:-right-16 animate-float">
               <div className="relative group">
                 <button
@@ -299,7 +282,6 @@ const Apply = () => {
               </div>
             </div>
 
-            {/* Decorative Background Glow */}
             <div className="absolute -z-10 top-1/2 -right-12 w-72 h-72 bg-blue-200 rounded-full blur-3xl opacity-40" />
             <div className="absolute -z-10 bottom-0 -left-8 w-56 h-56 bg-purple-200 rounded-full blur-3xl opacity-30" />
           </div>
@@ -309,7 +291,6 @@ const Apply = () => {
         isOpen={popupOpen}
         onClose={() => setPopupOpen(false)}
       />
-      {/* Animations */}
       <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0px); }

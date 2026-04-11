@@ -3,7 +3,6 @@ import StudentRegistrationPopup from "../../../components/common/StudentRegistra
 
 const AcademicsUk = () => {
   const [popupOpen, setPopupOpen] = useState(false);
-  // Featured programs data
   const featuredPrograms = [
     {
       university: "The University of Edinburgh",
@@ -27,7 +26,6 @@ const AcademicsUk = () => {
 
   return (
     <div className="space-y-20">
-      {/* Main Academics Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           <div className="space-y-6 col-span-5 order-2 md:order-1">
@@ -103,7 +101,6 @@ const AcademicsUk = () => {
         </div>
       </div>
 
-      {/* Featured Programs Section */}
       <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50/50 py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">
@@ -131,21 +128,18 @@ const AcademicsUk = () => {
             </button>
           </div>
 
-          {/* Programs Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {featuredPrograms.map((program, index) => (
               <div
                 key={index}
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                {/* Image Container */}
                 <div className="relative overflow-hidden h-56">
                   <img
                     src={program.image}
                     alt={`${program.university} campus`}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  {/* Featured Badge */}
                   <div className="absolute top-4 left-4">
                     <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-semibold bg-white/90 backdrop-blur-sm text-blue-600 shadow-md">
                       <svg
@@ -158,11 +152,9 @@ const AcademicsUk = () => {
                       Featured
                     </span>
                   </div>
-                  {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
-                {/* Content */}
                 <div className="p-6 space-y-4">
                   <div>
                     <p className="text-sm font-medium text-gray-500 mb-1">
@@ -173,7 +165,6 @@ const AcademicsUk = () => {
                     </h4>
                   </div>
 
-                  {/* Apply Now Button */}
                   <button
                     onClick={() => setPopupOpen(true)}
                     className="w-full py-3 px-4 bg-blue-50 hover:bg-blue-600 text-blue-600 hover:text-white font-semibold rounded-lg transition-all duration-300 group/btn"

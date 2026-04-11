@@ -4,12 +4,10 @@ const Experience = () => {
   return (
     <section className="py-16 px-6 max-w-6xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center md:items-start">
-        {/* Images Column */}
         <div
           className="flex flex-col gap-5 animate-fade-in col-span-5 order-2 md:order-1
         "
         >
-          {/* Top image */}
           <div className="rounded-2xl shadow-lg h-56 relative z-10">
             <img
               src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800&q=80"
@@ -37,7 +35,6 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Bottom image — offset right */}
           <div className="rounded-2xl shadow-lg h-48 w-4/5 self-end relative z-0 -mr-8">
             <img
               src="https://plus.unsplash.com/premium_photo-1714265045508-ce864a027714?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -66,7 +63,6 @@ const Experience = () => {
           </div>
         </div>
 
-        {/* Text Column */}
         <div className="flex flex-col gap-6 col-span-7 order-1 md:order-2">
           <p className="text-sm font-bold font-sans tracking-[1.5px] text-blue-600 uppercase">
             Experience
@@ -93,9 +89,7 @@ const Experience = () => {
             work visa.
           </p>
 
-          {/* Stat Cards */}
           <div className="flex flex-wrap gap-4 mt-2">
-            {/* Card 1 */}
             <div className="flex items-center justify-between gap-4 flex-1 min-w-[160px] bg-white border border-gray-100 rounded-2xl px-5 py-4 shadow-sm hover:shadow-md transition-shadow">
               <div>
                 <p className="text-sm font-sans text-gray-400 mb-1">
@@ -117,7 +111,6 @@ const Experience = () => {
               </button>
             </div>
 
-            {/* Card 2 */}
             <div className="flex items-center justify-between gap-4 flex-1 min-w-[160px] bg-white border border-gray-100 rounded-2xl px-5 py-4 shadow-sm hover:shadow-md transition-shadow">
               <div>
                 <p className="text-xs text-gray-400 mb-1 font-sans">Work After Study</p>

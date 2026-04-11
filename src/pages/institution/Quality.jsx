@@ -3,11 +3,8 @@ const Quality = () => {
     <div className=" bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Visual Composition */}
           <div className="relative order-2 md:order-1">
-            {/* Browser Window Mockup */}
             <div className="relative bg-white rounded-xl shadow-2xl overflow-hidden border border-gray-200">
-              {/* Browser Header */}
               <div className="bg-gradient-to-r from-blue-200 to-blue-300 px-4 py-3">
                 <div className="flex items-center space-x-2">
                   <div className="flex space-x-1.5">
@@ -21,9 +18,7 @@ const Quality = () => {
                 </div>
               </div>
 
-              {/* Browser Content */}
               <div className="p-6 bg-white">
-                {/* University Header */}
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-red-300 rounded-lg flex items-center justify-center">
@@ -42,7 +37,6 @@ const Quality = () => {
                   </div>
                 </div>
 
-                {/* Additional Content Placeholder */}
                 <div className="space-y-3">
                   <div className="h-20 bg-gray-100 rounded-lg"></div>
                   <div className="flex space-x-3">
@@ -54,7 +48,6 @@ const Quality = () => {
               </div>
             </div>
 
-            {/* Floating Icon 1 - Purple (Revenue/Building) */}
             <div className="absolute bottom-20 left-4 z-20">
               <div className="w-16 h-16 bg-purple-300 rounded-2xl shadow-xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
                 <svg
@@ -73,7 +66,6 @@ const Quality = () => {
               </div>
             </div>
 
-            {/* Floating Icon 2 - Green (People/Network) */}
             <div className="absolute bottom-20 left-1/5 z-20">
               <div className="w-16 h-16 bg-emerald-300 rounded-2xl shadow-xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
                 <svg
@@ -92,7 +84,6 @@ const Quality = () => {
               </div>
             </div>
 
-            {/* Floating Icon 3 - Orange (Globe/International) */}
             <div className="absolute bottom-20 left-1/3 z-20">
               <div className="w-16 h-16 bg-amber-300 rounded-2xl shadow-xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
                 <svg
@@ -111,7 +102,6 @@ const Quality = () => {
               </div>
             </div>
 
-            {/* Graduate Photo */}
             <div className="absolute -bottom-8 right-0 z-10">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-200 to-purple-300 rounded-2xl transform rotate-3 scale-105"></div>
@@ -120,7 +110,6 @@ const Quality = () => {
                   alt="Graduate student"
                   className="relative w-44 h-44 object-cover rounded-2xl shadow-2xl blur-xs"
                 />
-                {/* Decorative elements */}
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center shadow-lg">
                   <svg
                     className="w-6 h-6 text-yellow-400"
@@ -133,25 +122,20 @@ const Quality = () => {
               </div>
             </div>
 
-            {/* Extra spacing for floating elements */}
             <div className="h-32"></div>
           </div>
 
-          {/* Right Column - Text Content */}
           <div className="space-y-6 lg:pl-8 order-1 md:order-2">
-            {/* Category Label */}
             <div>
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase ">
                 QUALITY
               </span>
             </div>
 
-            {/* Main Heading */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-montserrat leading-tight">
               Convert Quality Leads to Quality Graduates
             </h2>
 
-            {/* Description */}
             <p className="text-lg text-gray-600 font-sans leading-relaxed max-w-xl">
               Our platform connects top students to the right programs at the
               right times, enabling you to achieve all of your institution's

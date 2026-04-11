@@ -56,18 +56,15 @@ const ApplyBoardInsights = () => {
           </h2>
         </div>
 
-        {/* Articles Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {articles.map((article) => (
             <div
               key={article.id}
               className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100"
             >
-              {/* Card Header with Image and Graphics */}
               <div
                 className={`relative h-48 ${article.bgColor} overflow-hidden`}
               >
-                {/* Background Graphics - Abstract shapes */}
                 <div className="absolute inset-0 opacity-20">
                   <svg className="w-full h-full" viewBox="0 0 400 200">
                     <circle
@@ -132,7 +129,6 @@ const ApplyBoardInsights = () => {
                   </svg>
                 </div>
 
-                {/* Flag Badge */}
                 <div className="absolute top-4 left-4 bg-white rounded-full p-2 shadow-lg">
                   <CountryFlag
                     countryCode={article.flag}
@@ -145,7 +141,6 @@ const ApplyBoardInsights = () => {
                   />
                 </div>
 
-                {/* Image */}
                 <div className="absolute top-4 right-4 w-24 h-24 rounded-lg overflow-hidden shadow-lg border-2 border-white">
                   <img
                     src={article.image}
@@ -154,7 +149,6 @@ const ApplyBoardInsights = () => {
                   />
                 </div>
 
-                {/* Decorative Elements */}
                 <div className="absolute bottom-4 left-4 text-white opacity-60">
                   <svg
                     className="w-12 h-12"
@@ -172,24 +166,20 @@ const ApplyBoardInsights = () => {
                 </div>
               </div>
 
-              {/* Card Content */}
               <div className="p-6">
-                {/* Category Label */}
                 <span className="inline-block px-3 py-1 font-montserrat bg-blue-50 text-blue-600 text-xs font-semibold rounded-full mb-3">
                   {article.category}
                 </span>
 
-                {/* Title */}
                 <h3 className="text-lg font-bold text-gray-900 mb-3 leading-snug font-montserrat">
                   {article.title}
                 </h3>
 
-                {/* Date */}
                 <p className="text-sm text-gray-500 mb-4 font-sans">
                   {article.date}
                 </p>
 
-                {/* Read More Link */}
+
                 <a
                   href={article.link}
                   className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors duration-200 font-sans"
@@ -214,7 +204,6 @@ const ApplyBoardInsights = () => {
           ))}
         </div>
 
-        {/* View More Button */}
         <div className="text-center mt-12">
           <a
             href="/blogs"

@@ -5,28 +5,22 @@ const Insights = () => {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Text Content */}
           <div className="space-y-6">
-            {/* Label */}
             <div>
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
                 INSIGHTS
               </span>
             </div>
-
-            {/* Heading */}
             <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-gray-800 leading-tight">
               Explore Sector-Leading Training and Insights
             </h2>
 
-            {/* Description */}
             <p className="text-base sm:text-lg text-gray-600 font-sans leading-relaxed max-w-xl">
               Stay informed, compliant, and ahead of the competition. Rely on
               the experts for strategic insights, document verification,
               comprehensive training, and resources to elevate your business.
             </p>
 
-            {/* Button */}
             <div className="pt-2">
               <a
                 href="/blogs"
@@ -37,11 +31,8 @@ const Insights = () => {
             </div>
           </div>
 
-          {/* Right Column: Visual Mockup */}
           <div className="relative flex justify-center lg:justify-end">
-            {/* Browser Window */}
             <div className="relative bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-200 w-full max-w-md z-10 overflow-hidden">
-              {/* Browser Header */}
               <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-3">
                 <div className="flex items-center space-x-2">
                   <div className="flex space-x-1.5">
@@ -52,12 +43,9 @@ const Insights = () => {
                 </div>
               </div>
 
-              {/* Browser Content */}
               <div className="flex">
-                {/* Sidebar */}
                 <div className="w-14 bg-gray-50 border-r border-gray-200 py-6">
                   <div className="flex flex-col items-center space-y-4">
-                    {/* Home */}
                     <div className="w-9 h-9 rounded-lg flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-gray-400"
@@ -73,7 +61,7 @@ const Insights = () => {
                         />
                       </svg>
                     </div>
-                    {/* Search */}
+
                     <div className="w-9 h-9 rounded-lg flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-gray-400"
@@ -89,7 +77,6 @@ const Insights = () => {
                         />
                       </svg>
                     </div>
-                    {/* User */}
                     <div className="w-9 h-9 rounded-lg flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-gray-400"
@@ -105,7 +92,6 @@ const Insights = () => {
                         />
                       </svg>
                     </div>
-                    {/* Document */}
                     <div className="w-9 h-9 rounded-lg flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-gray-400"
@@ -121,7 +107,7 @@ const Insights = () => {
                         />
                       </svg>
                     </div>
-                    {/* Graduation Cap - Active */}
+
                     <div className="w-9 h-9 rounded-lg bg-blue-100 flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-blue-400"
@@ -143,7 +129,6 @@ const Insights = () => {
                         />
                       </svg>
                     </div>
-                    {/* Settings */}
                     <div className="w-9 h-9 rounded-lg flex items-center justify-center">
                       <svg
                         className="w-5 h-5 text-gray-400"
@@ -168,13 +153,11 @@ const Insights = () => {
                   </div>
                 </div>
 
-                {/* Main Content */}
                 <div className="flex-1 p-6">
                   <h3 className="text-xl font-semibold text-gray-400 mb-6">
                     Institution Training
                   </h3>
 
-                  {/* University Card */}
                   <div className="bg-white border border-gray-200 rounded-xl p-4 shadow-sm">
                     <div className="flex items-start gap-3 mb-4">
                       <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -242,7 +225,6 @@ const Insights = () => {
                       </div>
                     </div>
 
-                    {/* Progress Bar */}
                     <div className="mb-4">
                       <p className="text-xs text-gray-400 mb-1.5">
                         Course progress
@@ -258,7 +240,6 @@ const Insights = () => {
                       </p>
                     </div>
 
-                    {/* Start Course Button */}
                     <button className="w-full bg-blue-300 text-white py-2.5 px-4 rounded-lg font-medium text-sm hover:bg-blue-300 transition-colors flex items-center justify-center gap-2">
                       Start course
                       <svg
@@ -280,8 +261,6 @@ const Insights = () => {
               </div>
             </div>
 
-            {/* Floating Icons */}
-            {/* Purple Shield Icon */}
             <div className="absolute -right-4 top-16 z-20">
               <div className="w-14 h-14 bg-purple-400 rounded-2xl shadow-xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
                 <svg
@@ -300,7 +279,6 @@ const Insights = () => {
               </div>
             </div>
 
-            {/* Blue Play Icon */}
             <div className="absolute -right-4 top-32 z-20">
               <div className="w-14 h-14 bg-blue-400 rounded-2xl shadow-xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
                 <svg
@@ -325,7 +303,6 @@ const Insights = () => {
               </div>
             </div>
 
-            {/* Yellow Chart Icon */}
             <div className="absolute -right-4 top-48 z-20">
               <div className="w-14 h-14 bg-amber-400 rounded-2xl shadow-xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
                 <svg

@@ -10,7 +10,7 @@ const StudyAbroadBlog = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
 
-  // Articles
+
   const studentsArticles = [
     {
       id: 1,
@@ -1144,7 +1144,6 @@ const [popupOpen, setPopupOpen] = useState(false);
 
   return (
     <div className="">
-      {/* Header Section */}
       <div className="mt-10">
         <div className="max-w-6xl mx-auto text-center bg-blue-50 py-16 px-4 sm:px-6 lg:px-8 rounded-4xl">
           <h1 className="text-3xl sm:text-4xl font-montserrat leading-tight font-bold text-gray-800 mb-4">
@@ -1155,7 +1154,6 @@ const [popupOpen, setPopupOpen] = useState(false);
             abroad journey.
           </p>
 
-          {/* Tabs */}
           <div className="inline-flex bg-white rounded-full p-1 shadow-md">
             {["Students", "Recruitment Partners", "Institutions"].map((tab) => (
               <button
@@ -1174,9 +1172,7 @@ const [popupOpen, setPopupOpen] = useState(false);
         </div>
       </div>
 
-      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Tags and Search */}
         <div className="flex flex-col lg:flex-row gap-4 mb-10 items-start justify-between">
           <div className="flex flex-wrap gap-2">
             {tags.map((tag, index) => (
@@ -1215,7 +1211,6 @@ const [popupOpen, setPopupOpen] = useState(false);
           </div>
         </div>
 
-        {/* Section Title */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-2 font-montserrat leading-tight">
             {activeTab === "Students" && "Resources for Students"}
@@ -1229,7 +1224,6 @@ const [popupOpen, setPopupOpen] = useState(false);
           </p>
         </div>
 
-        {/* Blog Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {visibleArticles.map((article, index) => (
             <article
@@ -1294,7 +1288,6 @@ const [popupOpen, setPopupOpen] = useState(false);
           ))}
         </div>
 
-        {/* Load More Button */}
         {hasMore && (
           <div className="text-center mt-12">
             <button
@@ -1311,10 +1304,8 @@ const [popupOpen, setPopupOpen] = useState(false);
                 overflow-hidden group
               `}
             >
-              {/* Animated background on hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-              {/* Loading spinner */}
               {isLoading ? (
                 <div className="flex items-center gap-3">
                   <svg
@@ -1371,7 +1362,6 @@ const [popupOpen, setPopupOpen] = useState(false);
           </div>
         )}
 
-        {/* No More Articles Message */}
         {!hasMore && filteredArticles.length > 0 && (
           <div className="text-center mt-12 animate-fadeIn">
             <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-50 text-green-700 rounded-full font-medium">
@@ -1394,26 +1384,22 @@ const [popupOpen, setPopupOpen] = useState(false);
         )}
       </div>
 
-      {/* Modal */}
       {isModalOpen && selectedArticle && (
         <div
           className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-300 ${
             isModalOpen ? "opacity-100" : "opacity-0"
           }`}
         >
-          {/* Backdrop */}
           <div
             className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             onClick={closeModal}
           ></div>
 
-          {/* Modal Content */}
           <div
             className={`relative bg-white rounded-3xl shadow-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto transform transition-all duration-300 ${
               isModalOpen ? "scale-100 translate-y-0" : "scale-95 translate-y-4"
             }`}
           >
-            {/* Close Button */}
             <button
               onClick={closeModal}
               className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-gray-100 transition-colors"
@@ -1433,7 +1419,6 @@ const [popupOpen, setPopupOpen] = useState(false);
               </svg>
             </button>
 
-            {/* Hero Image */}
             <div className="relative h-64 sm:h-80">
               <img
                 src={selectedArticle.image}
@@ -1456,7 +1441,6 @@ const [popupOpen, setPopupOpen] = useState(false);
               </div>
             </div>
 
-            {/* Content */}
             <div className="p-6 sm:p-8">
               <div className="flex items-center justify-between mb-6 pb-6 border-b border-gray-200">
                 <div className="flex items-center gap-4">
@@ -1503,7 +1487,6 @@ const [popupOpen, setPopupOpen] = useState(false);
                 dangerouslySetInnerHTML={{ __html: selectedArticle.content }}
               />
 
-              {/* Tags */}
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -1522,7 +1505,6 @@ const [popupOpen, setPopupOpen] = useState(false);
                 </div>
               </div>
 
-              {/* CTA */}
               <div className="mt-8 p-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl text-white text-center">
                 <h3 className="text-xl font-bold mb-2">
                   Ready to Start Your Journey?

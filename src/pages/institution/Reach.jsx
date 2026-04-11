@@ -1,7 +1,6 @@
 import React from "react";
 
 const Reach = () => {
-  // Student data with positions and flags
   const students = [
     {
       id: 1,
@@ -60,21 +59,17 @@ const Reach = () => {
     <div className=" bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
           <div className="space-y-6">
-            {/* Category Label */}
             <div className="uppercase tracking-wide">
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
                 REACH
               </span>
             </div>
 
-            {/* Main Heading */}
             <h1 className="text-4xl font-montserrat font-bold text-gray-800 leading-tight">
               Scale Your Reach to 180+ Student Markets
             </h1>
 
-            {/* Description */}
             <p className="text-base lg:text-lg text-gray-600 font-sans leading-relaxed max-w-xl">
                AdmissionOnBoard instantly presents your campus' unique offerings to an
               entire world of vetted, passionate student recruiters and
@@ -82,11 +77,8 @@ const Reach = () => {
             </p>
           </div>
 
-          {/* Right Column - Visual Composition */}
           <div className="relative lg:h-[500px] flex items-center justify-center">
-            {/* Main University Card */}
             <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden w-full max-w-md z-10">
-              {/* Card Header */}
               <div className="bg-gradient-to-r from-blue-300 to-blue-400 px-6 py-4">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
@@ -110,7 +102,6 @@ const Reach = () => {
                 </div>
               </div>
 
-              {/* University Info */}
               <div className="px-6 py-4 border-b border-gray-200">
                 <div className="flex items-center justify-between">
                   <div>
@@ -148,7 +139,6 @@ const Reach = () => {
                 </div>
               </div>
 
-              {/* Campus Image Grid */}
               <div className="p-4">
                 <div className="grid grid-cols-3 gap-2">
                   <div className="col-span-2 row-span-2">
@@ -174,7 +164,6 @@ const Reach = () => {
                   </div>
                 </div>
 
-                {/* Navigation Tabs */}
                 <div className="flex space-x-4 mt-4 border-b border-gray-200">
                   <button className="pb-2 px-1 text-blue-300 border-b-2 border-blue-300 font-medium text-sm">
                     Overview
@@ -190,7 +179,6 @@ const Reach = () => {
                   </button>
                 </div>
 
-                {/* Placeholder Content */}
                 <div className="mt-4 space-y-2">
                   <div className="h-3 bg-gray-200 rounded w-3/4"></div>
                   <div className="h-3 bg-gray-200 rounded w-full"></div>
@@ -199,8 +187,6 @@ const Reach = () => {
               </div>
             </div>
 
-            {/* Floating Student Profiles */}
-            {/* Top Left */}
             <div className="absolute top-20 left-16 lg:left-4 transform -translate-x-1/2 z-20">
               <div
                 className={`relative ${students[0].color} p-2 rounded-full shadow-lg`}
@@ -218,7 +204,6 @@ const Reach = () => {
               </div>
             </div>
 
-            {/* Top Right */}
             <div className="absolute top-20 right-16 lg:right-4 transform translate-x-1/2 z-10">
               <div
                 className={`relative ${students[1].color} p-2 rounded-full shadow-lg`}
@@ -236,7 +221,6 @@ const Reach = () => {
               </div>
             </div>
 
-            {/* Middle Left */}
             <div className="absolute top-2/3 left-8 lg:left-0 transform -translate-x-1/2 z-20">
               <div
                 className={`relative ${students[2].color} p-2 rounded-full shadow-lg`}
@@ -254,7 +238,6 @@ const Reach = () => {
               </div>
             </div>
 
-            {/* Middle Right */}
             <div className="absolute top-2/3 right-8 lg:right-8 transform translate-x-1/2 z-20">
               <div
                 className={`relative ${students[3].color} p-2 rounded-full shadow-lg`}
@@ -272,7 +255,6 @@ const Reach = () => {
               </div>
             </div>
 
-            {/* Bottom Left */}
             <div className="absolute -bottom-18 left-36 lg:left-36 transform -translate-x-1/2 z-20">
               <div
                 className={`relative ${students[4].color} p-2 rounded-full shadow-lg`}
@@ -290,7 +272,6 @@ const Reach = () => {
               </div>
             </div>
 
-            {/* Bottom Right */}
             <div className="absolute -bottom-18 right-36 lg:right-36 transform translate-x-1/2 z-20">
               <div
                 className={`relative ${students[5].color} p-2 rounded-full shadow-lg`}

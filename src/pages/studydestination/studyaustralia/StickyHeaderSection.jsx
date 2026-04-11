@@ -49,7 +49,6 @@ const StickyHeaderSection = () => {
 
   const sectionRefs = useRef({});
 
-  // Intersection Observer for section tracking
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -173,10 +172,8 @@ const StickyHeaderSection = () => {
         </div>
       </div>
 
-      {/* ==================== SECTIONS CONTENT ==================== */}
       <div className="pt-0">
         {sections.map((section, index) => {
-          // ✅ Render custom component for each section
           const CustomComponent = section.component;
 
           return (
@@ -184,7 +181,7 @@ const StickyHeaderSection = () => {
               key={section.id}
               id={section.id}
               ref={(el) => (sectionRefs.current[section.id] = el)}
-              className={`min-h-[80vh] py-16 ${
+              className={`min-h-[60vh] py-16 ${
                 index % 2 === 0 ? "bg-white" : "bg-gray-50"
               }`}
             >

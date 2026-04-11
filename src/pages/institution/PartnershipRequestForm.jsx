@@ -18,14 +18,12 @@ const PartnershipRequestForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission
     console.log(formData);
   };
 
   return (
     <div className=" bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        {/* Header Section */}
         <div className="bg-gradient-to-b from-blue-700 to-blue-500 rounded-t-2xl p-8 sm:p-12 text-white">
           <p className="text-sm font-semibold text-blue-100 uppercase tracking-wider mb-2">
             GET STARTED
@@ -38,12 +36,9 @@ const PartnershipRequestForm = () => {
           </p>
         </div>
 
-        {/* Form Container */}
         <div className="bg-white rounded-b-2xl shadow-xl p-6 sm:p-10">
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Two Column Layout */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {/* Destination Country */}
               <div>
                 <label htmlFor="destinationCountry" className="block text-sm font-medium text-gray-700 mb-2">
                   Destination Country
@@ -62,7 +57,6 @@ const PartnershipRequestForm = () => {
                 </select>
               </div>
 
-              {/* School Name */}
               <div>
                 <label htmlFor="schoolName" className="block text-sm font-medium text-gray-700 mb-2">
                   School Name
@@ -77,7 +71,6 @@ const PartnershipRequestForm = () => {
                 />
               </div>
 
-              {/* Contact First Name */}
               <div>
                 <label htmlFor="contactFirstName" className="block text-sm font-medium text-gray-700 mb-2">
                   Contact First Name
@@ -92,7 +85,6 @@ const PartnershipRequestForm = () => {
                 />
               </div>
 
-              {/* Contact Last Name */}
               <div>
                 <label htmlFor="contactLastName" className="block text-sm font-medium text-gray-700 mb-2">
                   Contact Last Name
@@ -107,7 +99,6 @@ const PartnershipRequestForm = () => {
                 />
               </div>
 
-              {/* Contact Email */}
               <div>
                 <label htmlFor="contactEmail" className="block text-sm font-medium text-gray-700 mb-2">
                   Contact Email
@@ -122,7 +113,6 @@ const PartnershipRequestForm = () => {
                 />
               </div>
 
-              {/* Contact Title */}
               <div>
                 <label htmlFor="contactTitle" className="block text-sm font-medium text-gray-700 mb-2">
                   Contact Title
@@ -137,7 +127,6 @@ const PartnershipRequestForm = () => {
                 />
               </div>
 
-              {/* Phone Number - Full Width */}
               <div className="sm:col-span-2">
                 <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-2">
                   Phone Number
@@ -153,7 +142,6 @@ const PartnershipRequestForm = () => {
               </div>
             </div>
 
-            {/* Referred By Section */}
             <div className="border-t border-gray-200 pt-6">
               <div className="flex items-center mb-4">
                 <input
@@ -200,7 +188,6 @@ const PartnershipRequestForm = () => {
               )}
             </div>
 
-            {/* Additional Comments */}
             <div>
               <label htmlFor="additionalComments" className="block text-sm font-medium text-gray-700 mb-2">
                 Partnership Request Form Additional Comments
@@ -215,7 +202,6 @@ const PartnershipRequestForm = () => {
               />
             </div>
 
-            {/* Privacy Section */}
             <div className="bg-gray-50 rounded-lg p-6 space-y-4">
               <p className="text-xs text-gray-600 leading-relaxed">
                 AdmissionOnBoard is committed to protecting and respecting your privacy, and will only use your personal information to administer your account and to provide the products and services you have requested from us. From time to time, we would like to contact you about our products and services, as well as other content that may be of interest to you. If you consent to us contacting you for this purpose, please tick below to say how you would like us to contact you.
@@ -238,7 +224,6 @@ const PartnershipRequestForm = () => {
               </div>
             </div>
 
-            {/* Submit Button */}
             <div className="pt-4">
               <button
                 type="submit"

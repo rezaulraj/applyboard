@@ -1,17 +1,15 @@
 import React from "react";
-import { AiOutlineStock } from "react-icons/ai";
-import { FaHandshake, FaRobot, FaUser } from "react-icons/fa";
+
+import { FaHandshake,FaUser } from "react-icons/fa";
 
 const Excellence = () => {
   return (
     <section className="py-16 px-6 max-w-6xl mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center md:items-start">
-        {/* Images Column */}
         <div
           className="flex flex-col gap-5 animate-fade-in col-span-5 order-2 md:order-1
         "
         >
-          {/* Top image */}
           <div className="rounded-2xl shadow-lg h-64 relative z-10">
             <img
               src="https://plus.unsplash.com/premium_photo-1661963563108-50f1f802d08c?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -29,8 +27,6 @@ const Excellence = () => {
               </div>
             </div>
           </div>
-
-          {/* Bottom image — offset right */}
           <div className="rounded-2xl shadow-lg h-56 w-4/5 self-end relative z-0 -mr-8">
             <img
               src="https://images.unsplash.com/photo-1580129893797-a7e6d5b1a6ea?q=80&w=417&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -50,7 +46,6 @@ const Excellence = () => {
           </div>
         </div>
 
-        {/* Text Column */}
         <div className="flex flex-col gap-6 col-span-7 order-1 md:order-2">
           <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             Excellence

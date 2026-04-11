@@ -62,9 +62,8 @@ const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200 pt-4 pb-6">
       <div className="max-w-7xl bg-blue-50 mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl py-10">
-        {/* Main Footer Grid */}
+
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
-          {/* Left Column - Address & Social */}
           <div className="md:col-span-4 space-y-4">
             <div className="mb-6">
               <a href="/" className="flex items-center gap-2 no-underline">
@@ -103,7 +102,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Students & Recruitment Partners (combined under Students group in design) */}
           <div className="md:col-span-2">
             <FooterHeading>Students</FooterHeading>
             <ul className="space-y-3">
@@ -134,7 +132,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Destinations */}
           <div className="md:col-span-2">
             <FooterHeading>Destinations</FooterHeading>
             <ul className="space-y-3">
@@ -159,7 +156,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* About */}
           <div className="md:col-span-2">
             <FooterHeading>About</FooterHeading>
             <ul className="space-y-3">
@@ -178,7 +174,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
           <div className="md:col-span-2">
             <FooterHeading>Resources</FooterHeading>
             <ul className="space-y-3">
@@ -195,7 +190,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Bottom Bar - Copyright & Legal */}
         <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 space-y-3 sm:space-y-0">
           <p>© 2026 AdmissionOnBoard Inc</p>
           <div className="flex space-x-6">

@@ -5,9 +5,7 @@ const OurImpact = () => {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column - Image with Stats */}
           <div className="relative">
-            {/* Main Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800"
@@ -16,7 +14,6 @@ const OurImpact = () => {
               />
             </div>
 
-            {/* Floating Stat Card 1 - Top */}
             <div className="absolute -top-6 left-8 bg-white rounded-2xl shadow-xl p-4 transform hover:scale-105 transition-transform duration-300">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center">
@@ -47,7 +44,6 @@ const OurImpact = () => {
               </div>
             </div>
 
-            {/* Floating Stat Card 2 - Middle Right */}
             <div className="absolute top-1/2 -right-6 bg-white rounded-2xl shadow-xl p-4 transform hover:scale-105 transition-transform duration-300">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
@@ -72,7 +68,6 @@ const OurImpact = () => {
               </div>
             </div>
 
-            {/* Floating Stat Card 3 - Bottom */}
             <div className="absolute -bottom-6 left-12 bg-white rounded-2xl shadow-xl p-4 transform hover:scale-105 transition-transform duration-300">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center">
@@ -98,7 +93,6 @@ const OurImpact = () => {
             </div>
           </div>
 
-          {/* Right Column - Text Content */}
           <div className="space-y-6">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 leading-tight font-montserrat">
               Our Impact

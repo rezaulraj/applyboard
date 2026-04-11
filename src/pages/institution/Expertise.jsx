@@ -5,9 +5,7 @@ const Expertise = () => {
     <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Column - Image & Floating Elements */}
           <div className="relative order-2 md:order-1">
-            {/* Main Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-gray-100">
               <img
                 src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -16,7 +14,6 @@ const Expertise = () => {
               />
             </div>
 
-            {/* Floating Chart Card */}
             <div className="absolute top-6 right-0 translate-x-1/4 lg:translate-x-1/3 z-20">
               <div className="bg-white rounded-xl shadow-2xl p-4 border border-gray-100 w-36 lg:w-44">
                 <div className="flex items-end justify-between h-16 space-x-2 px-2">
@@ -31,7 +28,6 @@ const Expertise = () => {
               </div>
             </div>
 
-            {/* Floating Blue Icon Card */}
             <div className="absolute top-1/3 right-0 translate-x-1/3 lg:translate-x-1/4 z-30">
               <div className="bg-blue-600 rounded-xl shadow-xl p-3 w-14 h-14 flex items-center justify-center border-4 border-white">
                 <svg
@@ -50,7 +46,6 @@ const Expertise = () => {
               </div>
             </div>
 
-            {/* Floating Green Icon Card */}
             <div className="absolute top-1/2 right-0 translate-x-1/3 lg:translate-x-1/4 z-30 mt-6">
               <div className="bg-emerald-500 rounded-xl shadow-xl p-3 w-14 h-14 flex items-center justify-center border-4 border-white">
                 <svg
@@ -70,21 +65,17 @@ const Expertise = () => {
             </div>
           </div>
 
-          {/* Right Column - Text Content */}
           <div className="space-y-6 order-1 md:order-2">
-            {/* Category Label */}
             <div>
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
                 EXPERTISE
               </span>
             </div>
 
-            {/* Main Heading */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 font-montserrat leading-tight">
               Leverage Millions of Global Data Points
             </h2>
 
-            {/* Description */}
             <p className="text-lg text-gray-600 font-sans leading-relaxed max-w-xl">
               Our experienced strategy team empowers you with sector-leading
               insights, market trends, and recruitment partner vetting,

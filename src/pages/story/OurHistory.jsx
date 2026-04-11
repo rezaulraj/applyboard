@@ -334,12 +334,10 @@ const OurHistory = () => {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-blue-50 to-white">
       <div className="max-w-4xl mx-auto">
-        {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center mb-8 font-montserrat">
           Our History
         </h2>
 
-        {/* Year Selector */}
         <div className="mb-12 overflow-x-auto pb-2">
           <div className="flex justify-center min-w-max bg-white rounded-full p-2 shadow-md mx-auto max-w-fit">
             {years.map((year) => (
@@ -358,12 +356,9 @@ const OurHistory = () => {
           </div>
         </div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Vertical Line */}
           <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-400 via-blue-500 to-blue-600 rounded-full"></div>
 
-          {/* Timeline Items */}
           <div className="space-y-8">
             {timelineData[selectedYear]?.map((item, index) => (
               <div
@@ -395,19 +390,16 @@ const OurHistory = () => {
                   </div>
                 </div>
 
-                {/* Dot */}
                 <div className="w-2/12 flex justify-center">
                   <div className="w-4 h-4 bg-blue-600 rounded-full border-4 border-white shadow-lg relative z-10"></div>
                 </div>
 
-                {/* Empty Space for other side */}
                 <div className="w-5/12"></div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Bottom decorative element */}
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-blue-100 rounded-full text-blue-700 font-semibold">
             <svg

@@ -8,7 +8,6 @@ const SolutionsPage = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 100);
 
-      // Update active tab based on scroll position
       const sections = [
         "proof-of-finance",
         "banking",
@@ -63,14 +62,12 @@ const SolutionsPage = () => {
     { id: "foreign-exchange", label: "FOREIGN EXCHANGE" },
     { id: "loans", label: "LOANS" },
     { id: "language-tests", label: "LANGUAGE TESTS" },
-    // { id: "pre-arrival", label: "PRE-ARRIVAL" },
     { id: "accommodations", label: "ACCOMMODATIONS" },
     { id: "visa-services", label: "VISA SERVICES" },
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Sticky Navigation */}
       <nav
         className={`sticky top-20 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled ? "bg-white py-3" : "bg-white py-4"
@@ -87,7 +84,6 @@ const SolutionsPage = () => {
             </p>
           </div>
 
-          {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-2 bg-gray-100 rounded-full p-2 max-w-5xl mx-auto">
             {tabs.map((tab) => (
               <button
@@ -106,10 +102,8 @@ const SolutionsPage = () => {
         </div>
       </nav>
 
-      {/* Spacer for fixed nav */}
       <div className="h-6"></div>
 
-      {/* Proof of Finance Section */}
       <section
         id="proof-of-finance"
         className="py-12 px-4 sm:px-6 lg:px-8 scroll-mt-40"
@@ -132,7 +126,6 @@ const SolutionsPage = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {/* TD Card */}
               <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
                 <div className="bg-green-500 p-8 flex items-center justify-center h-36">
                   <span className="text-white text-4xl font-bold">TD</span>
@@ -160,7 +153,6 @@ const SolutionsPage = () => {
                 </div>
               </div>
 
-              {/* RBC Card */}
               <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
                 <div className="bg-blue-800 p-8 flex items-center justify-center h-36">
                   <div className="text-center">
@@ -198,7 +190,6 @@ const SolutionsPage = () => {
                 </div>
               </div>
 
-              {/* Expatrio Card */}
               <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
                 <div className="bg-teal-500 p-8 flex items-center justify-center h-36">
                   <span className="text-white text-2xl font-bold">
@@ -228,7 +219,6 @@ const SolutionsPage = () => {
                 </div>
               </div>
 
-              {/* Coracle Card */}
               <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
                 <div className="bg-blue-900 p-8 flex items-center justify-center h-36">
                   <div className="flex items-center gap-2">
@@ -270,7 +260,6 @@ const SolutionsPage = () => {
         </div>
       </section>
 
-      {/* Banking Section - BMO */}
       <section id="banking" className="py-12 px-4 sm:px-6 lg:px-8 scroll-mt-40">
         <div className="max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 lg:p-12">
@@ -330,7 +319,6 @@ const SolutionsPage = () => {
         </div>
       </section>
 
-      {/* Foreign Exchange Section */}
       <section
         id="foreign-exchange"
         className="py-12 px-4 sm:px-6 lg:px-8 scroll-mt-40"
@@ -353,7 +341,6 @@ const SolutionsPage = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
-              {/* Reeudo Card */}
               <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
                 <div className="bg-cyan-400 p-8 flex items-center justify-center h-28">
                   <span className="text-gray-800 text-3xl font-bold">
@@ -383,7 +370,6 @@ const SolutionsPage = () => {
                 </div>
               </div>
 
-              {/* Flywire Card */}
               <div className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
                 <div className="bg-blue-600 p-8 flex items-center justify-center h-28">
                   <span className="text-white text-3xl font-bold italic">
@@ -417,7 +403,6 @@ const SolutionsPage = () => {
         </div>
       </section>
 
-      {/* Language Tests Section */}
       <section
         id="language-tests"
         className="py-12 px-4 sm:px-6 lg:px-8 scroll-mt-40"
@@ -452,7 +437,6 @@ const SolutionsPage = () => {
         </div>
       </section>
 
-      {/* Education Loans Section */}
       <section id="loans" className="py-12 px-4 sm:px-6 lg:px-8 scroll-mt-40">
         <div className="max-w-6xl mx-auto">
           <div className="bg-gradient-to-br from-blue-50 to-white rounded-3xl p-8 lg:p-12">
@@ -529,7 +513,6 @@ const SolutionsPage = () => {
       </section>
 
 
-      {/* Accommodations Section */}
       <section
         id="accommodations"
         className="py-12 px-4 sm:px-6 lg:px-8 scroll-mt-40"
@@ -602,7 +585,6 @@ const SolutionsPage = () => {
         </div>
       </section>
 
-      {/* Visa Services Section */}
       <section
         id="visa-services"
         className="py-12 px-4 sm:px-6 lg:px-8 scroll-mt-40 pb-20"

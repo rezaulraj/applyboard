@@ -4,26 +4,21 @@ const SatisfactionGermany = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-        {/* Left Column - Text Content */}
         <div className="space-y-6">
-          {/* Category Label */}
           <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             Affordability
           </span>
 
-          {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900 leading-tight">
             Spend Less on Your Studies
           </h2>
 
-          {/* First Paragraph */}
           <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
             One of the best benefits of studying in Ireland is that you can get
             a premium study abroad experience while spending comparatively less
             on tuition and cost of living.
           </p>
 
-          {/* Second Paragraph */}
           <p className="text-gray-600 text-base font-sans lg:text-lg leading-relaxed">
             Although an education abroad can still require a substantial
             investment no matter where it is, Ireland is quite affordable,
@@ -34,9 +29,7 @@ const SatisfactionGermany = () => {
           </p>
         </div>
 
-        {/* Right Column - Images */}
         <div className="grid grid-cols-2 gap-4">
-          {/* Top Left - Small Square Image */}
           <div className="space-y-4">
             <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[6/4]">
               <img
@@ -46,7 +39,6 @@ const SatisfactionGermany = () => {
               />
             </div>
 
-            {/* Bottom Left - Kangaroo Image */}
             <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[3.9/4]">
               <img
                 src="https://images.pexels.com/photos/29242212/pexels-photo-29242212.jpeg"
@@ -56,7 +48,6 @@ const SatisfactionGermany = () => {
             </div>
           </div>
 
-          {/* Right Side - Large Vertical Image */}
           <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[1.7/3]">
             <img
               src="https://images.unsplash.com/photo-1618259278412-2819cbdea4dc?q=80&w=821&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -67,10 +58,6 @@ const SatisfactionGermany = () => {
         </div>
       </div>
       <div className="relative w-full py-10 rounded-4xl mt-10 flex items-center justify-center overflow-hidden bg-blue-900">
-        {/* The Concentric Gradient Background */}
-        {/* <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-blue-400/30 via-blue-600/20 to-blue-900/80" /> */}
-
-        {/* Alternative: More distinct 'Ripple' rings effect */}
 
         <div className="absolute inset-0 bg-[radial-gradient(circle,theme(colors.blue.500)_0%,theme(colors.blue.500)_20%,theme(colors.blue.800)_40%,theme(colors.blue.500)_60%,theme(colors.blue.800)_100%)] opacity-80" />
 
