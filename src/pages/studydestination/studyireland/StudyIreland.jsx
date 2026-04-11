@@ -2,7 +2,7 @@ import React from "react";
 import HeroIreland from "./HeroIreland";
 import StickyHeaderIreland from "./StickyHeaderIreland";
 import StudentVisaIreland from "./StudentVisaIreland";
-import StudyDestinations from "../studyaustralia/StudyDestinations";
+import StudyDestinationIreland from "./StudyDestinationIreland";
 
 const StudyIreland = () => {
   return (
@@ -10,7 +10,7 @@ const StudyIreland = () => {
       <HeroIreland />
       <StickyHeaderIreland />
       <StudentVisaIreland />
-      <StudyDestinations />
+      <StudyDestinationIreland/>
     </div>
   );
 };

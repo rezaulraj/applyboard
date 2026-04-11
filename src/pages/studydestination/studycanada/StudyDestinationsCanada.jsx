@@ -3,12 +3,12 @@ import CountryFlag from "react-country-flag";
 
 const StudyDestinationsCanada = () => {
   const destinations = [
-    { country: "Australia", code: "AU", path: "/study-in-australia" },
-    { country: "Canada", code: "CA", path: "/study-in-canada" },
-    { country: "Germany", code: "DE", path: "/study-in-germany" },
-    { country: "Ireland", code: "IE", path: "/study-in-ireland" },
-    { country: "United Kingdom", code: "GB", path: "/study-in-uk" },
-    { country: "United States", code: "US", path: "/study-in-us" },
+    { country: "Australia", code: "AU", path: "/australia" },
+    // { country: "Canada", code: "CA", path: "/canada" },
+    { country: "Germany", code: "DE", path: "/germany" },
+    { country: "Ireland", code: "IE", path: "/ireland" },
+    { country: "United Kingdom", code: "GB", path: "/uk" },
+    { country: "United States", code: "US", path: "/usa" },
   ];
 
   return (

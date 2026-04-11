@@ -2,6 +2,7 @@ import React from "react";
 import HeroUsa from "./HeroUsa";
 import StickyHeaderUsa from "./StickyHeaderUsa";
 import StudentVisaUsa from "./StudentVisaUsa";
+import StudyDestinationUsa from "./StudyDestinationUsa";
 
 const StudyUsa = () => {
   return (
@@ -9,6 +10,7 @@ const StudyUsa = () => {
       <HeroUsa />
       <StickyHeaderUsa />
       <StudentVisaUsa />
+      <StudyDestinationUsa />
     </div>
   );
 };

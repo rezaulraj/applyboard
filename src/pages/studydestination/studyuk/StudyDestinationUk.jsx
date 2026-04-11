@@ -1,13 +1,13 @@
 import React from "react";
 import CountryFlag from "react-country-flag";
 
-const StudyDestinations = () => {
+const StudyDestinationUk = () => {
   const destinations = [
-    // { country: "Australia", code: "AU", path: "/australia" },
+    { country: "Australia", code: "AU", path: "/australia" },
     { country: "Canada", code: "CA", path: "/canada" },
     { country: "Germany", code: "DE", path: "/germany" },
     { country: "Ireland", code: "IE", path: "/ireland" },
-    { country: "United Kingdom", code: "GB", path: "/uk" },
+    // { country: "United Kingdom", code: "GB", path: "/uk" },
     { country: "United States", code: "US", path: "/usa" },
   ];
 
@@ -15,10 +15,10 @@ const StudyDestinations = () => {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10 space-y-3">
-          <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
+          <span className="text-sm font-bold font-sans tracking-[1.5px] text-blue-600 uppercase">
             STUDY DESTINATIONS
           </span>
-          <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900 leading-tight">
+          <h2 className="text-3xl sm:text-4xl font-montserrat font-bold text-gray-900">
             More Study Destinations to Explore
           </h2>
         </div>
@@ -64,4 +64,4 @@ const StudyDestinations = () => {
   );
 };
 
-export default StudyDestinations;
+export default StudyDestinationUk;
