@@ -16,6 +16,7 @@ import StudyAbroadBlog from "./pages/blog/StudyAbroadBlog";
 import Contact from "./pages/contact/Contact";
 import Career from "./pages/career/Career";
 import Solutions from "./pages/360-solution/Solutions";
+import OurStory from "./pages/story/OurStory";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/careers" element={<Career />} />
           <Route path="/solutions" element={<Solutions />} />
+          <Route path="/our-story" element={<OurStory />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

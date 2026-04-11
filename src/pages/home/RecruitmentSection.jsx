@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { LuUsersRound, LuLayers, LuClock } from "react-icons/lu";
 import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
-
+import PartnershipFormModal from "../../components/common/PartnershipFormModal";
 const features = [
   {
     icon: LuUsersRound,
@@ -19,11 +19,13 @@ const features = [
 
 const RecruitmentSection = () => {
   const [popupOpen, setPopupOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   return (
     <div className="max-w-6xl mx-auto px-12 py-14">
-      {/* TOP ROW */}
       <div className="flex items-center gap-12 flex-wrap">
-        {/* Left */}
         <div className="flex-1 min-w-[280px]">
           <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             Recruitment Partners
@@ -45,12 +47,14 @@ const RecruitmentSection = () => {
             ))}
           </ul>
 
-          <button className="mt-2 px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white text-[18px] font-medium rounded-lg transition-colors w-fit font-sans">
+          <button
+            onClick={openModal}
+            className="mt-2 px-7 py-3 bg-blue-600 hover:bg-blue-700 text-white text-[18px] font-medium rounded-lg transition-colors w-fit font-sans"
+          >
             Join Our Network
           </button>
         </div>
 
-        {/* Right image grid */}
         <div
           className="flex-shrink-0 grid gap-3"
           style={{
@@ -94,7 +98,6 @@ const RecruitmentSection = () => {
         </div>
       </div>
 
-      {/* CTA BANNER */}
       <div className="mt-10 rounded-[20px] bg-blue-600 flex items-end gap-10 overflow-hidden px-14 relative min-h-[180px]">
         <div className="absolute left-16 bottom-[-60px] w-64 h-64 rounded-full bg-white/5" />
         <div className="absolute left-5 bottom-[-90px] w-80 h-80 rounded-full bg-white/[0.03]" />
@@ -127,6 +130,7 @@ const RecruitmentSection = () => {
         isOpen={popupOpen}
         onClose={() => setPopupOpen(false)}
       />
+      <PartnershipFormModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 };

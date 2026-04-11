@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactCountryFlag from "react-country-flag";
 
-// ─── Data ────────────────────────────────────────────────────────────────────
-
 const COUNTRIES = [
   { code: "CA", name: "Canada" },
   { code: "US", name: "U.S.A." },
@@ -112,8 +110,6 @@ const stepLabels = [
   "Your Info",
 ];
 
-// ─── Shared UI ────────────────────────────────────────────────────────────────
-
 const Progress = ({ step }) => (
   <div className="flex gap-1 mt-2">
     {Array.from({ length: WIZARD_STEPS }).map((_, i) => (
@@ -157,8 +153,6 @@ const ContinueBtn = ({ onClick, label = "Continue", disabled }) => (
     <span>✦</span> {label}
   </button>
 );
-
-// ─── Step 1 — Destination ─────────────────────────────────────────────────────
 
 const StepDestination = ({ selected, toggle }) => (
   <div>
@@ -220,8 +214,6 @@ const StepDestination = ({ selected, toggle }) => (
     </div>
   </div>
 );
-
-// ─── Step 2 — Field of Study ──────────────────────────────────────────────────
 
 const StepFieldOfStudy = ({ field, setField, program, setProgram }) => {
   const [fOpen, setFOpen] = useState(false);
@@ -300,7 +292,7 @@ const StepFieldOfStudy = ({ field, setField, program, setProgram }) => {
   );
 };
 
-// ─── Step 3 — Study Level ─────────────────────────────────────────────────────
+//Step 3 — Study Level
 
 const StepStudyLevel = ({ selected, setSelected }) => (
   <div>
@@ -341,7 +333,7 @@ const StepStudyLevel = ({ selected, setSelected }) => (
   </div>
 );
 
-// ─── Step 4 — Nationality ─────────────────────────────────────────────────────
+// Step 4 — Nationality
 
 const StepNationality = ({ nationality, setNationality }) => {
   const [open, setOpen] = useState(false);
@@ -436,7 +428,7 @@ const StepNationality = ({ nationality, setNationality }) => {
   );
 };
 
-// ─── Step 5 — English Proficiency ─────────────────────────────────────────────
+//Step 5 — English Proficiency
 
 const StepEnglish = ({
   hasResults,
@@ -531,7 +523,7 @@ const StepEnglish = ({
   </div>
 );
 
-// ─── Step 6 — Financials ──────────────────────────────────────────────────────
+// Step 6 — Financials
 
 const StepFinancials = ({
   budget,
@@ -546,7 +538,7 @@ const StepFinancials = ({
       style={{ background: "linear-gradient(135deg,#f57f17 0%,#fbc02d 100%)" }}
     >
       <img
-        src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=200&fit=crop"
+        src="https://plus.unsplash.com/premium_photo-1742395281371-626ffd3cc0e0?q=80&w=812&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="graduates"
         className="w-full h-full object-cover opacity-80"
       />
@@ -608,7 +600,7 @@ const StepFinancials = ({
   </div>
 );
 
-// ─── Step 7 — Summary ─────────────────────────────────────────────────────────
+// Step 7 — Summary
 
 const StepSummary = () => (
   <div className="text-center">
@@ -659,7 +651,7 @@ const StepSummary = () => (
   </div>
 );
 
-// ─── Step 8 — Personal Info ───────────────────────────────────────────────────
+// Step 8 — Personal Info
 
 const StepPersonalInfo = ({ data, setData }) => {
   const update = (k, v) => setData((p) => ({ ...p, [k]: v }));
@@ -720,7 +712,6 @@ const StepPersonalInfo = ({ data, setData }) => {
           value={data.email}
           onChange={(e) => update("email", e.target.value)}
         />
-        {/* Phone with dial code */}
         <div>
           <label
             className="text-[12px] font-bold text-[#1a2340] mb-1.5 block"
@@ -766,7 +757,6 @@ const StepPersonalInfo = ({ data, setData }) => {
           value={data.dob}
           onChange={(e) => update("dob", e.target.value)}
         />
-        {/* Gender */}
         <div>
           <label
             className="text-[12px] font-bold text-[#1a2340] mb-2 block"
@@ -795,7 +785,6 @@ const StepPersonalInfo = ({ data, setData }) => {
             ))}
           </div>
         </div>
-        {/* Source */}
         <div>
           <label
             className="text-[12px] font-bold text-[#1a2340] mb-1.5 block"
@@ -851,7 +840,7 @@ const StepPersonalInfo = ({ data, setData }) => {
   );
 };
 
-// ─── Main Popup Component ─────────────────────────────────────────────────────
+// Main Popup Component
 
 const StudentRegistrationPopup = ({ isOpen, onClose }) => {
   const [step, setStep] = useState(1);
@@ -879,7 +868,6 @@ const StudentRegistrationPopup = ({ isOpen, onClose }) => {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  // Reset state each time popup opens
   useEffect(() => {
     if (isOpen) {
       setStep(1);
@@ -962,7 +950,6 @@ const StudentRegistrationPopup = ({ isOpen, onClose }) => {
           animation: "popIn 0.32s cubic-bezier(0.34,1.56,0.64,1)",
         }}
       >
-        {/* Top colour bar */}
         <div
           className="h-1.5 w-full flex-shrink-0"
           style={{
@@ -970,7 +957,6 @@ const StudentRegistrationPopup = ({ isOpen, onClose }) => {
           }}
         />
 
-        {/* Header row */}
         <div className="px-5 pt-4 pb-2 flex-shrink-0">
           <div className="flex items-center justify-between mb-1">
             <div className="flex items-center gap-2">
@@ -1011,7 +997,6 @@ const StudentRegistrationPopup = ({ isOpen, onClose }) => {
           )}
         </div>
 
-        {/* Scrollable body */}
         <div
           className="px-5 py-4 overflow-y-auto flex-1"
           style={{
@@ -1134,7 +1119,6 @@ const StudentRegistrationPopup = ({ isOpen, onClose }) => {
           )}
         </div>
 
-        {/* Footer CTA */}
         {!submitted && (
           <div className="px-5 pb-5 pt-3 border-t border-gray-100 flex-shrink-0">
             {step < 7 && (

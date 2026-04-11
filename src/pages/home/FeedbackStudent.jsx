@@ -21,7 +21,6 @@ const FeedbackStudent = () => {
   return (
     <div className="bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header Section */}
         <div className="text-left mb-16">
           <h1 className="text-4xl font-montserrat font-bold text-gray-900 mb-4 tracking-tight">
             What Our Students Have to Say
@@ -31,14 +30,12 @@ const FeedbackStudent = () => {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
               className="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 md:p-10 border border-gray-100 hover:border-indigo-200"
             >
-              {/* Decorative Quote Icon */}
               <div className="absolute top-6 right-6 text-indigo-100 group-hover:text-indigo-200 transition-colors duration-300">
                 <svg
                   className="w-12 h-12"
@@ -49,19 +46,16 @@ const FeedbackStudent = () => {
                 </svg>
               </div>
 
-              {/* Highlight Title */}
               <div className="mb-6">
                 <h2 className="text-2xl font-montserrat font-bold text-gray-700 border-l-4 border-gray-500 pl-4">
                   {testimonial.highlight}
                 </h2>
               </div>
 
-              {/* Quote Text */}
               <p className="text-gray-700 text-lg leading-relaxed mb-8 font-sans">
                 "{testimonial.quote}"
               </p>
 
-              {/* Student Name */}
               <div className="flex items-center justify-between border-t border-gray-100 pt-6 mt-2">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">

@@ -6,7 +6,6 @@ const Hero = () => {
   return (
     <section className="mt-10">
       <div className="max-w-6xl mx-auto bg-blue-50 rounded-4xl px-16 py-8 flex items-center justify-between gap-10 overflow-hidden min-h-[400px]">
-        {/* Left Content */}
         <div className="flex-1 max-w-[500px]">
           <h1 className="text-5xl font-bold font-montserrat text-[#1E2D4E] leading-normal">
             Your Future Goes
@@ -25,7 +24,6 @@ const Hero = () => {
           </button>
         </div>
 
-        {/* Diamond Image Grid */}
         <div className="shrink-0 relative w-[380px] h-[420px]">
           <div
             className="absolute inset-0 grid gap-10"

@@ -12,7 +12,7 @@ const OurStorySection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
           {/* Left Column - Text Content */}
           <div className="space-y-6">
-            <p className="text-gray-700 leading-relaxed font-sans">
+            <p className="text-gray-700 leading-relaxed font-sans text-lg lg:text-xl">
               Since 2015, AdmissionOnBoard has been on a mission to make education
               accessible. Our co-founders, Meti, Martin, and Massi Basiri, were
               international students themselves. After facing obstacles and
@@ -20,7 +20,7 @@ const OurStorySection = () => {
               opportunity to break down these barriers.
             </p>
 
-            <p className="text-gray-700 leading-relaxed font-sans">
+            <p className="text-gray-700 leading-relaxed font-sans text-lg lg:text-xl">
               In 2024, AdmissionOnBoard was named one of the fastest-growing
               technology companies in Canada by Deloitte, ranking #4 on the
               Deloitte Technology Fast 50 Enterprise—Industry leaders list. This
@@ -48,11 +48,11 @@ const OurStorySection = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 font-montserrat">
+                  <h3 className="font-semibold text-gray-900 text-lg lg:text-xl font-montserrat">
                     Our Mission
                   </h3>
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed font-sans">
+                <p className="text-gray-700 text-sm leading-relaxed font-sans text-lg lg:text-xl">
                   We enable global access to global education through our full
                   service platform, empowering students, institutions, and
                   partners across the globe.
@@ -83,11 +83,11 @@ const OurStorySection = () => {
                       />
                     </svg>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 font-montserrat">
+                  <h3 className="font-semibold text-gray-900 font-montserrat text-lg lg:text-xl">
                     Our Vision
                   </h3>
                 </div>
-                <p className="text-gray-700 text-sm leading-relaxed font-sans">
+                <p className="text-gray-700 leading-relaxed font-sans text-lg lg:text-xl">
                   To unlock the potential of every aspiring mind.
                 </p>
               </div>

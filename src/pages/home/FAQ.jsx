@@ -29,7 +29,6 @@ const FAQ = () => {
 
   return (
     <section className="max-w-6xl mx-auto px-12 py-16 flex gap-14 items-start flex-wrap">
-      {/* Left */}
       <div className="shrink-0 w-[360px]">
         <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
           FAQ's
@@ -44,7 +43,6 @@ const FAQ = () => {
         </p>
       </div>
 
-      {/* Accordion */}
       <div className="flex-1 flex flex-col gap-3 min-w-[280px]">
         {faqs.map((faq, i) => (
           <div

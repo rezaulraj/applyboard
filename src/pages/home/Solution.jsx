@@ -136,11 +136,9 @@ const Solution = () => {
   const containerRef = useRef(null);
   const [linePaths, setLinePaths] = useState([]);
   const [popupOpen, setPopupOpen] = useState(false);
-  // Calculate dynamic SVG paths from pill positions to center
   useEffect(() => {
     if (!visible || !containerRef.current) return;
 
-    // Use requestAnimationFrame to ensure DOM is painted
     const calculatePaths = () => {
       const container = containerRef.current;
       if (!container) return;
@@ -151,13 +149,11 @@ const Solution = () => {
       const containerRect = container.getBoundingClientRect();
       const centerRect = centerElement.getBoundingClientRect();
 
-      // Center point (where the image is)
       const centerX =
         centerRect.left + centerRect.width / 2 - containerRect.left;
       const centerY =
         centerRect.top + centerRect.height / 2 - containerRect.top;
 
-      // Get all pill elements
       const newPaths = [];
 
       solutions.forEach((solution, index) => {
@@ -168,39 +164,32 @@ const Solution = () => {
 
         const pillRect = pillElement.getBoundingClientRect();
 
-        // Pill center coordinates relative to container
         const startX = pillRect.left + pillRect.width / 2 - containerRect.left;
         const startY = pillRect.top + pillRect.height / 2 - containerRect.top;
 
-        // Calculate control points for a smooth curved line
         const dx = centerX - startX;
         const dy = centerY - startY;
 
-        // Create a bezier curve that arcs outward
         let cp1x, cp1y, cp2x, cp2y;
 
-        // For top center pill, create a downward curve
         if (solution.id === 1) {
           cp1x = startX + dx * 0.3;
           cp1y = startY + dy * 0.2;
           cp2x = startX + dx * 0.7;
           cp2y = startY + dy * 0.5;
         }
-        // For left side pills, curve outward to the left then in
         else if (startX < centerX - 50) {
           cp1x = startX - Math.abs(dx) * 0.2;
           cp1y = startY + dy * 0.3;
           cp2x = startX + dx * 0.5;
           cp2y = centerY - Math.abs(dy) * 0.1;
         }
-        // For right side pills, curve outward to the right then in
         else if (startX > centerX + 50) {
           cp1x = startX + Math.abs(dx) * 0.2;
           cp1y = startY + dy * 0.3;
           cp2x = startX + dx * 0.5;
           cp2y = centerY - Math.abs(dy) * 0.1;
         }
-        // Default curve
         else {
           cp1x = startX + dx * 0.25;
           cp1y = startY + dy * 0.25;
@@ -225,9 +214,7 @@ const Solution = () => {
       setLinePaths(newPaths);
     };
 
-    // Small delay to ensure DOM elements are fully rendered and positioned
     const timer = setTimeout(calculatePaths, 150);
-    // Also recalculate on window resize
     window.addEventListener("resize", calculatePaths);
 
     return () => {
@@ -253,22 +240,18 @@ const Solution = () => {
         className="bg-gradient-to-br from-[#eaf2ff] via-[#f5f9ff] to-[#e8f3f8] flex items-center justify-center py-15 px-5 font-['Montserrat'] overflow-hidden relative"
         ref={sectionRef}
       >
-        {/* Decorative circles */}
         <div className="absolute -top-[120px] -left-[120px] w-[480px] h-[480px] rounded-full bg-radial-[circle_from_center] from-[#c2d9ff55] to-transparent pointer-events-none" />
         <div className="absolute -bottom-20 -right-20 w-[340px] h-[340px] rounded-full bg-radial-[circle_from_center] from-[#b2e8f855] to-transparent pointer-events-none" />
 
         <div className="max-w-[1180px] w-full mx-auto flex flex-col items-center">
-          {/* Badge */}
           <div className="ttext-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
             360 Solutions
           </div>
 
-          {/* Title */}
           <h2 className="text-3xl lg:text-4xl font-montserrat font-bold text-center text-gray-800 leading-tight mb-6">
             Find Every Solution, From <br /> Applications to Accommodations
           </h2>
 
-          {/* Description */}
           <p className="text-base lg:text-lg text-center text-gray-600 font-sans leading-relaxed mb-10 max-w-2xl">
             Access our full 360 Solutions, covering everything from application
             to arrival. Get instant language test vouchers, explore financial
@@ -276,7 +259,6 @@ const Solution = () => {
             It's all here.
           </p>
 
-          {/* CTA Button */}
           <button
             onClick={() => setPopupOpen(true)}
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 group cursor-pointer"
@@ -284,12 +266,10 @@ const Solution = () => {
             Register as a Student
           </button>
 
-          {/* Visual */}
           <div
             className="relative w-full max-w-[860px] min-h-[480px] flex items-end justify-center max-[700px]:min-h-[340px] max-[500px]:min-h-[280px]"
             ref={containerRef}
           >
-            {/* SVG Layer for connecting lines */}
             {visible && linePaths.length > 0 && (
               <svg
                 className="absolute inset-0 w-full h-full pointer-events-none z-10"
@@ -317,7 +297,6 @@ const Solution = () => {
                       />
                     </linearGradient>
                   ))}
-                  {/* Glow filter for lines */}
                   <filter
                     id="glow"
                     x="-20%"
@@ -350,7 +329,6 @@ const Solution = () => {
                   />
                 ))}
 
-                {/* Animated dots at the end of each line (center) */}
                 {linePaths.map((path) => (
                   <circle
                     key={`dot-${path.id}`}
@@ -376,11 +354,9 @@ const Solution = () => {
               </svg>
             )}
 
-            {/* Arc backgrounds */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[85%] h-[88%] rounded-[50%_50%_0_0/60%_60%_0_0] border-2 border-[rgba(79,142,247,0.13)] bg-gradient-to-b from-[rgba(79,142,247,0.06)] to-[rgba(79,142,247,0.01)] z-0" />
             <div className="absolute top-[12%] left-1/2 -translate-x-1/2 w-[65%] h-[72%] rounded-[50%_50%_0_0/60%_60%_0_0] border border-dashed border-[rgba(79,142,247,0.12)] z-0" />
 
-            {/* Floating pills */}
             {solutions.map((s) => (
               <SolutionPill
                 key={s.id}
@@ -394,7 +370,6 @@ const Solution = () => {
               />
             ))}
 
-            {/* Center image */}
             <div className="center-image-container relative z-2 w-[280px] h-[380px] flex-shrink-0 max-[700px]:w-[180px] max-[700px]:h-[240px] max-[500px]:w-[140px] max-[500px]:h-[190px]">
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[230px] h-[230px] rounded-full bg-radial-[circle_from_center] from-[#d6e8ff] to-[#eaf2ff] -z-1 max-[700px]:w-[160px] max-[700px]:h-[160px]" />
               <img
@@ -406,7 +381,6 @@ const Solution = () => {
           </div>
         </div>
 
-        {/* Custom animations */}
         <style jsx>{`
           @keyframes fadeUp {
             from {

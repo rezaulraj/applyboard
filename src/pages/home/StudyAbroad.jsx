@@ -19,7 +19,6 @@ const StudyAbroad = () => {
   const [popupOpen, setPopupOpen] = useState(false);
   return (
     <section className="flex items-center gap-12 px-12 py-14 max-w-6xl mx-auto flex-wrap">
-      {/* LEFT */}
       <div className="flex-1 min-w-[280px]">
         <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
           International Students
@@ -54,9 +53,7 @@ const StudyAbroad = () => {
         </button>
       </div>
 
-      {/* RIGHT — image grid */}
       <div className="shrink-0 grid grid-cols-2 gap-3 w-[420px]">
-        {/* Main tall image */}
         <div className="row-span-2 rounded-[18px] overflow-hidden h-[380px]">
           <img
             src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -65,7 +62,6 @@ const StudyAbroad = () => {
           />
         </div>
 
-        {/* Stat card */}
         <div className="bg-blue-600 rounded-[18px] p-5 flex flex-col gap-2">
           <LuBookOpen className="text-white text-[28px] opacity-90" />
           <p className="text-[32px] font-extrabold text-white font-montserrat leading-none">
@@ -74,7 +70,6 @@ const StudyAbroad = () => {
           <p className="text-base text-white/80 font-sans">Acceptance Rate</p>
         </div>
 
-        {/* Second image */}
         <div className="rounded-[18px] overflow-hidden h-[220px]">
           <img
             src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=260&fit=crop"

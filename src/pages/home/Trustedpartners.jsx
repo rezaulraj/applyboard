@@ -753,7 +753,6 @@ const TrustedPartners = () => {
 
       <section className="tp-section">
         <div className="tp-inner">
-          {/* Badge */}
           <div
             style={{
               textAlign: "center",
@@ -769,7 +768,6 @@ const TrustedPartners = () => {
             Trusted Partners
           </div>
 
-          {/* Title */}
           <h2
             style={{
               textAlign: "center",
@@ -787,7 +785,6 @@ const TrustedPartners = () => {
             Trusted by 1,500+ Universities, Colleges, and Schools Worldwide
           </h2>
 
-          {/* Tabs with react-country-flag */}
           <div className="tp-tabs-wrap">
             {countries.map((c) => (
               <button
@@ -810,7 +807,6 @@ const TrustedPartners = () => {
             ))}
           </div>
 
-          {/* Cards */}
           <div
             className={`tp-cards-wrap ${animating ? "cards-fade" : "cards-anim"}`}
           >
@@ -819,7 +815,6 @@ const TrustedPartners = () => {
             ))}
           </div>
 
-          {/* CTA */}
           <div style={{ textAlign: "center" }}>
             <a href={activeCountry?.link} className="tp-explore-btn">
               Explore More {activeCountry?.label} Institutions →

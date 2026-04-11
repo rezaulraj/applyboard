@@ -76,7 +76,6 @@ const ChannelPartners = () => {
       </h2>
 
       <div className="max-w-[980px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left: Image collage */}
         <div
           className="grid gap-3"
           style={{
@@ -84,7 +83,6 @@ const ChannelPartners = () => {
             gridTemplateRows: "auto auto",
           }}
         >
-          {/* Stat card */}
           <div
             className="bg-blue-600 rounded-2xl p-5 flex flex-col items-center justify-center gap-2 min-h-[130px]"
             style={{ gridRow: "1/2", gridColumn: "1/2" }}
@@ -101,7 +99,6 @@ const ChannelPartners = () => {
             </span>
           </div>
 
-          {/* Main image */}
           <div
             className="rounded-2xl overflow-hidden bg-emerald-500 h-[280px]"
             style={{ gridRow: "1/3", gridColumn: "2/3" }}
@@ -113,7 +110,6 @@ const ChannelPartners = () => {
             />
           </div>
 
-          {/* Secondary image */}
           <div
             className="rounded-xl overflow-hidden bg-blue-200 h-[138px]"
             style={{ gridRow: "2/3", gridColumn: "1/2" }}
@@ -126,7 +122,6 @@ const ChannelPartners = () => {
           </div>
         </div>
 
-        {/* Right: Content */}
         <div className="flex flex-col gap-5">
           <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3 ">
             Partners Institutions

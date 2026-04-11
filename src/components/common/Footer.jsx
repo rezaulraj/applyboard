@@ -47,14 +47,14 @@ const Footer = () => {
   const FooterLink = ({ href, children }) => (
     <a
       href={href}
-      className="text-gray-600 hover:text-indigo-600 transition-colors duration-200 text-sm"
+      className="text-gray-600 hover:text-indigo-600 hover:underline transition-colors duration-200 font-sans text-base"
     >
       {children}
     </a>
   );
 
   const FooterHeading = ({ children }) => (
-    <h3 className="font-semibold text-gray-800 mb-4 text-base tracking-wide">
+    <h3 className="font-semibold text-gray-800 mb-4 font-montserrat text-lg md:text-xl tracking-wide">
       {children}
     </h3>
   );
@@ -67,11 +67,28 @@ const Footer = () => {
           {/* Left Column - Address & Social */}
           <div className="md:col-span-4 space-y-4">
             <div className="mb-6">
-              <a
-                href="/"
-                className="text-2xl font-bold font-montserrat uppercase bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent"
-              >
-                AdmissionOnBoard
+              <a href="/" className="flex items-center gap-2 no-underline">
+                <div className="w-12 h-12 flex items-center justify-center">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <path
+                      d="M20 4C11.2 4 4 11.2 4 20s7.2 16 16 16 16-7.2 16-16S28.8 4 20 4zm0 5c6.1 0 11 4.9 11 11s-4.9 11-11 11S9 26.1 9 20 13.9 9 20 9z"
+                      fill="#1a5fd8"
+                    />
+                    <path
+                      d="M20 4v8M20 28v8M4 20h8M28 20h8"
+                      stroke="#1a5fd8"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                    />
+                    <circle cx="20" cy="20" r="4" fill="#1a5fd8" />
+                  </svg>
+                </div>
+                <span
+                  className="text-[24px] md:text-[28px] font-bold text-[#1a5fd8] tracking-tight"
+                  style={{ fontFamily: "'Montserrat', sans-serif" }}
+                >
+                  AdmissionOnBoard
+                </span>
               </a>
             </div>
             <div className="space-y-1 text-gray-600 text-sm leading-relaxed">
@@ -147,7 +164,7 @@ const Footer = () => {
             <FooterHeading>About</FooterHeading>
             <ul className="space-y-3">
               <li>
-                <FooterLink href="#">Our Story</FooterLink>
+                <FooterLink href="/our-story">Our Story</FooterLink>
               </li>
               <li>
                 <FooterLink href="/careers">Careers</FooterLink>
