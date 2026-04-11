@@ -88,7 +88,9 @@ const AcademicsGermany = () => {
               institutions. The German higher education system is known for its
               quality, holding an impressive{" "}
               <a
-                href="#"
+                href="https://www.timeshighereducation.com/world-university-rankings"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-600 hover:underline hover:text-blue-400"
               >
                 {" "}

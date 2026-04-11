@@ -8,7 +8,7 @@ const HeroCanada = () => {
       <div className="max-w-6xl mx-auto w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center md:px-16">
         {/* Left Content */}
         <div className="space-y-8">
-          <h1 className="text-4xl font-montserrat font-bold leading-normal text-gray-900">
+          <h1 className="text-4xl md:text-5xl font-montserrat font-bold leading-normal text-gray-900">
             Your Journey to{" "}
             <span className="bg-[#9846c3] bg-clip-text text-transparent">
               Study in Canada
@@ -16,7 +16,7 @@ const HeroCanada = () => {
             Starts Here
           </h1>
 
-          <p className="text-gray-600 text-base font-sans leading-relaxed max-w-xl">
+          <p className="text-gray-600 text-base md:text-lg font-sans leading-relaxed max-w-xl">
             Canada might be your top study abroad choice for so many reasons:
             academic excellence, affordable tuition, reliable post-study work
             options, pro-immigration policies—and much more. Learn all about
@@ -26,7 +26,7 @@ const HeroCanada = () => {
 
           <button
             onClick={() => setPopupOpen(true)}
-            className="group relative inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-base font-sans rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5"
+            className="group relative inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-base md:text-lg font-sans rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5"
           >
             Start Your Journey
           </button>

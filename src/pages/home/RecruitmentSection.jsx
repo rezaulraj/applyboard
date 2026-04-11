@@ -24,7 +24,7 @@ const RecruitmentSection = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   return (
-    <div className="max-w-6xl mx-auto px-12 py-14">
+    <div className="max-w-6xl mx-auto px-4 md:px-12 py-14">
       <div className="flex items-center gap-12 flex-wrap">
         <div className="flex-1 min-w-[280px]">
           <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
@@ -98,7 +98,7 @@ const RecruitmentSection = () => {
         </div>
       </div>
 
-      <div className="mt-10 rounded-[20px] bg-blue-600 flex items-end gap-10 overflow-hidden px-14 relative min-h-[180px]">
+      <div className="mt-10 rounded-[20px] bg-blue-600 flex-wrap md:flex items-end gap-10 overflow-hidden px-14 relative min-h-[180px]">
         <div className="absolute left-16 bottom-[-60px] w-64 h-64 rounded-full bg-white/5" />
         <div className="absolute left-5 bottom-[-90px] w-80 h-80 rounded-full bg-white/[0.03]" />
 

@@ -30,7 +30,7 @@ const StudentJourneyBanner = () => {
                 application to arrival.
               </p>
 
-              <button className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+              <button className="inline-flex items-center px-8 py-4 bg-blue-600 text-base md:text-lg font-sans text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
                 Let's get started
                 <svg
                   className="w-5 h-5 ml-2"

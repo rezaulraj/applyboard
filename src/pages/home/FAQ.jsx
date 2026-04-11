@@ -28,7 +28,7 @@ const FAQ = () => {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="max-w-6xl mx-auto px-12 py-16 flex gap-14 items-start flex-wrap">
+    <section className="max-w-6xl mx-auto px-4 md:px-12 py-16 flex gap-14 items-start flex-wrap">
       <div className="shrink-0 w-[360px]">
         <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
           FAQ's

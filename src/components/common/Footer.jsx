@@ -199,7 +199,10 @@ const Footer = () => {
         <div className="border-t border-gray-200 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 space-y-3 sm:space-y-0">
           <p>© 2026 AdmissionOnBoard Inc</p>
           <div className="flex space-x-6">
-            <a href="#" className="hover:text-indigo-600 transition-colors">
+            <a
+              href="/privacy"
+              className="hover:text-indigo-600 transition-colors"
+            >
               Privacy Policy
             </a>
             <a href="#" className="hover:text-indigo-600 transition-colors">

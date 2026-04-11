@@ -29,7 +29,7 @@ const HeroRecruitment = () => {
 
               <button
                 onClick={openModal}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 shadow-md hover:shadow-lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 text-base md:text-lg font-sans shadow-md hover:shadow-lg"
               >
                 Register Now
               </button>

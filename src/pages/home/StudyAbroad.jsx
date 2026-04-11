@@ -18,7 +18,7 @@ const features = [
 const StudyAbroad = () => {
   const [popupOpen, setPopupOpen] = useState(false);
   return (
-    <section className="flex items-center gap-12 px-12 py-14 max-w-6xl mx-auto flex-wrap">
+    <section className="flex items-center gap-12 px-4 md:px-12 py-14 max-w-6xl mx-auto flex-wrap">
       <div className="flex-1 min-w-[280px]">
         <p className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
           International Students
@@ -53,7 +53,7 @@ const StudyAbroad = () => {
         </button>
       </div>
 
-      <div className="shrink-0 grid grid-cols-2 gap-3 w-[420px]">
+      <div className="shrink-0 grid grid-cols-2 gap-3 max-w-[380px] lg:max-w-[420ox]">
         <div className="row-span-2 rounded-[18px] overflow-hidden h-[380px]">
           <img
             src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

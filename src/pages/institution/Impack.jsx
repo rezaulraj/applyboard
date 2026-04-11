@@ -8,7 +8,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   return (
-    <div className="min-h-screen bg-white pb-16">
+    <div className=" bg-white pb-16">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
         {/* --- Top Section: Content + Illustration --- */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
@@ -18,7 +18,7 @@ const [isModalOpen, setIsModalOpen] = useState(false);
               <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
                 IMPACT
               </span>
-              <h2 className="text-4xl sm:text-5xl font-bold font-montserrat text-gray-900 mt-3 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-gray-800 mt-3 leading-tight">
                 Step into the Spotlight
               </h2>
             </div>

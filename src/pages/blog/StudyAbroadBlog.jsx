@@ -10,7 +10,7 @@ const StudyAbroadBlog = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
 
-  // Articles for Students tab
+  // Articles
   const studentsArticles = [
     {
       id: 1,
@@ -431,7 +431,6 @@ const StudyAbroadBlog = () => {
     },
   ];
 
-  // Articles for Recruitment Partners tab
   const partnersArticles = [
     {
       id: 10,
@@ -729,7 +728,6 @@ const StudyAbroadBlog = () => {
     },
   ];
 
-  // Articles for Institutions tab
   const institutionsArticles = [
     {
       id: 17,
@@ -1074,8 +1072,8 @@ const StudyAbroadBlog = () => {
       `,
     },
   ];
+
 const [popupOpen, setPopupOpen] = useState(false);
-  // Filter articles based on active tab
   useEffect(() => {
     setVisibleCount(6);
     setIsLoading(true);
@@ -1118,12 +1116,10 @@ const [popupOpen, setPopupOpen] = useState(false);
   const handleLoadMore = () => {
     setIsLoading(true);
 
-    // Simulate API call
     setTimeout(() => {
       setVisibleCount((prev) => prev + 3);
       setIsLoading(false);
 
-      // Check if we have more articles to show
       if (visibleCount + 3 >= filteredArticles.length) {
         setHasMore(false);
       }

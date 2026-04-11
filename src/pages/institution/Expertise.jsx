@@ -80,7 +80,7 @@ const Expertise = () => {
             </div>
 
             {/* Main Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 font-montserrat leading-tight">
               Leverage Millions of Global Data Points
             </h2>
 

@@ -176,7 +176,7 @@ const StickyHeaderInstitution = () => {
       {/* ==================== SECTIONS CONTENT ==================== */}
       <div className="pt-0">
         {sections.map((section, index) => {
-          // ✅ Render custom component for each section
+
           const CustomComponent = section.component;
 
           return (
@@ -184,7 +184,7 @@ const StickyHeaderInstitution = () => {
               key={section.id}
               id={section.id}
               ref={(el) => (sectionRefs.current[section.id] = el)}
-              className={`min-h-[80vh] py-16 ${
+              className={`min-h-[60vh] py-16 ${
                 index % 2 === 0 ? "bg-white" : "bg-gray-50"
               }`}
             >

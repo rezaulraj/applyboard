@@ -70,7 +70,7 @@ const ChannelPartners = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
   return (
-    <section className="w-full bg-white py-16 px-6">
+    <section className="w-full bg-white py-16 px-4 md:px-6">
       <h2 className="text-center text-3xl lg:text-4xl font-montserrat font-bold text-gray-800 mb-12 tracking-tight">
         Channel Partners
       </h2>

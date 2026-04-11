@@ -23,7 +23,7 @@ const PartnershipRequestForm = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className=" bg-gradient-to-b from-blue-50 to-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="bg-gradient-to-b from-blue-700 to-blue-500 rounded-t-2xl p-8 sm:p-12 text-white">

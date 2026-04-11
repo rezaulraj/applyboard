@@ -39,7 +39,7 @@ const HeroStory = () => {
 
               <button
                 onClick={openModal}
-                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-sans text-lg font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Partner with Us
                 <svg

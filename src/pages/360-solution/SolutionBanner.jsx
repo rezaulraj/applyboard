@@ -46,7 +46,7 @@ const SolutionBanner = () => {
                   </button>
                   <button
                     onClick={openModal}
-                    className="inline-flex items-center border border-gray-900 text-lg text-gray-900 font-semibold px-6 py-2.5 rounded-lg hover:shadow-md transition-all duration-200 mt-4"
+                    className="inline-flex items-center border border-blue-600 text-lg text-blue-900 font-semibold px-6 py-2.5 rounded-lg hover:shadow-md transition-all duration-200 mt-4"
                   >
                     I work at a school
                   </button>

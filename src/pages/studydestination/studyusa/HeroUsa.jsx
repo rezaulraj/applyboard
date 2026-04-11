@@ -22,7 +22,7 @@ const HeroUsa = () => {
             journey there, with the information on this page.
           </p>
 
-          <button onClick={() => setPopupOpen(true)} className="group relative inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-base font-sans rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5">
+          <button onClick={() => setPopupOpen(true)} className="group relative inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-base md:text-lg font-sans rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5">
             Start Your Journey
           </button>
         </div>

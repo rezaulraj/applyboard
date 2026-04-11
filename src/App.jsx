@@ -17,6 +17,8 @@ import Contact from "./pages/contact/Contact";
 import Career from "./pages/career/Career";
 import Solutions from "./pages/360-solution/Solutions";
 import OurStory from "./pages/story/OurStory";
+import PrivacyPolicy from "./pages/privacy/PrivacyPolicy";
+import CookieConsentBanner from "./components/common/CookieConsentBanner";
 
 function App() {
   return (
@@ -38,9 +40,11 @@ function App() {
           <Route path="/careers" element={<Career />} />
           <Route path="/solutions" element={<Solutions />} />
           <Route path="/our-story" element={<OurStory />} />
+          <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      <CookieConsentBanner />
     </>
   );
 }

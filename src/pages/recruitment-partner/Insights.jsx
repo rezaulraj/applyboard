@@ -15,7 +15,7 @@ const Insights = () => {
             </div>
 
             {/* Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-montserrat text-gray-800 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold font-montserrat text-gray-800 leading-tight">
               Explore Sector-Leading Training and Insights
             </h2>
 

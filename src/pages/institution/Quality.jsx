@@ -1,6 +1,6 @@
 const Quality = () => {
   return (
-    <div className="min-h-screen bg-white py-16 px-4 sm:px-6 lg:px-8">
+    <div className=" bg-white py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Visual Composition */}
@@ -141,13 +141,13 @@ const Quality = () => {
           <div className="space-y-6 lg:pl-8 order-1 md:order-2">
             {/* Category Label */}
             <div>
-              <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase mb-3">
+              <span className="text-base font-medium font-montserrat tracking-[1.5px] text-[#1e6deb] uppercase ">
                 QUALITY
               </span>
             </div>
 
             {/* Main Heading */}
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 font-montserrat leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 font-montserrat leading-tight">
               Convert Quality Leads to Quality Graduates
             </h2>
 
