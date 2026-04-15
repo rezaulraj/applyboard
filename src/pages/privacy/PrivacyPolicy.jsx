@@ -442,7 +442,7 @@ const PrivacyPolicy = () => {
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                     <h4 className="font-semibold mb-2">Email</h4>
-                    <p className="text-blue-100">privacy@admissiononboard.com</p>
+                    <p className="text-blue-100">ceo@admissiononboard.com</p>
                   </div>
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
                     <h4 className="font-semibold mb-2">Phone</h4>

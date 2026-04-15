@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
 
 const StudentJourneyBanner = () => {
+  const [popupOpen, setPopupOpen] = useState(false);
+
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
@@ -20,14 +23,17 @@ const StudentJourneyBanner = () => {
               </h2>
 
               <p className="text-gray-700 text-base lg:text-lg leading-relaxed mb-8 font-sans">
-                AdmissionOnBoard is so much more than an application platform. It's
-                your full-service toolbox, giving you new ways to grow your
+                AdmissionOnBoard is so much more than an application platform.
+                It's your full-service toolbox, giving you new ways to grow your
                 business and offer students peace of mind. Use these innovative
                 programs to guide students through their whole journey, from
                 application to arrival.
               </p>
 
-              <button className="inline-flex items-center px-8 py-4 bg-blue-600 text-base md:text-lg font-sans text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5">
+              <button
+                onClick={() => setPopupOpen(true)}
+                className="inline-flex items-center px-8 py-4 bg-blue-600 text-base md:text-lg font-sans text-white font-semibold rounded-lg hover:bg-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+              >
                 Let's get started
                 <svg
                   className="w-5 h-5 ml-2"
@@ -47,6 +53,10 @@ const StudentJourneyBanner = () => {
           </div>
         </div>
       </div>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </section>
   );
 };

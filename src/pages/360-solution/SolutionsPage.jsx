@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
 
 const SolutionsPage = () => {
   const [activeTab, setActiveTab] = useState("proof-of-finance");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [popupOpen, setPopupOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,7 +82,8 @@ const SolutionsPage = () => {
             </h2>
             <p className="text-gray-600 text-base lg:text-lg max-w-2xl mx-auto">
               Explore exclusive programs to help you and your students save time
-              and money. With AdmissionOnBoard, you're never far from a helping hand.
+              and money. With AdmissionOnBoard, you're never far from a helping
+              hand.
             </p>
           </div>
 
@@ -421,7 +424,10 @@ const SolutionsPage = () => {
                   Get TOEFL, PTE, GRE, and Duolingo English Test vouchers—and
                   more—at the best possible prices, on demand.
                 </p>
-                <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md">
+                <button
+                  onClick={() => setPopupOpen(true)}
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md"
+                >
                   Let's get started
                 </button>
               </div>
@@ -496,7 +502,10 @@ const SolutionsPage = () => {
                     Total payment flexibility
                   </li>
                 </ul>
-                <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md">
+                <button
+                  onClick={() => setPopupOpen(true)}
+                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors duration-300 shadow-md"
+                >
                   Let's get started
                 </button>
               </div>
@@ -511,7 +520,6 @@ const SolutionsPage = () => {
           </div>
         </div>
       </section>
-
 
       <section
         id="accommodations"
@@ -648,6 +656,10 @@ const SolutionsPage = () => {
           </div>
         </div>
       </section>
+      <StudentRegistrationPopup
+        isOpen={popupOpen}
+        onClose={() => setPopupOpen(false)}
+      />
     </div>
   );
 };

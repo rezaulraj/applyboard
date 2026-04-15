@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import StudentRegistrationPopup from "./StudentRegistrationPopup";
+import { FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
   const [popupOpen, setPopupOpen] = useState(false);
@@ -62,7 +63,6 @@ const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200 pt-4 pb-6">
       <div className="max-w-7xl bg-blue-50 mx-auto px-4 sm:px-6 lg:px-8 rounded-3xl py-10">
-
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
           <div className="md:col-span-4 space-y-4">
             <div className="mb-6">
@@ -94,6 +94,15 @@ const Footer = () => {
               <p>101 Frederick St,</p>
               <p>Kitchener, ON</p>
               <p>N2H 6R2</p>
+            </div>
+            <div className="">
+              <a
+                href="mailto:ceo@admissiononboard.com"
+                className="flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors duration-200"
+              >
+                <FaEnvelope className="text-gray-500 text-lg" />{" "}
+                ceo@admissiononboard.com
+              </a>
             </div>
             <div className="flex space-x-5 pt-3">
               <SocialIcon type="facebook" href="https://facebook.com" />

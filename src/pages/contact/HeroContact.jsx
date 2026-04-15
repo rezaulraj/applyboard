@@ -40,7 +40,7 @@ const HeroContact = () => {
               href="mailto:help@AdmissionOnBoard.com"
               className="text-blue-600 hover:text-blue-700 font-medium mb-4 block font-sans"
             >
-              help@AdmissionOnBoard.com
+              ceo@admissiononboard.com
             </a>
             <p className="text-gray-600 text-sm font-sans">
               Please email us with your inquiries.
