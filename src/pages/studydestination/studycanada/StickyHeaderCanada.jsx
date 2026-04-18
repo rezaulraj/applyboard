@@ -1,4 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AcademicsCanada from "./AcademicsCanada";
 import OpportunityCanada from "./OpportunityCanada";
 import ExperienceCanada from "./ExperienceCanada";
@@ -6,8 +9,13 @@ import LifeCanada from "./LifeCanada";
 import CommunityCanada from "./CommunityCanada";
 import StudentVisaCanada from "./StudentVisaCanada";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const StickyHeaderCanada = () => {
   const [activeSection, setActiveSection] = useState("academics");
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  const containerRef = useRef(null);
 
   const sections = [
     {
@@ -48,13 +56,68 @@ const StickyHeaderCanada = () => {
     {
       id: "student-visa",
       label: "STUDENT VISA",
-      color: "bg-pink-500",
+      color: "bg-indigo-500",
       hasCustom: true,
       component: StudentVisaCanada,
     },
   ];
 
   const sectionRefs = useRef({});
+
+  // ✨ GSAP Animations
+  useGSAP(
+    () => {
+      // Animate each section content when it enters viewport
+      sections.forEach((section) => {
+        const el = sectionRefs.current[section.id];
+        if (!el) return;
+
+        // Section fade-in from below
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.4,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 82%",
+              end: "bottom 18%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+
+        // Staggered children inside each section
+        const children = gsap.utils.toArray(".gsap-child", el);
+        if (children.length > 0) {
+          gsap.fromTo(
+            children,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+              stagger: 0.12,
+              scrollTrigger: {
+                trigger: el,
+                start: "top 75%",
+                toggleActions: "play none none none",
+              },
+            },
+          );
+        }
+      });
+
+      return () => {
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+      };
+    },
+    { scope: containerRef, dependencies: [] },
+  );
 
   useEffect(() => {
     const observerOptions = {
@@ -77,9 +140,26 @@ const StickyHeaderCanada = () => {
       });
     }, 100);
 
+    // Header visibility on scroll
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const lastSection = sectionRefs.current["student-visa"];
+      const lastSectionEnd = lastSection?.offsetTop + lastSection?.offsetHeight;
+
+      if (lastSectionEnd && scrollPosition >= lastSectionEnd - 100) {
+        setIsHeaderVisible(false);
+      } else {
+        setIsHeaderVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
     return () => {
       clearTimeout(timeoutId);
       observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -99,15 +179,19 @@ const StickyHeaderCanada = () => {
   };
 
   return (
-    <div className="relative">
+    <div ref={containerRef} className="relative">
       <div
         id="sticky-header"
-        className="sticky top-20 z-40 transition-all duration-500 ease-in-out"
+        className={`sticky top-20 z-40 transition-all duration-500 ease-in-out ${
+          isHeaderVisible
+            ? "translate-y-0 opacity-100"
+            : "-translate-y-full opacity-0 pointer-events-none"
+        }`}
       >
         <div className="bg-white/80 backdrop-blur-md">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-montserrat font-bold text-center text-gray-800 mb-5">
-              5 Incredible Reasons to Study in Australia
+              6 Incredible Reasons to Study in Canada
             </h2>
 
             <nav className="flex flex-wrap justify-center gap-2 sm:gap-3">
@@ -162,6 +246,7 @@ const StickyHeaderCanada = () => {
         </div>
       </div>
 
+      {/* SECTIONS CONTENT */}
       <div className="pt-0">
         {sections.map((section, index) => {
           const CustomComponent = section.component;

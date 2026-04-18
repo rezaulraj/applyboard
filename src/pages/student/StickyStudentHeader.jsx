@@ -1,12 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Search from "./Search";
 import Apply from "./Apply";
 import Funding from "./Funding";
 import Payments from "./Payments";
 import Visa from "./Visa";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const StickyStudentHeader = () => {
-  const [activeSection, setActiveSection] = useState("academics");
+  const [activeSection, setActiveSection] = useState("search");
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  const containerRef = useRef(null);
 
   const sections = [
     {
@@ -40,13 +48,68 @@ const StickyStudentHeader = () => {
     {
       id: "visa",
       label: "VISA",
-      color: "bg-pink-500",
+      color: "bg-green-500",
       hasCustom: true,
       component: Visa,
     },
   ];
 
   const sectionRefs = useRef({});
+
+  // ✨ GSAP Animations
+  useGSAP(
+    () => {
+      // Animate each section content when it enters viewport
+      sections.forEach((section) => {
+        const el = sectionRefs.current[section.id];
+        if (!el) return;
+
+        // Section fade-in from below
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.4,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 82%",
+              end: "bottom 18%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+
+        // Staggered children inside each section
+        const children = gsap.utils.toArray(".gsap-child", el);
+        if (children.length > 0) {
+          gsap.fromTo(
+            children,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+              stagger: 0.12,
+              scrollTrigger: {
+                trigger: el,
+                start: "top 75%",
+                toggleActions: "play none none none",
+              },
+            },
+          );
+        }
+      });
+
+      return () => {
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+      };
+    },
+    { scope: containerRef, dependencies: [] },
+  );
 
   useEffect(() => {
     const observerOptions = {
@@ -69,7 +132,7 @@ const StickyStudentHeader = () => {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
-      const lastSection = sectionRefs.current["community"];
+      const lastSection = sectionRefs.current["visa"];
       const lastSectionEnd = lastSection?.offsetTop + lastSection?.offsetHeight;
 
       if (lastSectionEnd && scrollPosition >= lastSectionEnd - 100) {
@@ -104,7 +167,7 @@ const StickyStudentHeader = () => {
   };
 
   return (
-    <div className="relative">
+    <div ref={containerRef} className="relative">
       <div
         id="sticky-header"
         className={`sticky top-20 z-40 transition-all duration-500 ease-in-out ${
@@ -171,10 +234,9 @@ const StickyStudentHeader = () => {
         </div>
       </div>
 
-      {/*SECTIONS CONTENT*/}
+      {/* SECTIONS CONTENT */}
       <div className="pt-0">
         {sections.map((section, index) => {
-
           const CustomComponent = section.component;
 
           return (

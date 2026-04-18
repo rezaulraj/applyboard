@@ -1,14 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Reach from "./Reach";
 import Quality from "./Quality";
 import Efficiency from "./Efficiency";
 import Expertise from "./Expertise";
 import Impack from "./Impack";
 
+gsap.registerPlugin(ScrollTrigger);
 
 const StickyHeaderInstitution = () => {
-  const [activeSection, setActiveSection] = useState("academics");
+  const [activeSection, setActiveSection] = useState("reach");
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  const containerRef = useRef(null);
 
   const sections = [
     {
@@ -40,8 +46,8 @@ const StickyHeaderInstitution = () => {
       component: Expertise,
     },
     {
-      id: "impack",
-      label: "IMPACK",
+      id: "impact",
+      label: "IMPACT",
       color: "bg-pink-500",
       hasCustom: true,
       component: Impack,
@@ -49,6 +55,61 @@ const StickyHeaderInstitution = () => {
   ];
 
   const sectionRefs = useRef({});
+
+  // ✨ GSAP Animations
+  useGSAP(
+    () => {
+      // Animate each section content when it enters viewport
+      sections.forEach((section) => {
+        const el = sectionRefs.current[section.id];
+        if (!el) return;
+
+        // Section fade-in from below
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.4,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 82%",
+              end: "bottom 18%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+
+        // Staggered children inside each section
+        const children = gsap.utils.toArray(".gsap-child", el);
+        if (children.length > 0) {
+          gsap.fromTo(
+            children,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+              stagger: 0.12,
+              scrollTrigger: {
+                trigger: el,
+                start: "top 75%",
+                toggleActions: "play none none none",
+              },
+            },
+          );
+        }
+      });
+
+      return () => {
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+      };
+    },
+    { scope: containerRef, dependencies: [] },
+  );
 
   useEffect(() => {
     const observerOptions = {
@@ -71,7 +132,7 @@ const StickyHeaderInstitution = () => {
 
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight;
-      const lastSection = sectionRefs.current["community"];
+      const lastSection = sectionRefs.current["impact"];
       const lastSectionEnd = lastSection?.offsetTop + lastSection?.offsetHeight;
 
       if (lastSectionEnd && scrollPosition >= lastSectionEnd - 100) {
@@ -106,7 +167,7 @@ const StickyHeaderInstitution = () => {
   };
 
   return (
-    <div className="relative">
+    <div ref={containerRef} className="relative">
       <div
         id="sticky-header"
         className={`sticky top-20 z-40 transition-all duration-500 ease-in-out ${
@@ -118,7 +179,7 @@ const StickyHeaderInstitution = () => {
         <div className="bg-white/80 backdrop-blur-md">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-montserrat font-bold text-center text-gray-800 mb-5">
-              5 Incredible Reasons to Study in the UK
+              5 Reasons to Partner with AdmissionHub
             </h2>
 
             <nav className="flex flex-wrap justify-center gap-2 sm:gap-3">
@@ -173,10 +234,9 @@ const StickyHeaderInstitution = () => {
         </div>
       </div>
 
-      {/*SECTIONS CONTENT*/}
+      {/* SECTIONS CONTENT */}
       <div className="pt-0">
         {sections.map((section, index) => {
-
           const CustomComponent = section.component;
 
           return (

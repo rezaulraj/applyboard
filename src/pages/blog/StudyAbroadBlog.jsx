@@ -1,7 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
 import StudentRegistrationPopup from "../../components/common/StudentRegistrationPopup";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const StudyAbroadBlog = () => {
+  const containerRef = useRef(null);
+  const progressRef = useRef(null);
   const [selectedArticle, setSelectedArticle] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Students");
@@ -10,6 +18,107 @@ const StudyAbroadBlog = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
 
+  useGSAP(
+    () => {
+      // 🚀 ULTRA-SMOOTH LENIS CONFIG
+      const lenis = new Lenis({
+        duration: 1.8,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true,
+        smoothTouch: true,
+        orientation: "vertical",
+        touchMultiplier: 1.5,
+        infinite: false,
+      });
+
+      // 🔗 Sync Lenis with GSAP
+      lenis.on("scroll", ScrollTrigger.update);
+      gsap.ticker.add((time) => lenis.raf(time * 1000));
+      gsap.ticker.lagSmoothing(0);
+
+      // 📊 Scroll Progress Bar
+      if (progressRef.current) {
+        gsap.to(progressRef.current, {
+          scaleX: 1,
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0.3,
+          },
+          transformOrigin: "left center",
+        });
+      }
+
+      // 🌀 Scroll Velocity Parallax
+      gsap.utils.toArray("[data-parallax]").forEach((el) => {
+        const speed = parseFloat(el.dataset.parallax) || 0.2;
+        gsap.to(el, {
+          y: () => -ScrollTrigger.maxScroll(window) * speed,
+          ease: "none",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true,
+          },
+        });
+      });
+
+      // ✨ Section Reveal - opacity and movement only, no blur
+      gsap.utils.toArray(".gsap-section").forEach((section) => {
+        // Parent section animation
+        gsap.fromTo(
+          section,
+          {
+            opacity: 0,
+            y: 80,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.6,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: section,
+              start: "top 82%",
+              end: "bottom 18%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+
+        // Staggered child elements inside section
+        const children = gsap.utils.toArray(".gsap-child", section);
+        if (children.length > 0) {
+          gsap.fromTo(
+            children,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+              stagger: 0.12,
+              scrollTrigger: {
+                trigger: section,
+                start: "top 75%",
+                toggleActions: "play none none none",
+              },
+            },
+          );
+        }
+      });
+
+      // 🧹 Cleanup
+      return () => {
+        lenis.destroy();
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+      };
+    },
+    { scope: containerRef },
+  );
 
   const studentsArticles = [
     {
@@ -1073,7 +1182,8 @@ const StudyAbroadBlog = () => {
     },
   ];
 
-const [popupOpen, setPopupOpen] = useState(false);
+  const [popupOpen, setPopupOpen] = useState(false);
+
   useEffect(() => {
     setVisibleCount(6);
     setIsLoading(true);
@@ -1143,230 +1253,83 @@ const [popupOpen, setPopupOpen] = useState(false);
   const visibleArticles = filteredArticles.slice(0, visibleCount);
 
   return (
-    <div className="">
-      <div className="mt-10">
-        <div className="max-w-6xl mx-auto text-center bg-blue-50 py-16 px-4 sm:px-6 lg:px-8 rounded-4xl">
-          <h1 className="text-3xl sm:text-4xl font-montserrat leading-tight font-bold text-gray-800 mb-4">
-            Learn More about Studying Abroad
-          </h1>
-          <p className="text-gray-600 font-sans text-base md:text-lg leading-relaxed mb-8 max-w-md mx-auto">
-            Tips, advice, and updates to help you across every step of the study
-            abroad journey.
-          </p>
+    <div ref={containerRef} className="relative">
+      {/* 📈 Scroll Progress Bar */}
+      <div
+        ref={progressRef}
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 z-50 scale-x-0"
+        style={{ transformOrigin: "left center" }}
+      />
 
-          <div className="inline-flex bg-white rounded-full p-1 shadow-md">
-            {["Students", "Recruitment Partners", "Institutions"].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-6 py-2 rounded-full text-sm font-montserrat font-medium transition-all duration-300 ${
-                  activeTab === tab
-                    ? "bg-blue-600 text-white shadow-md"
-                    : "text-gray-600 hover:bg-gray-100"
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
+      {/* 🌀 Decorative Parallax Background */}
+      <div
+        data-parallax="0.05"
+        className="fixed inset-0 -z-10 pointer-events-none"
+      >
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl" />
+      </div>
+
+      {/* 🎬 Hero Section */}
+      <div className="gsap-section">
+        <div className="mt-10">
+          <div className="max-w-6xl mx-auto text-center bg-blue-50 py-16 px-4 sm:px-6 lg:px-8 rounded-4xl">
+            <h1 className="text-3xl sm:text-4xl font-montserrat leading-tight font-bold text-gray-800 mb-4">
+              Learn More about Studying Abroad
+            </h1>
+            <p className="text-gray-600 font-sans text-base md:text-lg leading-relaxed mb-8 max-w-md mx-auto">
+              Tips, advice, and updates to help you across every step of the
+              study abroad journey.
+            </p>
+
+            <div className="inline-flex bg-white rounded-full p-1 shadow-md">
+              {["Students", "Recruitment Partners", "Institutions"].map(
+                (tab) => (
+                  <button
+                    key={tab}
+                    onClick={() => setActiveTab(tab)}
+                    className={`px-6 py-2 rounded-full text-sm font-montserrat font-medium transition-all duration-300 ${
+                      activeTab === tab
+                        ? "bg-blue-600 text-white shadow-md"
+                        : "text-gray-600 hover:bg-gray-100"
+                    }`}
+                  >
+                    {tab}
+                  </button>
+                ),
+              )}
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col lg:flex-row gap-4 mb-10 items-start justify-between">
-          <div className="flex flex-wrap gap-2">
-            {tags.map((tag, index) => (
-              <button
-                key={index}
-                className={`px-4 py-2 rounded-full text-sm font-montserrat font-medium transition-all duration-200 ${
-                  index === 0
-                    ? "text-gray-500 cursor-default"
-                    : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 shadow-sm border border-gray-200"
-                }`}
-              >
-                {tag}
-              </button>
-            ))}
-          </div>
+      {/* 🎬 Blog Content Section */}
+      <div className="gsap-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="flex flex-col lg:flex-row gap-4 mb-10 items-start justify-between">
+            <div className="flex flex-wrap gap-2">
+              {tags.map((tag, index) => (
+                <button
+                  key={index}
+                  className={`px-4 py-2 rounded-full text-sm font-montserrat font-medium transition-all duration-200 ${
+                    index === 0
+                      ? "text-gray-500 cursor-default"
+                      : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-600 shadow-sm border border-gray-200"
+                  }`}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
 
-          <div className="relative w-full lg:w-auto">
-            <input
-              type="text"
-              placeholder="Search the blog..."
-              className="w-full lg:w-64 px-4 py-2 pl-10 pr-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-            <svg
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            <div className="relative w-full lg:w-auto">
+              <input
+                type="text"
+                placeholder="Search the blog..."
+                className="w-full lg:w-64 px-4 py-2 pl-10 pr-10 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
-            </svg>
-          </div>
-        </div>
-
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2 font-montserrat leading-tight">
-            {activeTab === "Students" && "Resources for Students"}
-            {activeTab === "Recruitment Partners" &&
-              "Resources for Recruitment Partners"}
-            {activeTab === "Institutions" && "Resources for Institutions"}
-          </h2>
-          <p className="text-gray-600 font-sans text-sm">
-            Showing {visibleArticles.length} of {filteredArticles.length}{" "}
-            articles
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {visibleArticles.map((article, index) => (
-            <article
-              key={article.id}
-              onClick={() => openModal(article)}
-              className={`bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer group transform hover:-translate-y-1 animate-fadeIn`}
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={article.image}
-                  alt={article.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute top-4 left-4">
-                  <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-gray-700 font-montserrat">
-                    {article.tag}
-                  </span>
-                </div>
-              </div>
-
-              <div className="p-6">
-                <div className="flex items-center gap-2 text-xs font-montserrat text-gray-500 mb-3">
-                  <span className="font-medium text-blue-600">
-                    {article.category}
-                  </span>
-                  <span>•</span>
-                  <span>{article.date}</span>
-                </div>
-
-                <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors font-montserrat leading-tight">
-                  {article.title}
-                </h3>
-
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2 font-sans">
-                  {article.excerpt}
-                </p>
-
-                <div className="flex items-center justify-between">
-                  <button className="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors group/btn font-montserrat leading-relaxed">
-                    Read More
-                    <svg
-                      className="w-4 h-4 ml-1 transform group-hover/btn:translate-x-1 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M9 5l7 7-7 7"
-                      />
-                    </svg>
-                  </button>
-                  <span className="text-xs text-gray-400">
-                    {article.readTime}
-                  </span>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
-
-        {hasMore && (
-          <div className="text-center mt-12">
-            <button
-              onClick={handleLoadMore}
-              disabled={isLoading}
-              className={`
-                relative inline-flex items-center justify-center px-8 py-4 
-                bg-gradient-to-r from-blue-600 to-blue-700 
-                text-white font-semibold rounded-xl 
-                shadow-lg hover:shadow-2xl 
-                transform hover:-translate-y-0.5 
-                transition-all duration-300
-                disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none
-                overflow-hidden group
-              `}
-            >
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-              {isLoading ? (
-                <div className="flex items-center gap-3">
-                  <svg
-                    className="animate-spin h-5 w-5 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                    ></circle>
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    ></path>
-                  </svg>
-                  <span className="font-montserrat text-base leading-relaxed">
-                    Loading Articles...
-                  </span>
-                </div>
-              ) : (
-                <div className="flex items-center gap-3 relative z-10">
-                  <span className="font-montserrat text-base leading-relaxed">
-                    Load More Articles
-                  </span>
-                  <svg
-                    className="w-5 h-5 transform group-hover:translate-y-1 transition-transform duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                    />
-                  </svg>
-                </div>
-              )}
-            </button>
-
-            <p className="mt-4 text-sm text-gray-500 font-sans">
-              {isLoading
-                ? "Fetching more content..."
-                : `Showing ${visibleArticles.length} of ${filteredArticles.length} articles`}
-            </p>
-          </div>
-        )}
-
-        {!hasMore && filteredArticles.length > 0 && (
-          <div className="text-center mt-12 animate-fadeIn">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-50 text-green-700 rounded-full font-medium">
               <svg
-                className="w-5 h-5"
+                className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -1375,13 +1338,184 @@ const [popupOpen, setPopupOpen] = useState(false);
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   strokeWidth={2}
-                  d="M5 13l4 4L19 7"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                 />
               </svg>
-              <span>You've seen all articles! Check back soon for more.</span>
             </div>
           </div>
-        )}
+
+          <div className="mb-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2 font-montserrat leading-tight">
+              {activeTab === "Students" && "Resources for Students"}
+              {activeTab === "Recruitment Partners" &&
+                "Resources for Recruitment Partners"}
+              {activeTab === "Institutions" && "Resources for Institutions"}
+            </h2>
+            <p className="text-gray-600 font-sans text-sm">
+              Showing {visibleArticles.length} of {filteredArticles.length}{" "}
+              articles
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {visibleArticles.map((article, index) => (
+              <article
+                key={article.id}
+                onClick={() => openModal(article)}
+                className={`bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer group transform hover:-translate-y-1 animate-fadeIn gsap-child`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={article.image}
+                    alt={article.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute top-4 left-4">
+                    <span className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-gray-700 font-montserrat">
+                      {article.tag}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <div className="flex items-center gap-2 text-xs font-montserrat text-gray-500 mb-3">
+                    <span className="font-medium text-blue-600">
+                      {article.category}
+                    </span>
+                    <span>•</span>
+                    <span>{article.date}</span>
+                  </div>
+
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-blue-600 transition-colors font-montserrat leading-tight">
+                    {article.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2 font-sans">
+                    {article.excerpt}
+                  </p>
+
+                  <div className="flex items-center justify-between">
+                    <button className="inline-flex items-center text-blue-600 font-semibold text-sm hover:text-blue-700 transition-colors group/btn font-montserrat leading-relaxed">
+                      Read More
+                      <svg
+                        className="w-4 h-4 ml-1 transform group-hover/btn:translate-x-1 transition-transform"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                    <span className="text-xs text-gray-400">
+                      {article.readTime}
+                    </span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {hasMore && (
+            <div className="text-center mt-12">
+              <button
+                onClick={handleLoadMore}
+                disabled={isLoading}
+                className={`
+                  relative inline-flex items-center justify-center px-8 py-4 
+                  bg-gradient-to-r from-blue-600 to-blue-700 
+                  text-white font-semibold rounded-xl 
+                  shadow-lg hover:shadow-2xl 
+                  transform hover:-translate-y-0.5 
+                  transition-all duration-300
+                  disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none
+                  overflow-hidden group
+                `}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-blue-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {isLoading ? (
+                  <div className="flex items-center gap-3">
+                    <svg
+                      className="animate-spin h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                    <span className="font-montserrat text-base leading-relaxed">
+                      Loading Articles...
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex items-center gap-3 relative z-10">
+                    <span className="font-montserrat text-base leading-relaxed">
+                      Load More Articles
+                    </span>
+                    <svg
+                      className="w-5 h-5 transform group-hover:translate-y-1 transition-transform duration-300"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                      />
+                    </svg>
+                  </div>
+                )}
+              </button>
+
+              <p className="mt-4 text-sm text-gray-500 font-sans">
+                {isLoading
+                  ? "Fetching more content..."
+                  : `Showing ${visibleArticles.length} of ${filteredArticles.length} articles`}
+              </p>
+            </div>
+          )}
+
+          {!hasMore && filteredArticles.length > 0 && (
+            <div className="text-center mt-12 animate-fadeIn">
+              <div className="inline-flex items-center gap-2 px-6 py-3 bg-green-50 text-green-700 rounded-full font-medium">
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>You've seen all articles! Check back soon for more.</span>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       {isModalOpen && selectedArticle && (
@@ -1528,6 +1662,7 @@ const [popupOpen, setPopupOpen] = useState(false);
         isOpen={popupOpen}
         onClose={() => setPopupOpen(false)}
       />
+
       <style jsx>{`
         @keyframes fadeIn {
           from {

@@ -1,13 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AcademicsGermany from "./AcademicsGermany";
 import SatisfactionGermany from "./SatisfactionGermany";
 import ExperienceGermany from "./ExperienceGermany";
 import AffordabilityGermany from "./AffordabilityGermany";
 import CommunityGermany from "./CommunityGermany";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const StickyHeaderGermany = () => {
   const [activeSection, setActiveSection] = useState("academics");
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+
+  const containerRef = useRef(null);
 
   const sections = [
     {
@@ -48,6 +55,61 @@ const StickyHeaderGermany = () => {
   ];
 
   const sectionRefs = useRef({});
+
+  // ✨ GSAP Animations
+  useGSAP(
+    () => {
+      // Animate each section content when it enters viewport
+      sections.forEach((section) => {
+        const el = sectionRefs.current[section.id];
+        if (!el) return;
+
+        // Section fade-in from below
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 60 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.4,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: el,
+              start: "top 82%",
+              end: "bottom 18%",
+              toggleActions: "play none none reverse",
+            },
+          },
+        );
+
+        // Staggered children inside each section
+        const children = gsap.utils.toArray(".gsap-child", el);
+        if (children.length > 0) {
+          gsap.fromTo(
+            children,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+              stagger: 0.12,
+              scrollTrigger: {
+                trigger: el,
+                start: "top 75%",
+                toggleActions: "play none none none",
+              },
+            },
+          );
+        }
+      });
+
+      return () => {
+        ScrollTrigger.getAll().forEach((t) => t.kill());
+      };
+    },
+    { scope: containerRef, dependencies: [] },
+  );
 
   useEffect(() => {
     const observerOptions = {
@@ -105,7 +167,7 @@ const StickyHeaderGermany = () => {
   };
 
   return (
-    <div className="relative">
+    <div ref={containerRef} className="relative">
       <div
         id="sticky-header"
         className={`sticky top-20 z-40 transition-all duration-500 ease-in-out ${
@@ -172,6 +234,7 @@ const StickyHeaderGermany = () => {
         </div>
       </div>
 
+      {/* SECTIONS CONTENT */}
       <div className="pt-0">
         {sections.map((section, index) => {
           const CustomComponent = section.component;

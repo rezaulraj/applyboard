@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-
 @import "tailwindcss";
 
 @theme {
@@ -7,3 +6,55 @@
   --font-montserrat: "Montserrat", sans-serif;
 }
 
+/* ===== Smooth Scroll Base ===== */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* ===== Section Optimizations ===== */
+/* Removed 'filter' from will-change — it caused browser compositing blur */
+/* Removed translateZ(0) — GPU layer promotion can cause subpixel text blur */
+.gsap-section {
+  will-change: transform, opacity;
+}
+
+/* ===== Child Animation Helper ===== */
+/* Removed 'filter' from will-change to prevent text blur */
+.gsap-child {
+  will-change: transform, opacity;
+}
+
+/* ===== Custom Scrollbar (Dark Theme) ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46; /* zinc-700 */
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b; /* zinc-600 */
+}
+
+/* ===== Hide Scrollbar on Mobile ===== */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
